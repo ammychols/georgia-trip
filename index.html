@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Georgia Itinerary · 2–7 October</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Chonburi&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2620;
+    --paper:#f4efe4;
+    --paper2:#ece4d3;
+    --moss:#3a4a3a;
+    --pine:#2c3a2e;
+    --rust:#9c5b34;
+    --gold:#c79a45;
+    --stone:#7d7a6e;
+    --line:#cdc3ad;
+    --snow:#fbf9f3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'IBM Plex Sans Thai','Fraunces',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+  .hero{
+    position:relative;
+    padding:90px 24px 70px;
+    text-align:center;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 120% 80% at 50% 120%, rgba(60,74,58,.18), transparent 60%),
+      linear-gradient(180deg,#2c3a2e 0%, #3a4a3a 45%, #4a5240 100%);
+    color:var(--snow);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background-image:
+      linear-gradient(135deg, transparent 60%, rgba(199,154,69,.08) 60%, rgba(199,154,69,.08) 62%, transparent 62%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 2px, transparent 2px 5px);
+    pointer-events:none;
+  }
+  .peaks{position:absolute;bottom:-2px;left:0;width:100%;height:90px;display:block;}
+  .hero .kicker{
+    font-family:'IBM Plex Sans Thai',serif;font-weight:400;
+    letter-spacing:.04em;font-size:1.05rem;color:var(--gold);
+    margin-bottom:18px;position:relative;z-index:2;
+  }
+  .hero h1{
+    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:300;
+    font-size:clamp(2.6rem,8vw,4.4rem);line-height:.98;
+    letter-spacing:-.01em;position:relative;z-index:2;
+  }
+  .hero h1 b{font-weight:600;font-style:italic;color:var(--gold);}
+  .hero .sub{
+    margin-top:22px;font-weight:300;font-size:1.05rem;
+    color:rgba(251,249,243,.82);position:relative;z-index:2;
+  }
+  .hero .meta{
+    margin-top:26px;display:flex;gap:10px;justify-content:center;
+    flex-wrap:wrap;position:relative;z-index:2;
+  }
+  .chip{
+    font-size:.82rem;letter-spacing:.02em;
+    border:1px solid rgba(199,154,69,.45);
+    color:rgba(251,249,243,.9);
+    padding:6px 14px;border-radius:40px;
+    background:rgba(255,255,255,.04);
+  }
+  .intro{padding:54px 0 10px;text-align:center;}
+  .intro p{
+    font-family:'IBM Plex Sans Thai',serif;font-weight:300;
+    font-size:1.2rem;color:var(--moss);max-width:620px;margin:0 auto;
+    line-height:1.6;
+  }
+  .rule{width:60px;height:1px;background:var(--rust);margin:34px auto;position:relative;}
+  .rule::before,.rule::after{
+    content:"";position:absolute;top:50%;width:5px;height:5px;
+    border-radius:50%;background:var(--rust);transform:translateY(-50%);
+  }
+  .rule::before{left:-12px;}.rule::after{right:-12px;}
+  .day{padding:30px 0;border-bottom:1px solid var(--line);}
+  .day:last-of-type{border-bottom:none;}
+  .day-head{display:flex;align-items:baseline;gap:18px;margin-bottom:20px;flex-wrap:wrap;}
+  .daynum{
+    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:300;
+    font-size:3.2rem;line-height:.8;color:var(--rust);flex-shrink:0;
+  }
+  .daynum small{display:block;font-size:.7rem;letter-spacing:.22em;
+    color:var(--stone);font-family:'IBM Plex Sans Thai';margin-bottom:4px;font-weight:500;}
+  .day-title{flex:1;min-width:200px;}
+  .day-title h2{
+    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.45rem;
+    color:var(--pine);line-height:1.15;
+  }
+  .day-title .date{font-size:.85rem;color:var(--stone);margin-top:2px;}
+  .day-note{font-family:'IBM Plex Sans Thai',serif;color:var(--stone);font-size:.95rem;margin-bottom:16px;}
+  .badge{
+    display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.05em;
+    color:var(--snow);background:var(--rust);padding:3px 10px;border-radius:4px;
+    vertical-align:middle;margin-left:8px;
+  }
+  .badge.star{background:var(--gold);color:var(--pine);}
+  ul.tl{list-style:none;position:relative;padding-left:26px;}
+  ul.tl::before{
+    content:"";position:absolute;left:6px;top:8px;bottom:8px;
+    width:1px;background:var(--line);
+  }
+  ul.tl li{position:relative;padding:7px 0;}
+  ul.tl li::before{
+    content:"";position:absolute;left:-23px;top:14px;
+    width:9px;height:9px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--moss);
+  }
+  ul.tl li.hi::before{background:var(--gold);border-color:var(--rust);}
+  .time{
+    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:600;font-size:.92rem;
+    color:var(--rust);margin-right:10px;
+  }
+  .place{font-weight:600;color:var(--pine);}
+  .desc{color:var(--moss);font-size:.95rem;}
+  .small{color:var(--stone);font-size:.85rem;}
+  .panel{
+    background:var(--paper2);border:1px solid var(--line);
+    border-radius:14px;padding:34px 32px;margin:50px 0;position:relative;
+  }
+  .panel h3{
+    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.35rem;
+    color:var(--pine);margin-bottom:6px;
+  }
+  .panel .lead{font-size:.9rem;color:var(--stone);margin-bottom:22px;}
+  .check{list-style:none;display:grid;gap:14px;}
+  .check li{display:flex;gap:14px;align-items:flex-start;}
+  .check .n{
+    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:600;color:var(--rust);
+    flex-shrink:0;width:24px;text-align:center;
+    border-bottom:2px solid var(--gold);line-height:1.4;
+  }
+  .check .t b{color:var(--pine);}
+  .check .t span{color:var(--moss);font-size:.95rem;}
+  .pack{margin-top:26px;padding-top:22px;border-top:1px dashed var(--line);}
+  .pack h4{font-size:.78rem;letter-spacing:.18em;color:var(--stone);
+    text-transform:uppercase;margin-bottom:12px;font-weight:600;}
+  .pack-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .pack-row span{
+    background:var(--snow);border:1px solid var(--line);
+    font-size:.85rem;padding:5px 12px;border-radius:30px;color:var(--moss);
+  }
+  .next{padding:30px 0 10px;}
+  .next h3{
+    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.25rem;
+    color:var(--pine);margin-bottom:18px;text-align:center;
+  }
+  .next-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .nx{background:var(--snow);border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+  .nx b{color:var(--rust);font-family:'Fraunces','IBM Plex Sans Thai',serif;}
+  .nx span{display:block;font-size:.85rem;color:var(--stone);margin-top:2px;}
+  footer{
+    text-align:center;padding:50px 24px 60px;color:var(--stone);
+    font-family:'IBM Plex Sans Thai',serif;font-style:italic;
+  }
+  footer .big{font-size:1.4rem;color:var(--moss);margin-bottom:8px;}
+  @media(max-width:560px){
+    .daynum{font-size:2.6rem;}
+    .panel{padding:26px 20px;}
+    .next-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="kicker">Caucasus · ฤดูใบไม้ร่วง</div>
+  <h1>จอร์เจีย<br><b>Georgia</b></h1>
+  <p class="sub">ทริปแรก · เส้นทางทอง Tbilisi – Kazbegi – Juta</p>
+  <div class="meta">
+    <span class="chip">2–7 ตุลาคม</span>
+    <span class="chip">6 วัน 5 คืน</span>
+    <span class="chip">เน้นธรรมชาติ</span>
+  </div>
+  <svg class="peaks" viewBox="0 0 1200 90" preserveAspectRatio="none">
+    <path d="M0,90 L0,55 L120,20 L230,50 L340,8 L470,45 L600,15 L730,48 L860,22 L1000,52 L1110,28 L1200,50 L1200,90 Z" fill="#f4efe4"/>
+  </svg>
+</header>
+
+<div class="wrap">
+  <section class="intro">
+    <p>"ภูเขาคอเคซัส โบสถ์โบราณบนยอดเขา และหุบเขาสีทองในฤดูใบไม้ร่วง — จอร์เจียในแบบที่ดีที่สุดสำหรับครั้งแรก"</p>
+    <div class="rule"></div>
+  </section>
+
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>01</div>
+      <div class="day-title">
+        <h2>ถึง Tbilisi</h2>
+        <div class="date">2 ตุลาคม · ศุกร์</div>
+      </div>
+    </div>
+    <p class="day-note">วันเดินทาง เอาแบบสบายๆ ปรับตัวกับเมือง</p>
+    <ul class="tl">
+      <li><span class="place">เช็คอิน</span> <span class="desc">— ที่พักย่าน Old Town</span></li>
+      <li><span class="place">เดินเล่น Old Town + Abanotubani</span> <span class="desc">ริมแม่น้ำ Mtkvari ยามเย็น</span></li>
+      <li><span class="place">ดินเนอร์จอร์เจียแท้</span> <span class="desc">ลอง Khachapuri 🧀</span></li>
+      <li><span class="small">ถ้าถึงเช้า/บ่าย: เพิ่ม Botanical Garden of Tbilisi</span></li>
+    </ul>
+  </section>
+
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>02</div>
+      <div class="day-title">
+        <h2>Tbilisi → Kazbegi</h2>
+        <div class="date">3 ตุลาคม · เสาร์</div>
+      </div>
+    </div>
+    <p class="day-note">วันขับ Military Highway — เส้นทางที่สวยที่สุดของจอร์เจีย</p>
+    <ul class="tl">
+      <li><span class="time">07:30</span><span class="desc">ออกเดินทาง</span></li>
+      <li class="hi"><span class="time">09:00</span><span class="place">Ananuri Fortress</span> <span class="desc">+ วิว Zhinvali Reservoir สีมรกต</span></li>
+      <li><span class="time">10:00</span><span class="place">Two Rivers Confluence</span> <span class="desc">แม่น้ำดำ-ขาวบรรจบ (Pasanauri)</span></li>
+      <li><span class="time">11:15</span><span class="place">Jvari Pass</span> <span class="desc">จุดสูงสุด วิวเทือกเขากว้างสุด</span></li>
+      <li class="hi"><span class="time">11:45</span><span class="place">Friendship Monument</span> <span class="desc">จุดถ่ายรูป iconic เหนือ Devil's Valley</span></li>
+      <li><span class="time">12:30</span><span class="place">Gudauri Viewpoint</span> <span class="desc">วิว Caucasus</span></li>
+      <li><span class="time">13:30</span><span class="desc">เช็คอิน Kazbegi · อาหารกลางวัน</span></li>
+      <li class="hi"><span class="time">15:30</span><span class="place">Gergeti Trinity Church</span> <span class="desc">เดินขึ้นบ่าย แสง golden hour</span> <span class="small">(ขึ้น ~1.5 ชม. ลง ~1 ชม.)</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ ลอง Khinkali 🥟</span></li>
+    </ul>
+  </section>
+
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>03</div>
+      <div class="day-title">
+        <h2>Kazbegi → Juta <span class="badge">ค้างคืน</span></h2>
+        <div class="date">4 ตุลาคม · อาทิตย์</div>
+      </div>
+    </div>
+    <p class="day-note">ย้ายฐานเข้าหุบเขา · เก็บเป้เล็ก ฝากกระเป๋าใหญ่ที่ Kazbegi</p>
+    <ul class="tl">
+      <li><span class="time">09:30</span><span class="desc">ออกเดินทางไป Juta → จอดจุดถนนปิด → ต่อรถท้องถิ่น → ขึ้น Fifth Season</span></li>
+      <li class="hi"><span class="time">13:00</span><span class="place">เช็คอิน Fifth Season</span> <span class="desc">ชมวิว Chaukhi Massif ตรงหน้า 🏔️</span></li>
+      <li class="hi"><span class="time">14:30</span><span class="place">เดินเล่น Juta Valley</span> <span class="desc">เลาะชมวิวเบาๆ ใบไม้เปลี่ยนสี 🍂 (ไม่หนัก เก็บแรงพรุ่งนี้)</span></li>
+      <li><span class="time">18:00</span><span class="desc">ดินเนอร์ที่ Fifth Season ชมพระอาทิตย์ตก 🌅</span></li>
+    </ul>
+  </section>
+
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>04</div>
+      <div class="day-title">
+        <h2>Juta — Chaukhi Trail → Kazbegi <span class="badge star">★ ไฮไลต์</span></h2>
+        <div class="date">5 ตุลาคม · จันทร์</div>
+      </div>
+    </div>
+    <p class="day-note">วันไฮไลต์สูงสุด · เริ่ม trail จากหน้าที่พัก</p>
+    <ul class="tl">
+      <li><span class="time">07:00</span><span class="desc">อาหารเช้า + ขอ lunchbox จากที่พัก</span></li>
+      <li class="hi"><span class="time">08:00</span><span class="place">เริ่มเดิน Juta–Chaukhi Trail</span> 🥾</li>
+      <li class="hi"><span class="time">11:00</span><span class="place">จุดชมวิว Chaukhi Massif</span> <span class="desc">หน้าผาหินแหลม "Georgian Dolomites" พักกินข้าว ถ่ายรูป</span></li>
+      <li><span class="time">12:30</span><span class="desc">เดินลงกลับ</span></li>
+      <li><span class="time">14:30</span><span class="desc">กลับถึง Fifth Season · เช็คเอาต์</span></li>
+      <li><span class="time">15:30</span><span class="desc">ลงเขา → ต่อรถ → ขับกลับ Kazbegi</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ Kazbegi</span></li>
+    </ul>
+  </section>
+
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>05</div>
+      <div class="day-title">
+        <h2>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</h2>
+        <div class="date">6 ตุลาคม · อังคาร</div>
+      </div>
+    </div>
+    <p class="day-note">วันกลับ · แวะ 2 จุดประวัติศาสตร์ทางผ่าน</p>
+    <ul class="tl">
+      <li><span class="time">08:00</span><span class="desc">เช็คเอาต์ ออกเดินทาง</span></li>
+      <li class="hi"><span class="time">11:00</span><span class="place">Uplistsikhe Cave City</span> <span class="desc">เมืองถ้ำ 3,000 ปี (~2 ชม.) 🏛️</span></li>
+      <li><span class="time">13:30</span><span class="desc">อาหารกลางวันแถว Gori</span></li>
+      <li class="hi"><span class="time">15:30</span><span class="place">Mtskheta + Jvari Monastery</span> <span class="desc">วิวแม่น้ำสองสายบรรจบ (~1.5 ชม.)</span></li>
+      <li><span class="time">17:30</span><span class="desc">ถึง Tbilisi · เช็คอิน</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ดีๆ ย่าน Fabrika ฉลองทริป</span></li>
+    </ul>
+  </section>
+
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>06</div>
+      <div class="day-title">
+        <h2>Tbilisi → กลับบ้าน</h2>
+        <div class="date">7 ตุลาคม · พุธ</div>
+      </div>
+    </div>
+    <ul class="tl">
+      <li><span class="time">09:00</span><span class="place">Dry Bridge Market</span> <span class="desc">ช้อปของฝาก ของเก่า 🛍️</span></li>
+      <li><span class="time">11:00</span><span class="desc">กาแฟ อาหารเช้าสาย Old Town · เก็บกระเป๋า</span></li>
+      <li><span class="desc">บินกลับ ✈️</span></li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h3>เช็กลิสต์ก่อนไป</h3>
+    <p class="lead">จัดการล่วงหน้าให้เรียบร้อย ทริปจะราบรื่น</p>
+    <ul class="check">
+      <li><span class="n">1</span><span class="t"><b>จอง Fifth Season ล่วงหน้า</b> <span>— ต้นตุลาห้องจำกัด (เรตติ้ง 9.1 บน Booking)</span></span></li>
+      <li><span class="n">2</span><span class="t"><b>โทรถามที่พักเรื่องสภาพถนน Juta</b> <span>— ถนนเปลี่ยนบ่อย ต้องเช็กก่อนวันเดินทาง</span></span></li>
+      <li><span class="n">3</span><span class="t"><b>จองรถ 4WD + คนขับ</b> <span>— สำหรับเส้น Kazbegi–Juta</span></span></li>
+      <li><span class="n">4</span><span class="t"><b>แพ็คเป้เล็ก</b> <span>— สำหรับค้าง Juta 1 คืน</span></span></li>
+    </ul>
+    <div class="pack">
+      <h4>เตรียมตัว Chaukhi Trail</h4>
+      <div class="pack-row">
+        <span>รองเท้า hiking</span>
+        <span>น้ำ 2 ลิตร</span>
+        <span>เสื้อกันหนาว</span>
+        <span>ครีมกันแดด</span>
+        <span>แผนที่ offline (AllTrails)</span>
+        <span>lunchbox จากที่พัก</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="next">
+    <h3>เก็บไว้ทริปหน้า</h3>
+    <div class="next-grid">
+      <div class="nx"><b>Svaneti</b><span>ภูเขาสุดอลังการ · หอคอยหินยุคกลาง · 3–4 วัน</span></div>
+      <div class="nx"><b>Kakheti / Sighnaghi</b><span>ไวน์เก่าแก่ที่สุดในโลก · เมืองโรแมนติก · 1–2 วัน</span></div>
+      <div class="nx"><b>Vardzia</b><span>เมืองถ้ำยักษ์ 13 ชั้น · 1–2 วัน</span></div>
+      <div class="nx"><b>Batumi</b><span>ทะเลดำ · เมืองทันสมัย · 2 วัน</span></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="big">გაუმარჯოს!</div>
+  ดื่มฉลองทริปจอร์เจีย · ขอให้เดินทางสนุก
+</footer>
+
+</body>
+</html>
