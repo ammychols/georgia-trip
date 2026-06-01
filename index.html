@@ -17,7 +17,6 @@
   body{font-family:'IBM Plex Sans Thai','Fraunces',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
 
-  /* HERO */
   .hero{position:relative;padding:70px 24px 60px;text-align:center;overflow:hidden;
     background:radial-gradient(ellipse 120% 80% at 50% 120%,rgba(60,74,58,.18),transparent 60%),linear-gradient(180deg,#2c3a2e 0%,#3a4a3a 45%,#4a5240 100%);color:var(--snow);}
   .hero::after{content:"";position:absolute;inset:0;
@@ -30,7 +29,6 @@
   .hero .meta{margin-top:20px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;}
   .chip{font-size:.8rem;letter-spacing:.02em;border:1px solid rgba(199,154,69,.45);color:rgba(251,249,243,.9);padding:5px 12px;border-radius:40px;background:rgba(255,255,255,.04);}
 
-  /* TABS */
   .tab-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--line);display:flex;}
   .tab-btn{flex:1;padding:14px 8px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:.95rem;font-weight:500;color:var(--stone);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s;}
   .tab-btn.active{color:var(--rust);border-bottom-color:var(--rust);}
@@ -38,14 +36,12 @@
   .tab-panel{display:none;padding:0 0 60px;}
   .tab-panel.active{display:block;}
 
-  /* INTRO */
   .intro{padding:44px 0 10px;text-align:center;}
   .intro p{font-weight:300;font-size:1.15rem;color:var(--moss);max-width:620px;margin:0 auto;line-height:1.6;}
   .rule{width:60px;height:1px;background:var(--rust);margin:28px auto;position:relative;}
   .rule::before,.rule::after{content:"";position:absolute;top:50%;width:5px;height:5px;border-radius:50%;background:var(--rust);transform:translateY(-50%);}
   .rule::before{left:-12px;}.rule::after{right:-12px;}
 
-  /* QUICK INFO CARDS */
   .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0 32px;}
   .info-card{background:var(--snow);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;}
   .info-card .icon{font-size:1.4rem;margin-bottom:5px;}
@@ -53,7 +49,6 @@
   .info-card .ivalue{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:.95rem;color:var(--pine);font-weight:600;}
   .info-card .isub{font-size:.75rem;color:var(--stone);margin-top:2px;}
 
-  /* DAY */
   .day{padding:28px 0;border-bottom:1px solid var(--line);}
   .day:last-of-type{border-bottom:none;}
   .day-head{display:flex;align-items:baseline;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
@@ -66,7 +61,6 @@
   .badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.05em;color:var(--snow);background:var(--rust);padding:3px 10px;border-radius:4px;vertical-align:middle;margin-left:8px;}
   .badge.star{background:var(--gold);color:var(--pine);}
 
-  /* TIMELINE */
   ul.tl{list-style:none;position:relative;padding-left:26px;}
   ul.tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line);}
   ul.tl li{position:relative;padding:6px 0;}
@@ -77,7 +71,6 @@
   .desc{color:var(--moss);font-size:.93rem;}
   .small{color:var(--stone);font-size:.83rem;}
 
-  /* TIP / WARN BOXES */
   .tip-box{background:var(--snow);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0 4px;font-size:.87rem;color:var(--moss);line-height:1.6;}
   .tip-box .tip-head{font-weight:700;color:var(--rust);margin-bottom:4px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;}
   .tip-box ul{padding-left:16px;margin-top:4px;}
@@ -85,7 +78,6 @@
   .warn-box{background:#fff8ee;border-left:3px solid var(--rust);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0 4px;font-size:.87rem;color:var(--moss);line-height:1.6;}
   .warn-box .warn-head{font-weight:700;color:var(--rust);margin-bottom:4px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;}
 
-  /* NEXT TRIP */
   .next{padding:30px 0 10px;}
   .next h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.2rem;color:var(--pine);margin-bottom:16px;text-align:center;}
   .next-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
@@ -99,6 +91,7 @@
   .budget-hero .total{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:2.8rem;font-weight:300;color:var(--rust);line-height:1;}
   .budget-hero .total small{font-size:1.1rem;color:var(--stone);margin-left:6px;}
   .budget-hero .bnote{font-size:.85rem;color:var(--stone);margin-top:8px;}
+  .budget-hero .bnote2{font-size:.82rem;color:var(--moss);margin-top:6px;font-weight:500;}
 
   .bsum-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 28px;}
   .bsum-card{background:var(--snow);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;}
@@ -116,6 +109,8 @@
   .budget-row .amount{text-align:right;flex-shrink:0;}
   .budget-row .amount b{display:block;font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:1rem;color:var(--rust);}
   .budget-row .amount span{color:var(--stone);font-size:.78rem;}
+  .tag-self{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--snow);background:var(--moss);padding:2px 7px;border-radius:4px;margin-left:6px;vertical-align:middle;}
+  .tag-hire{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--pine);background:var(--gold);padding:2px 7px;border-radius:4px;margin-left:6px;vertical-align:middle;}
 
   .food-table{width:100%;border-collapse:collapse;font-size:.86rem;margin-top:10px;}
   .food-table th{text-align:left;font-weight:600;color:var(--stone);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line);}
@@ -253,25 +248,25 @@
       <div class="daynum"><small>DAY</small>02</div>
       <div class="day-title"><h2>Tbilisi → Kazbegi</h2><div class="date">3 ตุลาคม · เสาร์</div></div>
     </div>
-    <p class="day-note">วัน Military Highway — เส้นทางสวยที่สุดของจอร์เจีย · ~150 กม. ขับ ~3 ชม. (หยุดหลายจุด รวม ~7 ชม.)</p>
+    <p class="day-note">วัน Military Highway — ขับเองตามสะดวก · ~150 กม. ขับ ~3 ชม. (หยุดหลายจุด รวม ~7–8 ชม.)</p>
     <ul class="tl">
-      <li><span class="time">07:30</span><span class="desc">ออกเดินทาง รถรับที่โรงแรม</span></li>
-      <li class="hi"><span class="time">09:00</span><span class="place">Ananuri Fortress</span> <span class="desc">ป้อมศตวรรษที่ 16 + วิว Zhinvali Reservoir สีมรกต — แวะ 30–45 นาที</span></li>
+      <li><span class="time">07:30</span><span class="desc">ออกเดินทาง — ขับรถออกจาก Tbilisi มุ่งหน้าเหนือ</span></li>
+      <li class="hi"><span class="time">09:00</span><span class="place">Ananuri Fortress</span> <span class="desc">ป้อมศตวรรษที่ 16 + วิว Zhinvali Reservoir สีมรกต — จอดรถแวะ 30–45 นาที</span></li>
       <li><span class="time">10:00</span><span class="place">Pasanauri</span> <span class="desc">จุดบรรจบแม่น้ำดำ-ขาว · ซื้อ Churchkhela สดริมทาง</span></li>
-      <li><span class="time">11:15</span><span class="place">Jvari Pass</span> <span class="desc">2,379 ม. จุดสูงสุด วิวเทือกเขาคอเคซัสกว้างสุดสุด</span></li>
-      <li class="hi"><span class="time">11:45</span><span class="place">Friendship Monument</span> <span class="desc">จุดถ่ายรูป iconic วิว 180° เหนือ Devil's Valley · สร้างปี 1983</span></li>
-      <li><span class="time">12:30</span><span class="place">Gudauri Viewpoint</span> <span class="desc">สกีรีสอร์ตอันดับ 1 ตุลาคมยังไม่มีหิมะ วิวดีมาก</span></li>
-      <li><span class="time">13:30</span><span class="desc">เช็คอิน Kazbegi · อาหารกลางวันแถว Stepantsminda</span></li>
+      <li><span class="time">11:15</span><span class="place">Jvari Pass</span> <span class="desc">2,379 ม. จุดสูงสุด วิวเทือกเขาคอเคซัสกว้างสุดสุด — จอดรถถ่ายรูปได้เลย</span></li>
+      <li class="hi"><span class="time">11:45</span><span class="place">Friendship Monument</span> <span class="desc">จุดถ่ายรูป iconic วิว 180° เหนือ Devil's Valley · มีลานจอดรถ</span></li>
+      <li><span class="time">12:30</span><span class="place">Gudauri Viewpoint</span> <span class="desc">สกีรีสอร์ตอันดับ 1 ตุลาคมยังไม่มีหิมะ วิวดีมาก จอดรถง่าย</span></li>
+      <li><span class="time">13:30</span><span class="desc">เช็คอิน Kazbegi · อาหารกลางวันแถว Stepantsminda · จอดรถที่พัก</span></li>
       <li class="hi"><span class="time">15:30</span><span class="place">Gergeti Trinity Church</span> <span class="desc">เดินขึ้น ~1.5 ชม. (2,170 ม.) แสง golden hour สวยมาก 🏔️</span><span class="small"> · ลง ~1 ชม. · ทางชันแต่ไม่ยาก</span></li>
       <li><span class="time">19:30</span><span class="desc">ดินเนอร์ · ลอง Khinkali 🥟 ร้านแถวตัวเมือง Kazbegi</span></li>
     </ul>
     <div class="tip-box">
-      <div class="tip-head">💡 เคล็ดลับ Military Highway</div>
+      <div class="tip-head">🚗 เคล็ดลับขับรถ Military Highway</div>
       <ul>
-        <li>บอกคนขับว่าอยากแวะทุกจุด ส่วนใหญ่ทำได้</li>
+        <li>ถนนลาดยางตลอด ขับง่าย ใช้ Google Maps / Maps.me offline ได้เลย</li>
+        <li>จอดรถได้ทุกจุด — แวะนานแค่ไหนก็ได้ ไม่ต้องรีบเหมือนมีคนขับ</li>
         <li>ซื้อ <b>Churchkhela</b> แถว Pasanauri อร่อยกว่าในเมืองมาก</li>
         <li>เดิน Gergeti ช่วง 15:30–17:00 แสงสวยสุด ถ่ายกับ Mt. Kazbek (5,047 ม.)</li>
-        <li>ใส่รองเท้าที่เดินสบายขึ้น Gergeti ด้วย ทางเป็นดินลูกรัง</li>
       </ul>
     </div>
   </section>
@@ -281,10 +276,10 @@
       <div class="daynum"><small>DAY</small>03</div>
       <div class="day-title"><h2>Kazbegi → Juta <span class="badge">ค้างคืน</span></h2><div class="date">4 ตุลาคม · อาทิตย์</div></div>
     </div>
-    <p class="day-note">ย้ายฐานเข้าหุบเขา · เก็บเป้เล็ก ฝากกระเป๋าใหญ่ไว้ที่ Kazbegi</p>
+    <p class="day-note">ย้ายฐานเข้าหุบเขา · ฝากรถเช่าไว้ที่ Kazbegi · จ้าง 4WD ท้องถิ่นขึ้น Juta</p>
     <ul class="tl">
-      <li><span class="time">09:00</span><span class="desc">เช็คเอาต์ · ฝากกระเป๋าใหญ่ที่ที่พัก Kazbegi ไว้ก่อน</span></li>
-      <li><span class="time">09:30</span><span class="desc">นั่ง 4WD จาก Kazbegi ขึ้น Juta ~45 นาที (ถนนดินลูกรัง รถธรรมดาผ่านไม่ได้)</span></li>
+      <li><span class="time">09:00</span><span class="desc">เช็คเอาต์ · ฝากกระเป๋าใหญ่และรถเช่าไว้ที่ที่พัก Kazbegi</span></li>
+      <li><span class="time">09:30</span><span class="desc">จ้าง 4WD ท้องถิ่นขึ้น Juta ~45 นาที — ถนนดินลูกรังขรุขระมาก รถเช่าธรรมดาเข้าไม่ได้</span></li>
       <li class="hi"><span class="time">11:00</span><span class="place">เช็คอิน Fifth Season – Juta</span> <span class="desc">เกสต์เฮ้าส์เล็กๆ เรตติ้ง 9.1 วิว Chaukhi Massif ตรงหน้า 🏔️</span></li>
       <li><span class="time">12:00</span><span class="desc">อาหารกลางวันที่ Fifth Season (สั่งล่วงหน้าเมื่อจอง)</span></li>
       <li class="hi"><span class="time">14:00</span><span class="place">เดินเล่น Juta Valley</span> <span class="desc">เลาะลำธาร ชมใบไม้เปลี่ยนสีสีทอง-แดง-ส้ม 🍂 ราบเรียบเดินง่าย 2–3 ชม.</span></li>
@@ -292,8 +287,8 @@
       <li><span class="time">18:30</span><span class="desc">ดินเนอร์ที่ Fifth Season ชมพระอาทิตย์ตกสีส้มทาบ Chaukhi 🌅</span></li>
     </ul>
     <div class="warn-box">
-      <div class="warn-head">⚠️ ต้องรู้ก่อนไป Juta</div>
-      สัญญาณมือถือน้อยมากหรือไม่มี · ดาวน์โหลดแผนที่ offline + AllTrails ก่อน · อากาศตุลาคม 3–10°C ตอนเช้า-เย็น เย็นมาก · เอาไฟฉายหรือ headlamp ไปด้วย
+      <div class="warn-head">⚠️ ทำไมต้องจ้าง 4WD ท้องถิ่นขึ้น Juta</div>
+      ถนน Kazbegi–Juta เป็นดินลูกรังชันและขรุขระมาก รถเช่าปกติเสียหายได้และอาจผิดเงื่อนไขประกัน · บริษัทเช่ารถห้ามนำรถเข้าถนนนี้ · จ้างคนท้องถิ่นปลอดภัยและถูกกว่าซ่อมรถ
     </div>
   </section>
 
@@ -310,7 +305,7 @@
       <li class="hi"><span class="time">11:00</span><span class="place">จุดชมวิว Chaukhi Massif</span> <span class="desc">"Georgian Dolomites" ยอดหินแหลม 12 ยอดตัดฟ้า — พักกินข้าว ถ่ายรูปเต็มที่</span></li>
       <li><span class="time">12:30</span><span class="desc">เดินลงกลับ (ง่ายและเร็วกว่าขาขึ้น)</span></li>
       <li><span class="time">14:30</span><span class="desc">กลับถึง Fifth Season · เช็คเอาต์ อาบน้ำ</span></li>
-      <li><span class="time">15:30</span><span class="desc">นั่ง 4WD ลงเขา → ขับกลับ Kazbegi · เช็คอินที่พักเดิม</span></li>
+      <li><span class="time">15:30</span><span class="desc">นั่ง 4WD ท้องถิ่นลงเขากลับ Kazbegi · รับรถเช่าที่ที่พัก · เช็คอินที่พักเดิม</span></li>
       <li><span class="time">19:30</span><span class="desc">ดินเนอร์ Kazbegi ฉลองหลัง hike 🥂</span></li>
     </ul>
     <div class="tip-box">
@@ -329,21 +324,22 @@
       <div class="daynum"><small>DAY</small>05</div>
       <div class="day-title"><h2>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</h2><div class="date">6 ตุลาคม · อังคาร</div></div>
     </div>
-    <p class="day-note">วันกลับ แวะ 2 จุดประวัติศาสตร์ · ระยะทางรวม ~250 กม.</p>
+    <p class="day-note">ขับเองกลับ Tbilisi แวะ 2 จุดประวัติศาสตร์ · ระยะทางรวม ~250 กม.</p>
     <ul class="tl">
-      <li><span class="time">08:00</span><span class="desc">เช็คเอาต์ ออกเดินทาง รถรับที่โรงแรม</span></li>
+      <li><span class="time">08:00</span><span class="desc">เช็คเอาต์ ออกขับรถมุ่งหน้า Uplistsikhe</span></li>
       <li class="hi"><span class="time">11:00</span><span class="place">Uplistsikhe Cave City</span> <span class="desc">เมืองถ้ำหินอายุ 3,000 ปี — โกดังไวน์ โรงละคร ห้องโถงแกะหิน ค่าเข้า ~7 GEL 🏛️</span></li>
       <li><span class="time">13:30</span><span class="desc">อาหารกลางวันแถว Gori · ลอง Shotis Puri (ขนมปังอบเตาดิน)</span></li>
       <li class="hi"><span class="time">15:30</span><span class="place">Mtskheta + Jvari Monastery</span> <span class="desc">เมืองหลวงเก่า UNESCO · วิวจาก Jvari ชมแม่น้ำสองสายบรรจบ (~1.5 ชม.)</span></li>
-      <li><span class="time">17:30</span><span class="desc">ถึง Tbilisi · เช็คอินแถว Fabrika หรือ Old Town</span></li>
+      <li><span class="time">17:30</span><span class="desc">ถึง Tbilisi · คืนรถที่สนามบินหรือสำนักงาน · เช็คอินแถว Fabrika หรือ Old Town</span></li>
       <li class="hi"><span class="time">19:30</span><span class="desc">ดินเนอร์ฉลองทริป ย่าน Fabrika 🥂</span></li>
     </ul>
     <div class="tip-box">
-      <div class="tip-head">💡 Day 5 Tips</div>
+      <div class="tip-head">🚗 Day 5 Tips</div>
       <ul>
-        <li><b>Uplistsikhe:</b> มีไกด์ให้เช่า (optional) · แดดร้อนบนหิน เอาน้ำ + หมวกไปด้วย</li>
-        <li><b>Jvari Monastery:</b> แต่งกายสุภาพ มีผ้าให้ยืม · วิวจากด้านนอกโบสถ์สวยมากพอกัน</li>
-        <li>ย่าน <b>Fabrika</b> คือ hub คนรุ่นใหม่ ร้านอาหารหลากหลาย บาร์ดีๆ เหมาะฉลองวันสุดท้าย</li>
+        <li>ถนน Kazbegi–Gori–Tbilisi เป็น highway ดี ขับสบาย ~4–5 ชม. รวมแวะ</li>
+        <li><b>Uplistsikhe:</b> มีลานจอดรถ · แดดร้อนบนหิน เอาน้ำ + หมวกไปด้วย</li>
+        <li><b>Jvari Monastery:</b> แต่งกายสุภาพ มีผ้าให้ยืม · วิวจากด้านนอกสวยพอกัน</li>
+        <li>คืนรถที่ Tbilisi Airport สะดวก ไม่ต้องหาที่จอดในเมือง</li>
       </ul>
     </div>
   </section>
@@ -388,15 +384,16 @@
 <div class="wrap">
 
   <div class="budget-hero">
-    <div class="blabel">ประมาณการงบรวม / คน</div>
-    <div class="total">45,000–65,000<small>บาท</small></div>
-    <div class="bnote">ยังไม่รวมตั๋วเครื่องบิน · ขึ้นอยู่กับที่พักและการใช้จ่ายส่วนตัว</div>
+    <div class="blabel">งบรวมทั้งหมด / คน (รวมตั๋วเครื่องบินแล้ว)</div>
+    <div class="total">40,000–75,000<small>บาท</small></div>
+    <div class="bnote2">ค่าใช้จ่ายในจอร์เจีย (ไม่รวมตั๋ว): ~15,000–30,000 บาท &nbsp;+&nbsp; ตั๋วบิน: ~25,000–45,000 บาท</div>
+    <div class="bnote">ขึ้นอยู่กับราคาตั๋ว ที่พัก และการใช้จ่ายส่วนตัว</div>
   </div>
 
   <div class="bsum-row">
     <div class="bsum-card"><div class="sc-label">ตั๋วบิน</div><div class="sc-amount">25k–45k</div><div class="sc-note">บาท / คน</div></div>
-    <div class="bsum-card"><div class="sc-label">ที่พัก 5 คืน</div><div class="sc-amount">9k–15k</div><div class="sc-note">บาท / คน (แชร์คู่)</div></div>
-    <div class="bsum-card"><div class="sc-label">รถ + อาหาร</div><div class="sc-amount">11k–20k</div><div class="sc-note">บาท / คน</div></div>
+    <div class="bsum-card"><div class="sc-label">ที่พัก 5 คืน</div><div class="sc-amount">5k–10k</div><div class="sc-note">บาท / คน (แชร์คู่)</div></div>
+    <div class="bsum-card"><div class="sc-label">รถ+อาหาร+อื่นๆ</div><div class="sc-amount">10k–20k</div><div class="sc-note">บาท / คน</div></div>
   </div>
 
   <div class="budget-section">
@@ -438,23 +435,30 @@
   <div class="budget-section">
     <h3>🚗 การเดินทางในจอร์เจีย</h3>
     <div class="budget-row">
-      <div class="item"><b>รถ + คนขับ Military Highway (Day 2)</b><span>Tbilisi → Kazbegi แวะ Ananuri, Pasanauri, Friendship Monument, Gudauri · ~7 ชม.</span></div>
-      <div class="amount"><b>3,000–5,000</b><span>บาท/คัน</span></div>
+      <div class="item">
+        <b>เช่ารถ 4WD / SUV ขับเอง <span class="tag-self">ขับเอง</span></b>
+        <span>Day 2, 3, 5 · เช่าจากสนามบิน Tbilisi ง่ายสุด · แนะนำ Hertz / Sixt / Europcar · 4WD ดีกว่าเพราะถนนบางช่วงขรุขระ</span>
+      </div>
+      <div class="amount"><b>1,200–1,800</b><span>บาท/วัน (÷2 คน)</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>รถ 4WD Kazbegi → Juta (ไป-กลับ) (Day 3–4)</b><span>ถนนต้องใช้ 4WD เท่านั้น · ถามที่พัก Kazbegi ช่วยจัดได้</span></div>
-      <div class="amount"><b>1,500–2,500</b><span>บาท/คัน</span></div>
+      <div class="item">
+        <b>4WD ท้องถิ่น Kazbegi ↔ Juta <span class="tag-hire">จ้างคนขับ</span></b>
+        <span>Day 3 & 4 · ถนนดินลูกรังชันมาก รถเช่าเข้าไม่ได้ (ผิดเงื่อนไขประกัน) · ถามที่พัก Kazbegi จัดให้</span>
+      </div>
+      <div class="amount"><b>1,500–2,500</b><span>บาท/เที่ยว</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>รถ + คนขับ Kazbegi → Tbilisi (Day 5)</b><span>แวะ Uplistsikhe + Gori + Mtskheta · แวะมากกว่า ราคาสูงขึ้น · ~9 ชม.</span></div>
-      <div class="amount"><b>3,500–5,500</b><span>บาท/คัน</span></div>
-    </div>
-    <div class="budget-row">
-      <div class="item"><b>Bolt (แท็กซี่ app) ใน Tbilisi</b><span>Day 1 & 6 สนามบิน + เดินเที่ยวในเมือง ราคาถูกมาก</span></div>
-      <div class="amount"><b>300–600</b><span>บาท</span></div>
+      <div class="item"><b>Bolt (แท็กซี่ app) ใน Tbilisi <span class="tag-self">ขับเอง</span></b><span>Day 1 &amp; 6 สนามบิน + เดินเที่ยวในเมือง วันที่มีรถเช่าให้ขับเองได้เลย</span></div>
+      <div class="amount"><b>200–500</b><span>บาท</span></div>
     </div>
     <div class="budget-note">
-      <b>แชร์รถ:</b> ถ้าไปกลุ่ม 3–4 คน ค่ารถ/คนลดลงมาก · ถ้าไป 2 คนหาคนแชร์รถได้ที่โรงแรมหรือ Facebook Group "Georgia Travelers"
+      <b>สรุปค่ารถ (ต่อคน สำหรับ 2 คน):</b>
+      <ul>
+        <li>เช่ารถ 4WD ~4 วัน × 1,500 บาท/วัน = 6,000 บาท ÷ 2 = <b>~3,000 บาท/คน</b></li>
+        <li>4WD Juta ไป-กลับ 2 เที่ยว × 2,000 บาท = 4,000 บาท ÷ 2 = <b>~2,000 บาท/คน</b></li>
+        <li>รวมค่ารถทั้งหมด: <b>~5,000–7,000 บาท/คน</b> — ถูกกว่าจ้างคนขับทุกวัน</li>
+      </ul>
     </div>
   </div>
 
@@ -470,7 +474,7 @@
       </tr>
       <tr>
         <td><b>Military Hwy</b><br><span>Day 2</span></td>
-        <td>Churchkhela ริมทาง, Khinkali + Mtsvadi Kazbegi<br><span style="color:var(--stone);font-size:.77rem;">ร้านเล็กๆ ตามทาง ราคาถูกมาก</span></td>
+        <td>Churchkhela ริมทาง, Khinkali + Mtsvadi Kazbegi<br><span style="color:var(--stone);font-size:.77rem;">ร้านเล็กๆ ตามทาง จอดรถซื้อได้เลย</span></td>
         <td>400–700 บาท</td>
       </tr>
       <tr>
@@ -541,11 +545,11 @@
   </div>
 
   <div class="budget-note">
-    <b>สรุปเคล็ดลับประหยัด:</b>
+    <b>เคล็ดลับขับเองประหยัด:</b>
     <ul>
-      <li>แชร์รถกับนักท่องเที่ยวคนอื่น — ค่ารถลดได้ 50% ทันที</li>
-      <li>จอร์เจียถูกมาก อาหาร-ดื่ม-ที่พักล้วนเป็นมิตร เทียบยุโรปถูกกว่า 3–5 เท่า</li>
-      <li>ชำระเงินสด GEL ที่ร้านท้องถิ่นได้ราคาดีกว่าบัตร</li>
+      <li>เช่ารถ 4WD ที่สนามบิน Tbilisi ราคาถูกกว่าจ้างคนขับทุกวันมาก</li>
+      <li>จ้างคนขับเฉพาะ Juta เท่านั้น ที่อื่นถนนดีขับเองสบาย</li>
+      <li>จอดรถได้ทุกจุด ไม่ต้องรีบ เต็มที่กับวิวแต่ละจุด</li>
       <li>ที่พัก Half Board (รวมอาหารเช้า-เย็น) ที่ Kazbegi ประหยัดค่าอาหารได้มาก</li>
     </ul>
   </div>
@@ -564,9 +568,9 @@
       <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง Fifth Season – Juta</b><span>⚠️ ต้นตุลาห้องจำกัดมาก จองด่วนที่สุด! (Booking.com เรตติ้ง 9.1) มีห้องน้อย เต็มเร็วมาก</span></div></label>
       <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Kazbegi 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา หรือ Rooms Hotel Kazbegi (budget สูงกว่า)</span></div></label>
       <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Tbilisi 2 คืน</b><span>ย่าน Old Town สะดวกเดินเที่ยว หรือแถว Fabrika สำหรับคืนสุดท้าย</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับ Military Highway</b><span>Day 2 Tbilisi → Kazbegi แวะทุกจุด · หา Facebook Group "Georgia Travelers" หรือถามโรงแรม</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ 4WD Kazbegi–Juta (ไป-กลับ)</b><span>Day 3–4 ถนนต้องใช้ 4WD เท่านั้น · ถามที่พัก Kazbegi ช่วยจัดได้ ราคา 1,500–2,500 บาท/คัน</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับวันกลับ (Day 5)</b><span>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi แวะมากกว่า ราคาสูงขึ้น</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช่ารถ 4WD / SUV จากสนามบิน Tbilisi</b><span>Day 2–5 · จอง Hertz / Sixt / Europcar ล่วงหน้า · ขอ international driving permit จากไทยก่อน (ต้องใช้)</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ขอ International Driving Permit (IDP)</b><span>ทำที่ขนส่งทางบกในไทย ใช้เวลา 1 วัน · ค่าธรรมเนียม ~505 บาท · จำเป็นสำหรับขับรถในจอร์เจีย</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง 4WD ท้องถิ่น Kazbegi ↔ Juta (Day 3–4)</b><span>ถามที่พัก Kazbegi ช่วยจัดได้ · ราคา 1,500–2,500 บาท/เที่ยว · จองล่วงหน้า 1–2 วัน</span></div></label>
       <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช็กสภาพถนน Juta กับที่พัก</b><span>โทรถามก่อน 1–2 วัน ถนนดินลูกรังอาจปิดกะทันหันหลังฝน</span></div></label>
       <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อประกันการเดินทาง</b><span>ต้องครอบคลุม hiking + outdoor activities + ระดับความสูง 3,000 ม. · แนะนำ Safety Wing หรือ World Nomads</span></div></label>
       <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ดาวน์โหลดแผนที่ offline</b><span>Maps.me หรือ Google Maps offline พื้นที่ Kazbegi + Juta · ดาวน์โหลด AllTrails Chaukhi Trail ด้วย · ไม่มีสัญญาณที่ Juta</span></div></label>
@@ -636,6 +640,8 @@
     <div class="pack-grid">
       <label class="pack-item"><input type="checkbox"><span>พาสปอร์ต (อายุเหลือ 6+ เดือน)</span></label>
       <label class="pack-item"><input type="checkbox"><span>ถ่ายรูปพาสปอร์ตเก็บ Cloud</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ใบขับขี่สากล (IDP) ✱ จำเป็น</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ใบขับขี่ไทย (คู่กับ IDP)</span></label>
       <label class="pack-item"><input type="checkbox"><span>กล้อง + memory card สำรอง</span></label>
       <label class="pack-item"><input type="checkbox"><span>Power bank ≥ 20,000 mAh</span></label>
       <label class="pack-item"><input type="checkbox"><span>สายชาร์จ USB-C + adapter EU</span></label>
