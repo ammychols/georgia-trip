@@ -30,9 +30,11 @@
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+  /* HERO */
   .hero{
     position:relative;
-    padding:90px 24px 70px;
+    padding:70px 24px 60px;
     text-align:center;
     overflow:hidden;
     background:
@@ -47,130 +49,151 @@
       repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 2px, transparent 2px 5px);
     pointer-events:none;
   }
-  .peaks{position:absolute;bottom:-2px;left:0;width:100%;height:90px;display:block;}
-  .hero .kicker{
-    font-family:'IBM Plex Sans Thai',serif;font-weight:400;
-    letter-spacing:.04em;font-size:1.05rem;color:var(--gold);
-    margin-bottom:18px;position:relative;z-index:2;
-  }
-  .hero h1{
-    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:300;
-    font-size:clamp(2.6rem,8vw,4.4rem);line-height:.98;
-    letter-spacing:-.01em;position:relative;z-index:2;
-  }
+  .peaks{position:absolute;bottom:-2px;left:0;width:100%;height:70px;display:block;}
+  .hero .kicker{font-family:'IBM Plex Sans Thai',serif;font-weight:400;letter-spacing:.04em;font-size:1rem;color:var(--gold);margin-bottom:14px;position:relative;z-index:2;}
+  .hero h1{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:300;font-size:clamp(2.4rem,8vw,4rem);line-height:.98;letter-spacing:-.01em;position:relative;z-index:2;}
   .hero h1 b{font-weight:600;font-style:italic;color:var(--gold);}
-  .hero .sub{
-    margin-top:22px;font-weight:300;font-size:1.05rem;
-    color:rgba(251,249,243,.82);position:relative;z-index:2;
+  .hero .sub{margin-top:16px;font-weight:300;font-size:1rem;color:rgba(251,249,243,.82);position:relative;z-index:2;}
+  .hero .meta{margin-top:20px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;}
+  .chip{font-size:.8rem;letter-spacing:.02em;border:1px solid rgba(199,154,69,.45);color:rgba(251,249,243,.9);padding:5px 12px;border-radius:40px;background:rgba(255,255,255,.04);}
+
+  /* TABS */
+  .tab-nav{
+    position:sticky;top:0;z-index:100;
+    background:var(--paper);
+    border-bottom:2px solid var(--line);
+    display:flex;
   }
-  .hero .meta{
-    margin-top:26px;display:flex;gap:10px;justify-content:center;
-    flex-wrap:wrap;position:relative;z-index:2;
+  .tab-btn{
+    flex:1;padding:14px 8px;
+    font-family:'IBM Plex Sans Thai',sans-serif;font-size:.95rem;font-weight:500;
+    color:var(--stone);background:none;border:none;cursor:pointer;
+    border-bottom:3px solid transparent;margin-bottom:-2px;
+    transition:color .2s, border-color .2s;
   }
-  .chip{
-    font-size:.82rem;letter-spacing:.02em;
-    border:1px solid rgba(199,154,69,.45);
-    color:rgba(251,249,243,.9);
-    padding:6px 14px;border-radius:40px;
-    background:rgba(255,255,255,.04);
-  }
-  .intro{padding:54px 0 10px;text-align:center;}
-  .intro p{
-    font-family:'IBM Plex Sans Thai',serif;font-weight:300;
-    font-size:1.2rem;color:var(--moss);max-width:620px;margin:0 auto;
-    line-height:1.6;
-  }
-  .rule{width:60px;height:1px;background:var(--rust);margin:34px auto;position:relative;}
-  .rule::before,.rule::after{
-    content:"";position:absolute;top:50%;width:5px;height:5px;
-    border-radius:50%;background:var(--rust);transform:translateY(-50%);
-  }
+  .tab-btn.active{color:var(--rust);border-bottom-color:var(--rust);}
+  .tab-btn:hover{color:var(--moss);}
+
+  /* TAB PANELS */
+  .tab-panel{display:none;padding:0 0 60px;}
+  .tab-panel.active{display:block;}
+
+  /* INTRO */
+  .intro{padding:44px 0 10px;text-align:center;}
+  .intro p{font-family:'IBM Plex Sans Thai',serif;font-weight:300;font-size:1.15rem;color:var(--moss);max-width:620px;margin:0 auto;line-height:1.6;}
+  .rule{width:60px;height:1px;background:var(--rust);margin:28px auto;position:relative;}
+  .rule::before,.rule::after{content:"";position:absolute;top:50%;width:5px;height:5px;border-radius:50%;background:var(--rust);transform:translateY(-50%);}
   .rule::before{left:-12px;}.rule::after{right:-12px;}
-  .day{padding:30px 0;border-bottom:1px solid var(--line);}
+
+  /* DAY */
+  .day{padding:28px 0;border-bottom:1px solid var(--line);}
   .day:last-of-type{border-bottom:none;}
-  .day-head{display:flex;align-items:baseline;gap:18px;margin-bottom:20px;flex-wrap:wrap;}
-  .daynum{
-    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:300;
-    font-size:3.2rem;line-height:.8;color:var(--rust);flex-shrink:0;
-  }
-  .daynum small{display:block;font-size:.7rem;letter-spacing:.22em;
-    color:var(--stone);font-family:'IBM Plex Sans Thai';margin-bottom:4px;font-weight:500;}
+  .day-head{display:flex;align-items:baseline;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+  .daynum{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:300;font-size:3rem;line-height:.8;color:var(--rust);flex-shrink:0;}
+  .daynum small{display:block;font-size:.7rem;letter-spacing:.22em;color:var(--stone);font-family:'IBM Plex Sans Thai';margin-bottom:4px;font-weight:500;}
   .day-title{flex:1;min-width:200px;}
-  .day-title h2{
-    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.45rem;
-    color:var(--pine);line-height:1.15;
-  }
+  .day-title h2{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.4rem;color:var(--pine);line-height:1.15;}
   .day-title .date{font-size:.85rem;color:var(--stone);margin-top:2px;}
-  .day-note{font-family:'IBM Plex Sans Thai',serif;color:var(--stone);font-size:.95rem;margin-bottom:16px;}
-  .badge{
-    display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.05em;
-    color:var(--snow);background:var(--rust);padding:3px 10px;border-radius:4px;
-    vertical-align:middle;margin-left:8px;
-  }
+  .day-note{font-family:'IBM Plex Sans Thai',serif;color:var(--stone);font-size:.9rem;margin-bottom:14px;}
+  .badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.05em;color:var(--snow);background:var(--rust);padding:3px 10px;border-radius:4px;vertical-align:middle;margin-left:8px;}
   .badge.star{background:var(--gold);color:var(--pine);}
+
+  /* TIMELINE */
   ul.tl{list-style:none;position:relative;padding-left:26px;}
-  ul.tl::before{
-    content:"";position:absolute;left:6px;top:8px;bottom:8px;
-    width:1px;background:var(--line);
-  }
-  ul.tl li{position:relative;padding:7px 0;}
-  ul.tl li::before{
-    content:"";position:absolute;left:-23px;top:14px;
-    width:9px;height:9px;border-radius:50%;
-    background:var(--paper);border:2px solid var(--moss);
-  }
+  ul.tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line);}
+  ul.tl li{position:relative;padding:6px 0;}
+  ul.tl li::before{content:"";position:absolute;left:-23px;top:13px;width:9px;height:9px;border-radius:50%;background:var(--paper);border:2px solid var(--moss);}
   ul.tl li.hi::before{background:var(--gold);border-color:var(--rust);}
-  .time{
-    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:600;font-size:.92rem;
-    color:var(--rust);margin-right:10px;
-  }
+  .time{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:600;font-size:.9rem;color:var(--rust);margin-right:8px;}
   .place{font-weight:600;color:var(--pine);}
-  .desc{color:var(--moss);font-size:.95rem;}
-  .small{color:var(--stone);font-size:.85rem;}
-  .panel{
-    background:var(--paper2);border:1px solid var(--line);
-    border-radius:14px;padding:34px 32px;margin:50px 0;position:relative;
-  }
-  .panel h3{
-    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.35rem;
-    color:var(--pine);margin-bottom:6px;
-  }
-  .panel .lead{font-size:.9rem;color:var(--stone);margin-bottom:22px;}
-  .check{list-style:none;display:grid;gap:14px;}
-  .check li{display:flex;gap:14px;align-items:flex-start;}
-  .check .n{
-    font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:600;color:var(--rust);
-    flex-shrink:0;width:24px;text-align:center;
-    border-bottom:2px solid var(--gold);line-height:1.4;
-  }
-  .check .t b{color:var(--pine);}
-  .check .t span{color:var(--moss);font-size:.95rem;}
-  .pack{margin-top:26px;padding-top:22px;border-top:1px dashed var(--line);}
-  .pack h4{font-size:.78rem;letter-spacing:.18em;color:var(--stone);
-    text-transform:uppercase;margin-bottom:12px;font-weight:600;}
-  .pack-row{display:flex;flex-wrap:wrap;gap:8px;}
-  .pack-row span{
-    background:var(--snow);border:1px solid var(--line);
-    font-size:.85rem;padding:5px 12px;border-radius:30px;color:var(--moss);
-  }
+  .desc{color:var(--moss);font-size:.93rem;}
+  .small{color:var(--stone);font-size:.83rem;}
+
+  /* NEXT TRIP */
   .next{padding:30px 0 10px;}
-  .next h3{
-    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.25rem;
-    color:var(--pine);margin-bottom:18px;text-align:center;
-  }
-  .next-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .next h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.2rem;color:var(--pine);margin-bottom:16px;text-align:center;}
+  .next-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
   .nx{background:var(--snow);border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
   .nx b{color:var(--rust);font-family:'Fraunces','IBM Plex Sans Thai',serif;}
-  .nx span{display:block;font-size:.85rem;color:var(--stone);margin-top:2px;}
-  footer{
-    text-align:center;padding:50px 24px 60px;color:var(--stone);
-    font-family:'IBM Plex Sans Thai',serif;font-style:italic;
+  .nx span{display:block;font-size:.83rem;color:var(--stone);margin-top:2px;}
+
+  /* ── BUDGET TAB ── */
+  .budget-hero{
+    background:var(--paper2);border:1px solid var(--line);border-radius:14px;
+    padding:28px 28px 20px;margin:32px 0 24px;text-align:center;
   }
+  .budget-hero .label{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:6px;}
+  .budget-hero .total{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:2.8rem;font-weight:300;color:var(--rust);line-height:1;}
+  .budget-hero .total small{font-size:1.1rem;color:var(--stone);margin-left:6px;}
+  .budget-hero .note{font-size:.85rem;color:var(--stone);margin-top:8px;}
+
+  .budget-section{margin-bottom:28px;}
+  .budget-section h3{
+    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.1rem;
+    color:var(--pine);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:14px;
+  }
+  .budget-row{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);gap:12px;}
+  .budget-row:last-child{border-bottom:none;}
+  .budget-row .item{flex:1;}
+  .budget-row .item b{display:block;color:var(--pine);font-size:.95rem;}
+  .budget-row .item span{color:var(--stone);font-size:.82rem;}
+  .budget-row .amount{text-align:right;flex-shrink:0;}
+  .budget-row .amount b{display:block;font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:1rem;color:var(--rust);}
+  .budget-row .amount span{color:var(--stone);font-size:.78rem;}
+
+  .budget-note{
+    background:var(--snow);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px;margin-top:10px;font-size:.87rem;color:var(--stone);line-height:1.6;
+  }
+  .budget-note b{color:var(--moss);}
+
+  /* ── CHECKLIST TAB ── */
+  .cl-section{margin-bottom:32px;}
+  .cl-section h3{
+    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.15rem;
+    color:var(--pine);margin-bottom:4px;
+  }
+  .cl-section .lead{font-size:.85rem;color:var(--stone);margin-bottom:16px;}
+  .cl-group{display:grid;gap:10px;}
+  .cl-item{
+    display:flex;align-items:flex-start;gap:12px;
+    background:var(--snow);border:1px solid var(--line);
+    border-radius:10px;padding:12px 14px;cursor:pointer;
+    transition:border-color .15s, background .15s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .cl-item:hover{border-color:var(--moss);}
+  .cl-item input[type=checkbox]{
+    width:18px;height:18px;flex-shrink:0;margin-top:2px;
+    accent-color:var(--rust);cursor:pointer;
+  }
+  .cl-item .cl-text{flex:1;}
+  .cl-item .cl-text b{display:block;color:var(--pine);font-size:.95rem;}
+  .cl-item .cl-text span{color:var(--stone);font-size:.82rem;}
+  .cl-item.done{background:var(--paper2);border-color:var(--line);}
+  .cl-item.done .cl-text b{text-decoration:line-through;color:var(--stone);}
+
+  .cl-divider{margin:28px 0;border:none;border-top:1px solid var(--line);}
+
+  .pack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+  .pack-item{
+    display:flex;align-items:center;gap:10px;
+    background:var(--snow);border:1px solid var(--line);
+    border-radius:8px;padding:10px 12px;cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .pack-item input[type=checkbox]{width:16px;height:16px;flex-shrink:0;accent-color:var(--rust);cursor:pointer;}
+  .pack-item span{font-size:.88rem;color:var(--moss);}
+  .pack-item.done span{text-decoration:line-through;color:var(--stone);}
+
+  /* FOOTER */
+  footer{text-align:center;padding:40px 24px 60px;color:var(--stone);font-family:'IBM Plex Sans Thai',serif;font-style:italic;}
   footer .big{font-size:1.4rem;color:var(--moss);margin-bottom:8px;}
+
   @media(max-width:560px){
-    .daynum{font-size:2.6rem;}
-    .panel{padding:26px 20px;}
-    .next-grid{grid-template-columns:1fr;}
+    .daynum{font-size:2.5rem;}
+    .next-grid,.pack-grid{grid-template-columns:1fr;}
+    .budget-hero .total{font-size:2.2rem;}
   }
 </style>
 </head>
@@ -185,11 +208,20 @@
     <span class="chip">6 วัน 5 คืน</span>
     <span class="chip">เน้นธรรมชาติ</span>
   </div>
-  <svg class="peaks" viewBox="0 0 1200 90" preserveAspectRatio="none">
-    <path d="M0,90 L0,55 L120,20 L230,50 L340,8 L470,45 L600,15 L730,48 L860,22 L1000,52 L1110,28 L1200,50 L1200,90 Z" fill="#f4efe4"/>
+  <svg class="peaks" viewBox="0 0 1200 70" preserveAspectRatio="none">
+    <path d="M0,70 L0,42 L120,16 L230,38 L340,6 L470,34 L600,11 L730,37 L860,17 L1000,40 L1110,21 L1200,38 L1200,70 Z" fill="#f4efe4"/>
   </svg>
 </header>
 
+<!-- TAB NAV -->
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="itinerary">🗺 แผนการเดินทาง</button>
+  <button class="tab-btn" data-tab="budget">💰 งบประมาณ</button>
+  <button class="tab-btn" data-tab="checklist">✅ เช็กลิสต์</button>
+</nav>
+
+<!-- ═══════════════════════════════════ ITINERARY TAB -->
+<div class="tab-panel active" id="tab-itinerary">
 <div class="wrap">
   <section class="intro">
     <p>"ภูเขาคอเคซัส โบสถ์โบราณบนยอดเขา และหุบเขาสีทองในฤดูใบไม้ร่วง — จอร์เจียในแบบที่ดีที่สุดสำหรับครั้งแรก"</p>
@@ -199,10 +231,7 @@
   <section class="day">
     <div class="day-head">
       <div class="daynum"><small>DAY</small>01</div>
-      <div class="day-title">
-        <h2>ถึง Tbilisi</h2>
-        <div class="date">2 ตุลาคม · ศุกร์</div>
-      </div>
+      <div class="day-title"><h2>ถึง Tbilisi</h2><div class="date">2 ตุลาคม · ศุกร์</div></div>
     </div>
     <p class="day-note">วันเดินทาง เอาแบบสบายๆ ปรับตัวกับเมือง</p>
     <ul class="tl">
@@ -216,10 +245,7 @@
   <section class="day">
     <div class="day-head">
       <div class="daynum"><small>DAY</small>02</div>
-      <div class="day-title">
-        <h2>Tbilisi → Kazbegi</h2>
-        <div class="date">3 ตุลาคม · เสาร์</div>
-      </div>
+      <div class="day-title"><h2>Tbilisi → Kazbegi</h2><div class="date">3 ตุลาคม · เสาร์</div></div>
     </div>
     <p class="day-note">วันขับ Military Highway — เส้นทางที่สวยที่สุดของจอร์เจีย</p>
     <ul class="tl">
@@ -238,16 +264,13 @@
   <section class="day">
     <div class="day-head">
       <div class="daynum"><small>DAY</small>03</div>
-      <div class="day-title">
-        <h2>Kazbegi → Juta <span class="badge">ค้างคืน</span></h2>
-        <div class="date">4 ตุลาคม · อาทิตย์</div>
-      </div>
+      <div class="day-title"><h2>Kazbegi → Juta <span class="badge">ค้างคืน</span></h2><div class="date">4 ตุลาคม · อาทิตย์</div></div>
     </div>
     <p class="day-note">ย้ายฐานเข้าหุบเขา · เก็บเป้เล็ก ฝากกระเป๋าใหญ่ที่ Kazbegi</p>
     <ul class="tl">
       <li><span class="time">09:30</span><span class="desc">ออกเดินทางไป Juta → จอดจุดถนนปิด → ต่อรถท้องถิ่น → ขึ้น Fifth Season</span></li>
       <li class="hi"><span class="time">13:00</span><span class="place">เช็คอิน Fifth Season</span> <span class="desc">ชมวิว Chaukhi Massif ตรงหน้า 🏔️</span></li>
-      <li class="hi"><span class="time">14:30</span><span class="place">เดินเล่น Juta Valley</span> <span class="desc">เลาะชมวิวเบาๆ ใบไม้เปลี่ยนสี 🍂 (ไม่หนัก เก็บแรงพรุ่งนี้)</span></li>
+      <li class="hi"><span class="time">14:30</span><span class="place">เดินเล่น Juta Valley</span> <span class="desc">เลาะชมวิวเบาๆ ใบไม้เปลี่ยนสี 🍂</span></li>
       <li><span class="time">18:00</span><span class="desc">ดินเนอร์ที่ Fifth Season ชมพระอาทิตย์ตก 🌅</span></li>
     </ul>
   </section>
@@ -255,16 +278,13 @@
   <section class="day">
     <div class="day-head">
       <div class="daynum"><small>DAY</small>04</div>
-      <div class="day-title">
-        <h2>Juta — Chaukhi Trail → Kazbegi <span class="badge star">★ ไฮไลต์</span></h2>
-        <div class="date">5 ตุลาคม · จันทร์</div>
-      </div>
+      <div class="day-title"><h2>Chaukhi Trail <span class="badge star">★ ไฮไลต์</span></h2><div class="date">5 ตุลาคม · จันทร์</div></div>
     </div>
     <p class="day-note">วันไฮไลต์สูงสุด · เริ่ม trail จากหน้าที่พัก</p>
     <ul class="tl">
       <li><span class="time">07:00</span><span class="desc">อาหารเช้า + ขอ lunchbox จากที่พัก</span></li>
       <li class="hi"><span class="time">08:00</span><span class="place">เริ่มเดิน Juta–Chaukhi Trail</span> 🥾</li>
-      <li class="hi"><span class="time">11:00</span><span class="place">จุดชมวิว Chaukhi Massif</span> <span class="desc">หน้าผาหินแหลม "Georgian Dolomites" พักกินข้าว ถ่ายรูป</span></li>
+      <li class="hi"><span class="time">11:00</span><span class="place">จุดชมวิว Chaukhi Massif</span> <span class="desc">"Georgian Dolomites" พักกินข้าว ถ่ายรูป</span></li>
       <li><span class="time">12:30</span><span class="desc">เดินลงกลับ</span></li>
       <li><span class="time">14:30</span><span class="desc">กลับถึง Fifth Season · เช็คเอาต์</span></li>
       <li><span class="time">15:30</span><span class="desc">ลงเขา → ต่อรถ → ขับกลับ Kazbegi</span></li>
@@ -275,10 +295,7 @@
   <section class="day">
     <div class="day-head">
       <div class="daynum"><small>DAY</small>05</div>
-      <div class="day-title">
-        <h2>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</h2>
-        <div class="date">6 ตุลาคม · อังคาร</div>
-      </div>
+      <div class="day-title"><h2>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</h2><div class="date">6 ตุลาคม · อังคาร</div></div>
     </div>
     <p class="day-note">วันกลับ · แวะ 2 จุดประวัติศาสตร์ทางผ่าน</p>
     <ul class="tl">
@@ -294,38 +311,13 @@
   <section class="day">
     <div class="day-head">
       <div class="daynum"><small>DAY</small>06</div>
-      <div class="day-title">
-        <h2>Tbilisi → กลับบ้าน</h2>
-        <div class="date">7 ตุลาคม · พุธ</div>
-      </div>
+      <div class="day-title"><h2>Tbilisi → กลับบ้าน</h2><div class="date">7 ตุลาคม · พุธ</div></div>
     </div>
     <ul class="tl">
       <li><span class="time">09:00</span><span class="place">Dry Bridge Market</span> <span class="desc">ช้อปของฝาก ของเก่า 🛍️</span></li>
       <li><span class="time">11:00</span><span class="desc">กาแฟ อาหารเช้าสาย Old Town · เก็บกระเป๋า</span></li>
       <li><span class="desc">บินกลับ ✈️</span></li>
     </ul>
-  </section>
-
-  <section class="panel">
-    <h3>เช็กลิสต์ก่อนไป</h3>
-    <p class="lead">จัดการล่วงหน้าให้เรียบร้อย ทริปจะราบรื่น</p>
-    <ul class="check">
-      <li><span class="n">1</span><span class="t"><b>จอง Fifth Season ล่วงหน้า</b> <span>— ต้นตุลาห้องจำกัด (เรตติ้ง 9.1 บน Booking)</span></span></li>
-      <li><span class="n">2</span><span class="t"><b>โทรถามที่พักเรื่องสภาพถนน Juta</b> <span>— ถนนเปลี่ยนบ่อย ต้องเช็กก่อนวันเดินทาง</span></span></li>
-      <li><span class="n">3</span><span class="t"><b>จองรถ 4WD + คนขับ</b> <span>— สำหรับเส้น Kazbegi–Juta</span></span></li>
-      <li><span class="n">4</span><span class="t"><b>แพ็คเป้เล็ก</b> <span>— สำหรับค้าง Juta 1 คืน</span></span></li>
-    </ul>
-    <div class="pack">
-      <h4>เตรียมตัว Chaukhi Trail</h4>
-      <div class="pack-row">
-        <span>รองเท้า hiking</span>
-        <span>น้ำ 2 ลิตร</span>
-        <span>เสื้อกันหนาว</span>
-        <span>ครีมกันแดด</span>
-        <span>แผนที่ offline (AllTrails)</span>
-        <span>lunchbox จากที่พัก</span>
-      </div>
-    </div>
   </section>
 
   <section class="next">
@@ -338,11 +330,193 @@
     </div>
   </section>
 </div>
+</div>
+
+<!-- ═══════════════════════════════════ BUDGET TAB -->
+<div class="tab-panel" id="tab-budget">
+<div class="wrap">
+
+  <div class="budget-hero">
+    <div class="label">ประมาณการงบรวม / คน</div>
+    <div class="total">45,000–65,000<small>บาท</small></div>
+    <div class="note">ยังไม่รวมตั๋วเครื่องบิน · ขึ้นอยู่กับที่พักและการใช้จ่ายส่วนตัว</div>
+  </div>
+
+  <div class="budget-section">
+    <h3>✈️ ตั๋วเครื่องบิน</h3>
+    <div class="budget-row">
+      <div class="item"><b>กรุงเทพฯ → Tbilisi (ไป-กลับ)</b><span>มักต่อ Dubai / Istanbul / Doha</span></div>
+      <div class="amount"><b>25,000–45,000</b><span>บาท</span></div>
+    </div>
+  </div>
+
+  <div class="budget-section">
+    <h3>🏨 ที่พัก (5 คืน)</h3>
+    <div class="budget-row">
+      <div class="item"><b>Tbilisi Old Town</b><span>2 คืน · บูทีคโฮเทล / เกสต์เฮ้าส์</span></div>
+      <div class="amount"><b>2,000–4,000</b><span>บาท/คืน</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Kazbegi</b><span>2 คืน · เกสต์เฮ้าส์ วิวภูเขา</span></div>
+      <div class="amount"><b>1,500–3,000</b><span>บาท/คืน</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Fifth Season – Juta</b><span>1 คืน · จองล่วงหน้า! (เรตติ้ง 9.1)</span></div>
+      <div class="amount"><b>2,500–4,000</b><span>บาท/คืน</span></div>
+    </div>
+  </div>
+
+  <div class="budget-section">
+    <h3>🚗 การเดินทางในจอร์เจีย</h3>
+    <div class="budget-row">
+      <div class="item"><b>รถ + คนขับ Military Highway</b><span>Tbilisi → Kazbegi (วันที่ 2) แวะ Ananuri, Friendship Monument</span></div>
+      <div class="amount"><b>3,000–5,000</b><span>บาท/คัน</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>รถ 4WD Kazbegi → Juta</b><span>ถนนขรุขระต้องใช้ 4WD เท่านั้น</span></div>
+      <div class="amount"><b>1,500–2,500</b><span>บาท/คัน</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>รถ + คนขับ Kazbegi → Tbilisi</b><span>วันที่ 5 แวะ Uplistsikhe + Mtskheta</span></div>
+      <div class="amount"><b>3,500–5,500</b><span>บาท/คัน</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Metro / Taxi ใน Tbilisi</b><span>วันที่ 1, 6</span></div>
+      <div class="amount"><b>300–600</b><span>บาท</span></div>
+    </div>
+  </div>
+
+  <div class="budget-section">
+    <h3>🍽️ อาหาร (6 วัน)</h3>
+    <div class="budget-row">
+      <div class="item"><b>Tbilisi</b><span>ร้านอาหารดีๆ · Khachapuri, Khinkali, ไวน์</span></div>
+      <div class="amount"><b>600–1,200</b><span>บาท/วัน</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Kazbegi / Juta</b><span>ที่พักมักรวมอาหารเช้า · ดินเนอร์ที่โรงแรม</span></div>
+      <div class="amount"><b>400–800</b><span>บาท/วัน</span></div>
+    </div>
+  </div>
+
+  <div class="budget-section">
+    <h3>🎟️ ค่าเข้าชม</h3>
+    <div class="budget-row">
+      <div class="item"><b>Uplistsikhe Cave City</b><span></span></div>
+      <div class="amount"><b>~150</b><span>บาท</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Ananuri Fortress</b><span>ฟรี</span></div>
+      <div class="amount"><b>ฟรี</b><span></span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Gergeti / Jvari / Mtskheta</b><span>โบสถ์เปิดให้เข้าฟรี</span></div>
+      <div class="amount"><b>ฟรี</b><span></span></div>
+    </div>
+  </div>
+
+  <div class="budget-note">
+    <b>เคล็ดลับประหยัด:</b> แชร์รถกับนักท่องเที่ยวคนอื่น ค่ารถลดได้ครึ่งนึง · จอร์เจียถูกมากเมื่อเทียบยุโรป · ชำระด้วยเงินสด GEL (Lari) ได้ราคาดีกว่า · 1 GEL ≈ 13–14 บาท
+  </div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════════ CHECKLIST TAB -->
+<div class="tab-panel" id="tab-checklist">
+<div class="wrap" style="padding-top:32px;">
+
+  <div class="cl-section">
+    <h3>📋 จัดการก่อนเดินทาง</h3>
+    <p class="lead">ทำล่วงหน้าให้เสร็จ ทริปจะราบรื่น</p>
+    <div class="cl-group">
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง Fifth Season – Juta</b><span>ต้นตุลาห้องจำกัดมาก จองด่วน! (Booking.com เรตติ้ง 9.1)</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Kazbegi 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา หรือ Rooms Hotel Kazbegi</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Tbilisi 2 คืน</b><span>ย่าน Old Town หรือ Fabrika</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับ Military Highway</b><span>Tbilisi → Kazbegi แวะทุกจุด</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ 4WD Kazbegi–Juta</b><span>ถามที่พัก Kazbegi ช่วยจัดได้</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับวันกลับ</b><span>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช็กสภาพถนน Juta กับที่พัก</b><span>โทรถามก่อนวันเดินทาง ถนนเปลี่ยนบ่อยตามสภาพอากาศ</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อประกันการเดินทาง</b><span>ครอบคลุม hiking และ outdoor activities</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ดาวน์โหลดแผนที่ offline</b><span>Maps.me หรือ Google Maps (offline) พื้นที่ Kazbegi + Juta</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อซิม / เช็ก roaming</b><span>Magti หรือ Geocell ดีในจอร์เจีย</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>แลกเงิน GEL (Lari)</b><span>แลกที่จอร์เจียได้เลย อัตราดีกว่าไทย ATM ก็ได้</span></div></label>
+    </div>
+  </div>
+
+  <hr class="cl-divider">
+
+  <div class="cl-section">
+    <h3>🎒 เป้ใหญ่ — เสื้อผ้า</h3>
+    <p class="lead">ต้นตุลาคม อากาศ 5–18°C ที่ Kazbegi · Tbilisi อุ่นกว่า ~15–22°C</p>
+    <div class="cl-group">
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อกันหนาวหนา / fleece</b><span>สำหรับ Kazbegi และ Juta ตอนเช้า-เย็น</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อกันลม / rain jacket</b><span>กันลมและฝนระหว่าง hike</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อแขนยาว base layer 2–3 ตัว</b><span></span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>กางเกง hiking / trousers</b><span>แห้งเร็ว ขยับสะดวก</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ชุดสำหรับ Tbilisi 2–3 วัน</b><span>แต่งตัวปกติสำหรับเดินเมือง</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ผ้าพันคอ / หมวก / ถุงมือบาง</b><span>สำหรับยอดเขา</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ถุงเท้า hiking หนา 2–3 คู่</b><span></span></div></label>
+    </div>
+  </div>
+
+  <hr class="cl-divider">
+
+  <div class="cl-section">
+    <h3>👟 รองเท้าและอุปกรณ์ Hike</h3>
+    <div class="pack-grid">
+      <label class="pack-item"><input type="checkbox"><span>รองเท้า hiking (กันน้ำ)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>รองเท้าเดินเมือง</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ไม้เท้า trekking poles</span></label>
+      <label class="pack-item"><input type="checkbox"><span>เป้เล็ก daypack</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ขวดน้ำ 1 ลิตร × 2</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ครีมกันแดด SPF50+</span></label>
+      <label class="pack-item"><input type="checkbox"><span>แว่นกันแดด</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ยาแก้ปวดเท้า / พลาสเตอร์</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ขนมระหว่าง hike</span></label>
+      <label class="pack-item"><input type="checkbox"><span>AllTrails app (offline)</span></label>
+    </div>
+  </div>
+
+  <hr class="cl-divider">
+
+  <div class="cl-section">
+    <h3>📱 อุปกรณ์และเอกสาร</h3>
+    <div class="pack-grid">
+      <label class="pack-item"><input type="checkbox"><span>พาสปอร์ต (หมดอายุ?)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>กล้องถ่ายรูป / lens</span></label>
+      <label class="pack-item"><input type="checkbox"><span>Power bank ใหญ่</span></label>
+      <label class="pack-item"><input type="checkbox"><span>สายชาร์จ + adapter</span></label>
+      <label class="pack-item"><input type="checkbox"><span>หูฟัง</span></label>
+      <label class="pack-item"><input type="checkbox"><span>กระเป๋าซิป ใส่ของมีค่า</span></label>
+    </div>
+  </div>
+
+</div>
+</div>
 
 <footer>
   <div class="big">გაუმარჯოს!</div>
   ดื่มฉลองทริปจอร์เจีย · ขอให้เดินทางสนุก
 </footer>
 
+<script>
+  const btns = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  });
+
+  document.querySelectorAll('.cl-item input, .pack-item input').forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.closest('.cl-item, .pack-item').classList.toggle('done', cb.checked);
+    });
+  });
+</script>
 </body>
 </html>
