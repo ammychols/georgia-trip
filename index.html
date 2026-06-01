@@ -279,10 +279,10 @@
       <div class="daynum"><small>DAY</small>02</div>
       <div class="day-title"><h2>Tbilisi → Kazbegi</h2><div class="date">3 ตุลาคม · เสาร์</div></div>
     </div>
-    <div class="day-photo" data-wiki="Georgian Military Highway">
+    <div class="day-photo" data-wiki="Ananuri">
       <img class="dp-img" alt="Georgian Military Highway" loading="lazy">
       <div class="dp-bar"></div>
-      <div class="dp-label">Georgian Military Highway · เส้นทางตำนาน<span class="dp-src">© Wikimedia Commons</span></div>
+      <div class="dp-label">Ananuri · ป้อมปราการริมทะเลสาบมรกต<span class="dp-src">© Wikimedia Commons</span></div>
     </div>
     <p class="day-note">วัน Military Highway — ขับเองตามสะดวก · ~150 กม. ขับ ~3 ชม. (หยุดหลายจุด รวม ~7–8 ชม.)</p>
     <ul class="tl">
@@ -338,10 +338,10 @@
       <div class="daynum"><small>DAY</small>04</div>
       <div class="day-title"><h2>Chaukhi Trail <span class="badge star">★ ไฮไลต์</span></h2><div class="date">5 ตุลาคม · จันทร์</div></div>
     </div>
-    <div class="day-photo dp-rock" data-wiki="Chaukhi">
+    <div class="day-photo dp-rock" data-wiki="Kazbegi">
       <img class="dp-img" alt="Chaukhi Massif" loading="lazy">
       <div class="dp-bar"></div>
-      <div class="dp-label">Chaukhi Massif · Georgian Dolomites<span class="dp-src">© Wikimedia Commons</span></div>
+      <div class="dp-label">Kazbegi · หุบเขาและยอดเขาคอเคซัส<span class="dp-src">© Wikimedia Commons</span></div>
     </div>
     <p class="day-note">วัน Highlight — trail เริ่มหน้าที่พักเลย · ระยะรวม ~10 กม. · ความสูง 2,150–2,900 ม.</p>
     <ul class="tl">
@@ -795,36 +795,30 @@
     });
   });
 
-  // Load Wikipedia thumbnail photos for each place
-  function loadWikiPhoto(articleTitle, imgEl) {
-    fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(articleTitle))
-      .then(r => r.json())
-      .then(d => {
-        if (d.thumbnail && d.thumbnail.source) {
-          var src = d.thumbnail.source.replace(/\/\d+px-/, '/800px-');
+  // Load Wikipedia photos via MediaWiki API (CORS-safe with origin=*)
+  function loadWikiThumb(title, imgEl, size) {
+    var url = 'https://en.wikipedia.org/w/api.php?action=query&prop=pageimages' +
+      '&format=json&pithumbsize=' + (size || 800) + '&origin=*&titles=' + encodeURIComponent(title);
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        if (!d.query || !d.query.pages) return;
+        var page = d.query.pages[Object.keys(d.query.pages)[0]];
+        if (page && page.thumbnail && page.thumbnail.source) {
           imgEl.onload = function() { imgEl.classList.add('loaded'); };
-          imgEl.src = src;
+          imgEl.onerror = function() {};
+          imgEl.src = page.thumbnail.source;
         }
       })
       .catch(function() {});
   }
 
   document.querySelectorAll('.day-photo[data-wiki]').forEach(function(card) {
-    loadWikiPhoto(card.dataset.wiki, card.querySelector('.dp-img'));
+    loadWikiThumb(card.dataset.wiki, card.querySelector('.dp-img'), 800);
   });
 
   document.querySelectorAll('.nx-thumb[data-wiki]').forEach(function(card) {
-    var img = card.querySelector('img');
-    fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(card.dataset.wiki))
-      .then(r => r.json())
-      .then(d => {
-        if (d.thumbnail && d.thumbnail.source) {
-          var src = d.thumbnail.source.replace(/\/\d+px-/, '/400px-');
-          img.onload = function() { img.classList.add('loaded'); };
-          img.src = src;
-        }
-      })
-      .catch(function() {});
+    loadWikiThumb(card.dataset.wiki, card.querySelector('img'), 400);
   });
 </script>
 </body>
