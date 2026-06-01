@@ -338,10 +338,10 @@
       <div class="daynum"><small>DAY</small>04</div>
       <div class="day-title"><h2>Chaukhi Trail <span class="badge star">★ ไฮไลต์</span></h2><div class="date">5 ตุลาคม · จันทร์</div></div>
     </div>
-    <div class="day-photo dp-rock" data-wiki="Kazbegi">
+    <div class="day-photo dp-rock" data-wiki="Mount Kazbek">
       <img class="dp-img" alt="Chaukhi Massif" loading="lazy">
       <div class="dp-bar"></div>
-      <div class="dp-label">Kazbegi · หุบเขาและยอดเขาคอเคซัส<span class="dp-src">© Wikimedia Commons</span></div>
+      <div class="dp-label">Mt. Kazbek · 5,047 ม. ยอดสูงสุดของจอร์เจีย<span class="dp-src">© Wikimedia Commons</span></div>
     </div>
     <p class="day-note">วัน Highlight — trail เริ่มหน้าที่พักเลย · ระยะรวม ~10 กม. · ความสูง 2,150–2,900 ม.</p>
     <ul class="tl">
@@ -427,7 +427,7 @@
     <h3>เก็บไว้ทริปหน้า</h3>
     <div class="next-grid">
       <div class="nx">
-        <div class="nx-thumb" data-wiki="Upper Svaneti"><img alt="Svaneti" loading="lazy"></div>
+        <div class="nx-thumb" data-wiki="Ushguli"><img alt="Svaneti" loading="lazy"></div>
         <div class="nx-body"><b>Svaneti</b><span>ภูเขาสุดอลังการ หอคอยหินยุคกลาง · 3–4 วัน (บินภายในหรือรถ 8 ชม.)</span></div>
       </div>
       <div class="nx">
@@ -798,7 +798,7 @@
   // Load Wikipedia photos via MediaWiki API (CORS-safe with origin=*)
   function loadWikiThumb(title, imgEl, size) {
     var url = 'https://en.wikipedia.org/w/api.php?action=query&prop=pageimages' +
-      '&format=json&pithumbsize=' + (size || 800) + '&origin=*&titles=' + encodeURIComponent(title);
+      '&format=json&piprop=thumbnail&pithumbsize=' + (size || 800) + '&origin=*&redirects=1&titles=' + encodeURIComponent(title);
     fetch(url)
       .then(function(r) { return r.json(); })
       .then(function(d) {
