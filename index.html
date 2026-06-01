@@ -49,6 +49,17 @@
   .info-card .ivalue{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:.95rem;color:var(--pine);font-weight:600;}
   .info-card .isub{font-size:.75rem;color:var(--stone);margin-top:2px;}
 
+  /* Day photo */
+  .day-photo{position:relative;width:100%;height:220px;border-radius:12px;overflow:hidden;margin:0 0 20px;background:linear-gradient(135deg,var(--pine) 0%,var(--moss) 100%);}
+  .day-photo.dp-warm{background:linear-gradient(135deg,#5c3d2e 0%,#8a4a28 50%,var(--rust) 100%);}
+  .day-photo.dp-rock{background:linear-gradient(135deg,#2e2e3a 0%,#4a4a5e 60%,#6e6e8a 100%);}
+  .day-photo.dp-gold{background:linear-gradient(135deg,#4a2e10 0%,#7a5020 50%,var(--gold) 100%);}
+  .dp-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease;}
+  .dp-img.loaded{opacity:1;}
+  .dp-bar{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,30,22,.7) 0%,rgba(20,30,22,.1) 50%,transparent 100%);}
+  .dp-label{position:absolute;bottom:12px;left:14px;color:var(--snow);font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:.95rem;font-weight:300;font-style:italic;z-index:1;text-shadow:0 1px 4px rgba(0,0,0,.5);}
+  .dp-src{display:block;font-family:'IBM Plex Sans Thai',sans-serif;font-size:.62rem;color:rgba(251,249,243,.5);font-style:normal;margin-top:2px;}
+
   .day{padding:28px 0;border-bottom:1px solid var(--line);}
   .day:last-of-type{border-bottom:none;}
   .day-head{display:flex;align-items:baseline;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
@@ -78,10 +89,15 @@
   .warn-box{background:#fff8ee;border-left:3px solid var(--rust);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0 4px;font-size:.87rem;color:var(--moss);line-height:1.6;}
   .warn-box .warn-head{font-weight:700;color:var(--rust);margin-bottom:4px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;}
 
+  /* Next destinations with thumbnails */
   .next{padding:30px 0 10px;}
   .next h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.2rem;color:var(--pine);margin-bottom:16px;text-align:center;}
   .next-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-  .nx{background:var(--snow);border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+  .nx{background:var(--snow);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .nx-thumb{width:100%;height:100px;background:linear-gradient(135deg,var(--pine),var(--moss));position:relative;overflow:hidden;flex-shrink:0;}
+  .nx-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s;}
+  .nx-thumb img.loaded{opacity:1;}
+  .nx-body{padding:12px 14px;}
   .nx b{color:var(--rust);font-family:'Fraunces','IBM Plex Sans Thai',serif;}
   .nx span{display:block;font-size:.83rem;color:var(--stone);margin-top:2px;}
 
@@ -188,6 +204,7 @@
     .budget-hero .total{font-size:2.2rem;}
     .bsum-row{grid-template-columns:1fr 1fr;}
     .info-grid{grid-template-columns:1fr 1fr;}
+    .day-photo{height:170px;}
   }
 </style>
 </head>
@@ -234,6 +251,11 @@
       <div class="daynum"><small>DAY</small>01</div>
       <div class="day-title"><h2>ถึง Tbilisi</h2><div class="date">2 ตุลาคม · ศุกร์</div></div>
     </div>
+    <div class="day-photo dp-warm" data-wiki="Tbilisi">
+      <img class="dp-img" alt="Tbilisi" loading="lazy">
+      <div class="dp-bar"></div>
+      <div class="dp-label">Tbilisi · เมืองหลวงแห่งคอเคซัส<span class="dp-src">© Wikimedia Commons</span></div>
+    </div>
     <p class="day-note">วันเดินทาง — เอาสบายๆ ปรับตัวกับเมือง ไม่ต้องรีบ</p>
     <ul class="tl">
       <li><span class="place">เช็คอิน</span> <span class="desc">— ที่พักย่าน Old Town ใกล้ Narikala Fortress เดินเที่ยวง่ายสุด</span></li>
@@ -256,6 +278,11 @@
     <div class="day-head">
       <div class="daynum"><small>DAY</small>02</div>
       <div class="day-title"><h2>Tbilisi → Kazbegi</h2><div class="date">3 ตุลาคม · เสาร์</div></div>
+    </div>
+    <div class="day-photo" data-wiki="Georgian Military Highway">
+      <img class="dp-img" alt="Georgian Military Highway" loading="lazy">
+      <div class="dp-bar"></div>
+      <div class="dp-label">Georgian Military Highway · เส้นทางตำนาน<span class="dp-src">© Wikimedia Commons</span></div>
     </div>
     <p class="day-note">วัน Military Highway — ขับเองตามสะดวก · ~150 กม. ขับ ~3 ชม. (หยุดหลายจุด รวม ~7–8 ชม.)</p>
     <ul class="tl">
@@ -285,6 +312,11 @@
       <div class="daynum"><small>DAY</small>03</div>
       <div class="day-title"><h2>Kazbegi → Juta <span class="badge">ค้างคืน</span></h2><div class="date">4 ตุลาคม · อาทิตย์</div></div>
     </div>
+    <div class="day-photo" data-wiki="Gergeti Trinity Church">
+      <img class="dp-img" alt="Gergeti Trinity Church" loading="lazy">
+      <div class="dp-bar"></div>
+      <div class="dp-label">Gergeti Trinity Church · 2,170 เมตร<span class="dp-src">© Wikimedia Commons</span></div>
+    </div>
     <p class="day-note">ย้ายฐานเข้าหุบเขา · ฝากรถเช่าไว้ที่ Kazbegi · จ้าง 4WD ท้องถิ่นขึ้น Juta</p>
     <ul class="tl">
       <li><span class="time">09:00</span><span class="desc">เช็คเอาต์ · ฝากกระเป๋าใหญ่และรถเช่าไว้ที่ที่พัก Kazbegi</span></li>
@@ -305,6 +337,11 @@
     <div class="day-head">
       <div class="daynum"><small>DAY</small>04</div>
       <div class="day-title"><h2>Chaukhi Trail <span class="badge star">★ ไฮไลต์</span></h2><div class="date">5 ตุลาคม · จันทร์</div></div>
+    </div>
+    <div class="day-photo dp-rock" data-wiki="Chaukhi">
+      <img class="dp-img" alt="Chaukhi Massif" loading="lazy">
+      <div class="dp-bar"></div>
+      <div class="dp-label">Chaukhi Massif · Georgian Dolomites<span class="dp-src">© Wikimedia Commons</span></div>
     </div>
     <p class="day-note">วัน Highlight — trail เริ่มหน้าที่พักเลย · ระยะรวม ~10 กม. · ความสูง 2,150–2,900 ม.</p>
     <ul class="tl">
@@ -333,6 +370,11 @@
       <div class="daynum"><small>DAY</small>05</div>
       <div class="day-title"><h2>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</h2><div class="date">6 ตุลาคม · อังคาร</div></div>
     </div>
+    <div class="day-photo dp-gold" data-wiki="Uplistsikhe">
+      <img class="dp-img" alt="Uplistsikhe" loading="lazy">
+      <div class="dp-bar"></div>
+      <div class="dp-label">Uplistsikhe · เมืองถ้ำหิน 3,000 ปี<span class="dp-src">© Wikimedia Commons</span></div>
+    </div>
     <p class="day-note">ขับเองกลับ Tbilisi แวะ 2 จุดประวัติศาสตร์ · ระยะทางรวม ~250 กม.</p>
     <ul class="tl">
       <li><span class="time">08:00</span><span class="desc">เช็คเอาต์ ออกขับรถมุ่งหน้า Uplistsikhe</span></li>
@@ -358,6 +400,11 @@
       <div class="daynum"><small>DAY</small>06</div>
       <div class="day-title"><h2>Tbilisi → กลับบ้าน</h2><div class="date">7 ตุลาคม · พุธ</div></div>
     </div>
+    <div class="day-photo dp-warm" data-wiki="Mtskheta">
+      <img class="dp-img" alt="Mtskheta" loading="lazy">
+      <div class="dp-bar"></div>
+      <div class="dp-label">Mtskheta · เมืองหลวงเก่า UNESCO<span class="dp-src">© Wikimedia Commons</span></div>
+    </div>
     <ul class="tl">
       <li><span class="time">09:00</span><span class="place">Dry Bridge Market</span> <span class="desc">ตลาดของเก่า งานศิลปะ เครื่องประดับ เปิดทุกวัน · ต่อราคาได้ 🛍️</span></li>
       <li><span class="time">10:30</span><span class="desc">ช้อปของฝาก Old Town · ไวน์ ชา Churchkhela เครื่องปั้นดินเผา</span></li>
@@ -379,10 +426,22 @@
   <section class="next">
     <h3>เก็บไว้ทริปหน้า</h3>
     <div class="next-grid">
-      <div class="nx"><b>Svaneti</b><span>ภูเขาสุดอลังการ หอคอยหินยุคกลาง · 3–4 วัน (บินภายในหรือรถ 8 ชม.)</span></div>
-      <div class="nx"><b>Kakheti / Sighnaghi</b><span>แหล่งไวน์เก่าแก่ที่สุดในโลก เมืองโรแมนติกมีกำแพง · 1–2 วัน</span></div>
-      <div class="nx"><b>Vardzia</b><span>เมืองถ้ำยักษ์ 13 ชั้น ศตวรรษที่ 12 ทางใต้ · 1–2 วัน</span></div>
-      <div class="nx"><b>Batumi</b><span>ทะเลดำ เมืองทันสมัย คาสิโน · 2 วัน (บินภายในได้)</span></div>
+      <div class="nx">
+        <div class="nx-thumb" data-wiki="Upper Svaneti"><img alt="Svaneti" loading="lazy"></div>
+        <div class="nx-body"><b>Svaneti</b><span>ภูเขาสุดอลังการ หอคอยหินยุคกลาง · 3–4 วัน (บินภายในหรือรถ 8 ชม.)</span></div>
+      </div>
+      <div class="nx">
+        <div class="nx-thumb" data-wiki="Sighnaghi"><img alt="Sighnaghi" loading="lazy"></div>
+        <div class="nx-body"><b>Kakheti / Sighnaghi</b><span>แหล่งไวน์เก่าแก่ที่สุดในโลก เมืองโรแมนติกมีกำแพง · 1–2 วัน</span></div>
+      </div>
+      <div class="nx">
+        <div class="nx-thumb" data-wiki="Vardzia"><img alt="Vardzia" loading="lazy"></div>
+        <div class="nx-body"><b>Vardzia</b><span>เมืองถ้ำยักษ์ 13 ชั้น ศตวรรษที่ 12 ทางใต้ · 1–2 วัน</span></div>
+      </div>
+      <div class="nx">
+        <div class="nx-thumb" data-wiki="Batumi"><img alt="Batumi" loading="lazy"></div>
+        <div class="nx-body"><b>Batumi</b><span>ทะเลดำ เมืองทันสมัย คาสิโน · 2 วัน (บินภายในได้)</span></div>
+      </div>
     </div>
   </section>
 </div>
@@ -729,10 +788,43 @@
       window.scrollTo({top: 0, behavior: 'smooth'});
     });
   });
+
   document.querySelectorAll('.cl-item input, .pack-item input, .food-cl-item input').forEach(cb => {
     cb.addEventListener('change', () => {
       cb.closest('.cl-item, .pack-item, .food-cl-item').classList.toggle('done', cb.checked);
     });
+  });
+
+  // Load Wikipedia thumbnail photos for each place
+  function loadWikiPhoto(articleTitle, imgEl) {
+    fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(articleTitle))
+      .then(r => r.json())
+      .then(d => {
+        if (d.thumbnail && d.thumbnail.source) {
+          var src = d.thumbnail.source.replace(/\/\d+px-/, '/800px-');
+          imgEl.onload = function() { imgEl.classList.add('loaded'); };
+          imgEl.src = src;
+        }
+      })
+      .catch(function() {});
+  }
+
+  document.querySelectorAll('.day-photo[data-wiki]').forEach(function(card) {
+    loadWikiPhoto(card.dataset.wiki, card.querySelector('.dp-img'));
+  });
+
+  document.querySelectorAll('.nx-thumb[data-wiki]').forEach(function(card) {
+    var img = card.querySelector('img');
+    fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(card.dataset.wiki))
+      .then(r => r.json())
+      .then(d => {
+        if (d.thumbnail && d.thumbnail.source) {
+          var src = d.thumbnail.source.replace(/\/\d+px-/, '/400px-');
+          img.onload = function() { img.classList.add('loaded'); };
+          img.src = src;
+        }
+      })
+      .catch(function() {});
   });
 </script>
 </body>
