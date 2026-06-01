@@ -9,48 +9,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Chonburi&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1c2620;
-    --paper:#f4efe4;
-    --paper2:#ece4d3;
-    --moss:#3a4a3a;
-    --pine:#2c3a2e;
-    --rust:#9c5b34;
-    --gold:#c79a45;
-    --stone:#7d7a6e;
-    --line:#cdc3ad;
-    --snow:#fbf9f3;
+    --ink:#1c2620;--paper:#f4efe4;--paper2:#ece4d3;--moss:#3a4a3a;--pine:#2c3a2e;
+    --rust:#9c5b34;--gold:#c79a45;--stone:#7d7a6e;--line:#cdc3ad;--snow:#fbf9f3;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:'IBM Plex Sans Thai','Fraunces',sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-  }
+  body{font-family:'IBM Plex Sans Thai','Fraunces',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
 
   /* HERO */
-  .hero{
-    position:relative;
-    padding:70px 24px 60px;
-    text-align:center;
-    overflow:hidden;
-    background:
-      radial-gradient(ellipse 120% 80% at 50% 120%, rgba(60,74,58,.18), transparent 60%),
-      linear-gradient(180deg,#2c3a2e 0%, #3a4a3a 45%, #4a5240 100%);
-    color:var(--snow);
-  }
-  .hero::after{
-    content:"";position:absolute;inset:0;
-    background-image:
-      linear-gradient(135deg, transparent 60%, rgba(199,154,69,.08) 60%, rgba(199,154,69,.08) 62%, transparent 62%),
-      repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 2px, transparent 2px 5px);
-    pointer-events:none;
-  }
+  .hero{position:relative;padding:70px 24px 60px;text-align:center;overflow:hidden;
+    background:radial-gradient(ellipse 120% 80% at 50% 120%,rgba(60,74,58,.18),transparent 60%),linear-gradient(180deg,#2c3a2e 0%,#3a4a3a 45%,#4a5240 100%);color:var(--snow);}
+  .hero::after{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(135deg,transparent 60%,rgba(199,154,69,.08) 60%,rgba(199,154,69,.08) 62%,transparent 62%),repeating-linear-gradient(90deg,rgba(255,255,255,.015) 0 2px,transparent 2px 5px);pointer-events:none;}
   .peaks{position:absolute;bottom:-2px;left:0;width:100%;height:70px;display:block;}
-  .hero .kicker{font-family:'IBM Plex Sans Thai',serif;font-weight:400;letter-spacing:.04em;font-size:1rem;color:var(--gold);margin-bottom:14px;position:relative;z-index:2;}
+  .hero .kicker{font-weight:400;letter-spacing:.04em;font-size:1rem;color:var(--gold);margin-bottom:14px;position:relative;z-index:2;}
   .hero h1{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-weight:300;font-size:clamp(2.4rem,8vw,4rem);line-height:.98;letter-spacing:-.01em;position:relative;z-index:2;}
   .hero h1 b{font-weight:600;font-style:italic;color:var(--gold);}
   .hero .sub{margin-top:16px;font-weight:300;font-size:1rem;color:rgba(251,249,243,.82);position:relative;z-index:2;}
@@ -58,32 +31,27 @@
   .chip{font-size:.8rem;letter-spacing:.02em;border:1px solid rgba(199,154,69,.45);color:rgba(251,249,243,.9);padding:5px 12px;border-radius:40px;background:rgba(255,255,255,.04);}
 
   /* TABS */
-  .tab-nav{
-    position:sticky;top:0;z-index:100;
-    background:var(--paper);
-    border-bottom:2px solid var(--line);
-    display:flex;
-  }
-  .tab-btn{
-    flex:1;padding:14px 8px;
-    font-family:'IBM Plex Sans Thai',sans-serif;font-size:.95rem;font-weight:500;
-    color:var(--stone);background:none;border:none;cursor:pointer;
-    border-bottom:3px solid transparent;margin-bottom:-2px;
-    transition:color .2s, border-color .2s;
-  }
+  .tab-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--line);display:flex;}
+  .tab-btn{flex:1;padding:14px 8px;font-family:'IBM Plex Sans Thai',sans-serif;font-size:.95rem;font-weight:500;color:var(--stone);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s;}
   .tab-btn.active{color:var(--rust);border-bottom-color:var(--rust);}
   .tab-btn:hover{color:var(--moss);}
-
-  /* TAB PANELS */
   .tab-panel{display:none;padding:0 0 60px;}
   .tab-panel.active{display:block;}
 
   /* INTRO */
   .intro{padding:44px 0 10px;text-align:center;}
-  .intro p{font-family:'IBM Plex Sans Thai',serif;font-weight:300;font-size:1.15rem;color:var(--moss);max-width:620px;margin:0 auto;line-height:1.6;}
+  .intro p{font-weight:300;font-size:1.15rem;color:var(--moss);max-width:620px;margin:0 auto;line-height:1.6;}
   .rule{width:60px;height:1px;background:var(--rust);margin:28px auto;position:relative;}
   .rule::before,.rule::after{content:"";position:absolute;top:50%;width:5px;height:5px;border-radius:50%;background:var(--rust);transform:translateY(-50%);}
   .rule::before{left:-12px;}.rule::after{right:-12px;}
+
+  /* QUICK INFO CARDS */
+  .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0 32px;}
+  .info-card{background:var(--snow);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;}
+  .info-card .icon{font-size:1.4rem;margin-bottom:5px;}
+  .info-card .ilabel{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:3px;}
+  .info-card .ivalue{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:.95rem;color:var(--pine);font-weight:600;}
+  .info-card .isub{font-size:.75rem;color:var(--stone);margin-top:2px;}
 
   /* DAY */
   .day{padding:28px 0;border-bottom:1px solid var(--line);}
@@ -94,7 +62,7 @@
   .day-title{flex:1;min-width:200px;}
   .day-title h2{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.4rem;color:var(--pine);line-height:1.15;}
   .day-title .date{font-size:.85rem;color:var(--stone);margin-top:2px;}
-  .day-note{font-family:'IBM Plex Sans Thai',serif;color:var(--stone);font-size:.9rem;margin-bottom:14px;}
+  .day-note{color:var(--stone);font-size:.9rem;margin-bottom:14px;}
   .badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.05em;color:var(--snow);background:var(--rust);padding:3px 10px;border-radius:4px;vertical-align:middle;margin-left:8px;}
   .badge.star{background:var(--gold);color:var(--pine);}
 
@@ -109,6 +77,14 @@
   .desc{color:var(--moss);font-size:.93rem;}
   .small{color:var(--stone);font-size:.83rem;}
 
+  /* TIP / WARN BOXES */
+  .tip-box{background:var(--snow);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0 4px;font-size:.87rem;color:var(--moss);line-height:1.6;}
+  .tip-box .tip-head{font-weight:700;color:var(--rust);margin-bottom:4px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;}
+  .tip-box ul{padding-left:16px;margin-top:4px;}
+  .tip-box ul li{margin-bottom:3px;}
+  .warn-box{background:#fff8ee;border-left:3px solid var(--rust);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0 4px;font-size:.87rem;color:var(--moss);line-height:1.6;}
+  .warn-box .warn-head{font-weight:700;color:var(--rust);margin-bottom:4px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;}
+
   /* NEXT TRIP */
   .next{padding:30px 0 10px;}
   .next h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.2rem;color:var(--pine);margin-bottom:16px;text-align:center;}
@@ -117,21 +93,21 @@
   .nx b{color:var(--rust);font-family:'Fraunces','IBM Plex Sans Thai',serif;}
   .nx span{display:block;font-size:.83rem;color:var(--stone);margin-top:2px;}
 
-  /* ── BUDGET TAB ── */
-  .budget-hero{
-    background:var(--paper2);border:1px solid var(--line);border-radius:14px;
-    padding:28px 28px 20px;margin:32px 0 24px;text-align:center;
-  }
-  .budget-hero .label{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:6px;}
+  /* BUDGET TAB */
+  .budget-hero{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:28px 28px 20px;margin:32px 0 24px;text-align:center;}
+  .budget-hero .blabel{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:6px;}
   .budget-hero .total{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:2.8rem;font-weight:300;color:var(--rust);line-height:1;}
   .budget-hero .total small{font-size:1.1rem;color:var(--stone);margin-left:6px;}
-  .budget-hero .note{font-size:.85rem;color:var(--stone);margin-top:8px;}
+  .budget-hero .bnote{font-size:.85rem;color:var(--stone);margin-top:8px;}
+
+  .bsum-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 28px;}
+  .bsum-card{background:var(--snow);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;}
+  .bsum-card .sc-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:4px;}
+  .bsum-card .sc-amount{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:1.1rem;color:var(--rust);}
+  .bsum-card .sc-note{font-size:.73rem;color:var(--stone);margin-top:2px;}
 
   .budget-section{margin-bottom:28px;}
-  .budget-section h3{
-    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.1rem;
-    color:var(--pine);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:14px;
-  }
+  .budget-section h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.1rem;color:var(--pine);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:14px;}
   .budget-row{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);gap:12px;}
   .budget-row:last-child{border-bottom:none;}
   .budget-row .item{flex:1;}
@@ -141,59 +117,74 @@
   .budget-row .amount b{display:block;font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:1rem;color:var(--rust);}
   .budget-row .amount span{color:var(--stone);font-size:.78rem;}
 
-  .budget-note{
-    background:var(--snow);border:1px solid var(--line);border-radius:10px;
-    padding:16px 18px;margin-top:10px;font-size:.87rem;color:var(--stone);line-height:1.6;
-  }
-  .budget-note b{color:var(--moss);}
+  .food-table{width:100%;border-collapse:collapse;font-size:.86rem;margin-top:10px;}
+  .food-table th{text-align:left;font-weight:600;color:var(--stone);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line);}
+  .food-table td{padding:9px 8px;border-bottom:1px dashed var(--line);vertical-align:top;color:var(--moss);}
+  .food-table td:last-child{text-align:right;color:var(--rust);font-family:'Fraunces','IBM Plex Sans Thai',serif;white-space:nowrap;}
+  .food-table tr:last-child td{border-bottom:none;}
 
-  /* ── CHECKLIST TAB ── */
+  .currency-box{background:var(--pine);color:var(--snow);border-radius:12px;padding:18px 20px;margin:16px 0;}
+  .currency-box .cy-title{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:1.1rem;margin-bottom:10px;color:var(--gold);}
+  .currency-box .cy-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.87rem;}
+  .currency-box .cy-row:last-child{border-bottom:none;}
+  .currency-box .cy-row span{color:rgba(251,249,243,.7);}
+  .currency-box .cy-row b{color:var(--snow);}
+
+  .budget-note{background:var(--snow);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-top:10px;font-size:.87rem;color:var(--stone);line-height:1.6;}
+  .budget-note b{color:var(--moss);}
+  .budget-note ul{padding-left:18px;margin-top:6px;}
+  .budget-note ul li{margin-bottom:4px;}
+
+  /* CHECKLIST TAB */
   .cl-section{margin-bottom:32px;}
-  .cl-section h3{
-    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.15rem;
-    color:var(--pine);margin-bottom:4px;
-  }
+  .cl-section h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.15rem;color:var(--pine);margin-bottom:4px;}
   .cl-section .lead{font-size:.85rem;color:var(--stone);margin-bottom:16px;}
   .cl-group{display:grid;gap:10px;}
-  .cl-item{
-    display:flex;align-items:flex-start;gap:12px;
-    background:var(--snow);border:1px solid var(--line);
-    border-radius:10px;padding:12px 14px;cursor:pointer;
-    transition:border-color .15s, background .15s;
-    -webkit-tap-highlight-color:transparent;
-  }
+  .cl-item{display:flex;align-items:flex-start;gap:12px;background:var(--snow);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;transition:border-color .15s,background .15s;-webkit-tap-highlight-color:transparent;}
   .cl-item:hover{border-color:var(--moss);}
-  .cl-item input[type=checkbox]{
-    width:18px;height:18px;flex-shrink:0;margin-top:2px;
-    accent-color:var(--rust);cursor:pointer;
-  }
+  .cl-item input[type=checkbox]{width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:var(--rust);cursor:pointer;}
   .cl-item .cl-text{flex:1;}
   .cl-item .cl-text b{display:block;color:var(--pine);font-size:.95rem;}
   .cl-item .cl-text span{color:var(--stone);font-size:.82rem;}
   .cl-item.done{background:var(--paper2);border-color:var(--line);}
   .cl-item.done .cl-text b{text-decoration:line-through;color:var(--stone);}
-
   .cl-divider{margin:28px 0;border:none;border-top:1px solid var(--line);}
 
   .pack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
-  .pack-item{
-    display:flex;align-items:center;gap:10px;
-    background:var(--snow);border:1px solid var(--line);
-    border-radius:8px;padding:10px 12px;cursor:pointer;
-    -webkit-tap-highlight-color:transparent;
-  }
+  .pack-item{display:flex;align-items:center;gap:10px;background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
   .pack-item input[type=checkbox]{width:16px;height:16px;flex-shrink:0;accent-color:var(--rust);cursor:pointer;}
   .pack-item span{font-size:.88rem;color:var(--moss);}
   .pack-item.done span{text-decoration:line-through;color:var(--stone);}
 
-  /* FOOTER */
-  footer{text-align:center;padding:40px 24px 60px;color:var(--stone);font-family:'IBM Plex Sans Thai',serif;font-style:italic;}
+  .food-cl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+  .food-cl-item{background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:10px 14px;display:flex;align-items:flex-start;gap:10px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .food-cl-item input[type=checkbox]{width:16px;height:16px;flex-shrink:0;margin-top:3px;accent-color:var(--rust);cursor:pointer;}
+  .food-cl-item .food-info b{display:block;font-size:.88rem;color:var(--pine);}
+  .food-cl-item .food-info span{font-size:.75rem;color:var(--stone);}
+  .food-cl-item.done .food-info b{text-decoration:line-through;color:var(--stone);}
+
+  .etiq-grid{display:grid;gap:10px;}
+  .etiq-card{background:var(--snow);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;gap:14px;align-items:flex-start;}
+  .etiq-card .etiq-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px;}
+  .etiq-card b{display:block;color:var(--pine);font-size:.9rem;margin-bottom:2px;}
+  .etiq-card span{font-size:.82rem;color:var(--stone);}
+
+  .emergency-box{background:var(--pine);color:var(--snow);border-radius:14px;padding:20px 22px;}
+  .emergency-box h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.05rem;color:var(--gold);margin-bottom:14px;}
+  .em-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);gap:12px;font-size:.87rem;}
+  .em-row:last-child{border-bottom:none;}
+  .em-row .em-label{color:rgba(251,249,243,.7);}
+  .em-row .em-val{color:var(--snow);font-weight:600;text-align:right;}
+
+  footer{text-align:center;padding:40px 24px 60px;color:var(--stone);font-style:italic;}
   footer .big{font-size:1.4rem;color:var(--moss);margin-bottom:8px;}
 
-  @media(max-width:560px){
-    .daynum{font-size:2.5rem;}
-    .next-grid,.pack-grid{grid-template-columns:1fr;}
+  @media(max-width:640px){
+    .daynum{font-size:2.4rem;}
+    .next-grid,.pack-grid,.food-cl-grid{grid-template-columns:1fr;}
     .budget-hero .total{font-size:2.2rem;}
+    .bsum-row{grid-template-columns:1fr 1fr;}
+    .info-grid{grid-template-columns:1fr 1fr;}
   }
 </style>
 </head>
@@ -213,14 +204,13 @@
   </svg>
 </header>
 
-<!-- TAB NAV -->
 <nav class="tab-nav">
   <button class="tab-btn active" data-tab="itinerary">🗺 แผนการเดินทาง</button>
   <button class="tab-btn" data-tab="budget">💰 งบประมาณ</button>
   <button class="tab-btn" data-tab="checklist">✅ เช็กลิสต์</button>
 </nav>
 
-<!-- ═══════════════════════════════════ ITINERARY TAB -->
+<!-- ═══ ITINERARY TAB ═══ -->
 <div class="tab-panel active" id="tab-itinerary">
 <div class="wrap">
   <section class="intro">
@@ -228,18 +218,34 @@
     <div class="rule"></div>
   </section>
 
+  <div class="info-grid">
+    <div class="info-card"><div class="icon">🌡️</div><div class="ilabel">อุณหภูมิ</div><div class="ivalue">5–22°C</div><div class="isub">Kazbegi เย็นกว่า Tbilisi มาก</div></div>
+    <div class="info-card"><div class="icon">✈️</div><div class="ilabel">เดินทาง</div><div class="ivalue">ต่อ 1 จุด</div><div class="isub">Dubai / Istanbul / Doha</div></div>
+    <div class="info-card"><div class="icon">💱</div><div class="ilabel">เงินตรา</div><div class="ivalue">GEL (Lari)</div><div class="isub">1 GEL ≈ 13–14 บาท</div></div>
+    <div class="info-card"><div class="icon">🌍</div><div class="ilabel">วีซ่า</div><div class="ivalue">ฟรี 365 วัน</div><div class="isub">พาสปอร์ตไทย ไม่ต้องขอ</div></div>
+  </div>
+
   <section class="day">
     <div class="day-head">
       <div class="daynum"><small>DAY</small>01</div>
       <div class="day-title"><h2>ถึง Tbilisi</h2><div class="date">2 ตุลาคม · ศุกร์</div></div>
     </div>
-    <p class="day-note">วันเดินทาง เอาแบบสบายๆ ปรับตัวกับเมือง</p>
+    <p class="day-note">วันเดินทาง — เอาสบายๆ ปรับตัวกับเมือง ไม่ต้องรีบ</p>
     <ul class="tl">
-      <li><span class="place">เช็คอิน</span> <span class="desc">— ที่พักย่าน Old Town</span></li>
-      <li><span class="place">เดินเล่น Old Town + Abanotubani</span> <span class="desc">ริมแม่น้ำ Mtkvari ยามเย็น</span></li>
-      <li><span class="place">ดินเนอร์จอร์เจียแท้</span> <span class="desc">ลอง Khachapuri 🧀</span></li>
-      <li><span class="small">ถ้าถึงเช้า/บ่าย: เพิ่ม Botanical Garden of Tbilisi</span></li>
+      <li><span class="place">เช็คอิน</span> <span class="desc">— ที่พักย่าน Old Town ใกล้ Narikala Fortress เดินเที่ยวง่ายสุด</span></li>
+      <li class="hi"><span class="place">เดินเล่น Old Town + Abanotubani</span> <span class="desc">ย่านโดมกำมะถันริมแม่น้ำ Mtkvari บรรยากาศดีมากยามเย็น</span></li>
+      <li><span class="place">Narikala Fortress</span> <span class="desc">ป้อมปราการเก่าบนเขา — นั่ง cable car ขึ้นหรือเดินก็ได้ ชมวิว 360° ทั้งเมือง</span></li>
+      <li class="hi"><span class="place">ดินเนอร์จอร์เจียแท้</span> <span class="desc">ลอง Khachapuri Adjaruli (ขนมปังชีสรูปเรือ) และไวน์จอร์เจีย 🧀🍷</span></li>
+      <li><span class="small">ถ้าถึงเช้า-บ่าย: เพิ่ม Botanical Garden of Tbilisi · ค่าเข้า ~2 GEL · สวยมากต้นตุลาคม</span></li>
     </ul>
+    <div class="tip-box">
+      <div class="tip-head">🍽️ ร้านอาหาร Day 1 แนะนำ</div>
+      <ul>
+        <li><b>Shavi Lomi</b> — ดังมาก ย่าน Vera โต๊ะยาวสไตล์ดั้งเดิม Khachapuri + Lobiani อร่อยสุด ต้องจอง!</li>
+        <li><b>Machakhela</b> — ร้านเครือข่ายในตลาด สะดวก ราคาถูก เหมาะวันแรกที่เหนื่อย</li>
+        <li><b>Cafe Gabriadze</b> — บรรยากาศดีใต้หอนาฬิกาหุ่นกระบอก Old Town</li>
+      </ul>
+    </div>
   </section>
 
   <section class="day">
@@ -247,18 +253,27 @@
       <div class="daynum"><small>DAY</small>02</div>
       <div class="day-title"><h2>Tbilisi → Kazbegi</h2><div class="date">3 ตุลาคม · เสาร์</div></div>
     </div>
-    <p class="day-note">วันขับ Military Highway — เส้นทางที่สวยที่สุดของจอร์เจีย</p>
+    <p class="day-note">วัน Military Highway — เส้นทางสวยที่สุดของจอร์เจีย · ~150 กม. ขับ ~3 ชม. (หยุดหลายจุด รวม ~7 ชม.)</p>
     <ul class="tl">
-      <li><span class="time">07:30</span><span class="desc">ออกเดินทาง</span></li>
-      <li class="hi"><span class="time">09:00</span><span class="place">Ananuri Fortress</span> <span class="desc">+ วิว Zhinvali Reservoir สีมรกต</span></li>
-      <li><span class="time">10:00</span><span class="place">Two Rivers Confluence</span> <span class="desc">แม่น้ำดำ-ขาวบรรจบ (Pasanauri)</span></li>
-      <li><span class="time">11:15</span><span class="place">Jvari Pass</span> <span class="desc">จุดสูงสุด วิวเทือกเขากว้างสุด</span></li>
-      <li class="hi"><span class="time">11:45</span><span class="place">Friendship Monument</span> <span class="desc">จุดถ่ายรูป iconic เหนือ Devil's Valley</span></li>
-      <li><span class="time">12:30</span><span class="place">Gudauri Viewpoint</span> <span class="desc">วิว Caucasus</span></li>
-      <li><span class="time">13:30</span><span class="desc">เช็คอิน Kazbegi · อาหารกลางวัน</span></li>
-      <li class="hi"><span class="time">15:30</span><span class="place">Gergeti Trinity Church</span> <span class="desc">เดินขึ้นบ่าย แสง golden hour</span> <span class="small">(ขึ้น ~1.5 ชม. ลง ~1 ชม.)</span></li>
-      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ ลอง Khinkali 🥟</span></li>
+      <li><span class="time">07:30</span><span class="desc">ออกเดินทาง รถรับที่โรงแรม</span></li>
+      <li class="hi"><span class="time">09:00</span><span class="place">Ananuri Fortress</span> <span class="desc">ป้อมศตวรรษที่ 16 + วิว Zhinvali Reservoir สีมรกต — แวะ 30–45 นาที</span></li>
+      <li><span class="time">10:00</span><span class="place">Pasanauri</span> <span class="desc">จุดบรรจบแม่น้ำดำ-ขาว · ซื้อ Churchkhela สดริมทาง</span></li>
+      <li><span class="time">11:15</span><span class="place">Jvari Pass</span> <span class="desc">2,379 ม. จุดสูงสุด วิวเทือกเขาคอเคซัสกว้างสุดสุด</span></li>
+      <li class="hi"><span class="time">11:45</span><span class="place">Friendship Monument</span> <span class="desc">จุดถ่ายรูป iconic วิว 180° เหนือ Devil's Valley · สร้างปี 1983</span></li>
+      <li><span class="time">12:30</span><span class="place">Gudauri Viewpoint</span> <span class="desc">สกีรีสอร์ตอันดับ 1 ตุลาคมยังไม่มีหิมะ วิวดีมาก</span></li>
+      <li><span class="time">13:30</span><span class="desc">เช็คอิน Kazbegi · อาหารกลางวันแถว Stepantsminda</span></li>
+      <li class="hi"><span class="time">15:30</span><span class="place">Gergeti Trinity Church</span> <span class="desc">เดินขึ้น ~1.5 ชม. (2,170 ม.) แสง golden hour สวยมาก 🏔️</span><span class="small"> · ลง ~1 ชม. · ทางชันแต่ไม่ยาก</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ · ลอง Khinkali 🥟 ร้านแถวตัวเมือง Kazbegi</span></li>
     </ul>
+    <div class="tip-box">
+      <div class="tip-head">💡 เคล็ดลับ Military Highway</div>
+      <ul>
+        <li>บอกคนขับว่าอยากแวะทุกจุด ส่วนใหญ่ทำได้</li>
+        <li>ซื้อ <b>Churchkhela</b> แถว Pasanauri อร่อยกว่าในเมืองมาก</li>
+        <li>เดิน Gergeti ช่วง 15:30–17:00 แสงสวยสุด ถ่ายกับ Mt. Kazbek (5,047 ม.)</li>
+        <li>ใส่รองเท้าที่เดินสบายขึ้น Gergeti ด้วย ทางเป็นดินลูกรัง</li>
+      </ul>
+    </div>
   </section>
 
   <section class="day">
@@ -266,13 +281,20 @@
       <div class="daynum"><small>DAY</small>03</div>
       <div class="day-title"><h2>Kazbegi → Juta <span class="badge">ค้างคืน</span></h2><div class="date">4 ตุลาคม · อาทิตย์</div></div>
     </div>
-    <p class="day-note">ย้ายฐานเข้าหุบเขา · เก็บเป้เล็ก ฝากกระเป๋าใหญ่ที่ Kazbegi</p>
+    <p class="day-note">ย้ายฐานเข้าหุบเขา · เก็บเป้เล็ก ฝากกระเป๋าใหญ่ไว้ที่ Kazbegi</p>
     <ul class="tl">
-      <li><span class="time">09:30</span><span class="desc">ออกเดินทางไป Juta → จอดจุดถนนปิด → ต่อรถท้องถิ่น → ขึ้น Fifth Season</span></li>
-      <li class="hi"><span class="time">13:00</span><span class="place">เช็คอิน Fifth Season</span> <span class="desc">ชมวิว Chaukhi Massif ตรงหน้า 🏔️</span></li>
-      <li class="hi"><span class="time">14:30</span><span class="place">เดินเล่น Juta Valley</span> <span class="desc">เลาะชมวิวเบาๆ ใบไม้เปลี่ยนสี 🍂</span></li>
-      <li><span class="time">18:00</span><span class="desc">ดินเนอร์ที่ Fifth Season ชมพระอาทิตย์ตก 🌅</span></li>
+      <li><span class="time">09:00</span><span class="desc">เช็คเอาต์ · ฝากกระเป๋าใหญ่ที่ที่พัก Kazbegi ไว้ก่อน</span></li>
+      <li><span class="time">09:30</span><span class="desc">นั่ง 4WD จาก Kazbegi ขึ้น Juta ~45 นาที (ถนนดินลูกรัง รถธรรมดาผ่านไม่ได้)</span></li>
+      <li class="hi"><span class="time">11:00</span><span class="place">เช็คอิน Fifth Season – Juta</span> <span class="desc">เกสต์เฮ้าส์เล็กๆ เรตติ้ง 9.1 วิว Chaukhi Massif ตรงหน้า 🏔️</span></li>
+      <li><span class="time">12:00</span><span class="desc">อาหารกลางวันที่ Fifth Season (สั่งล่วงหน้าเมื่อจอง)</span></li>
+      <li class="hi"><span class="time">14:00</span><span class="place">เดินเล่น Juta Valley</span> <span class="desc">เลาะลำธาร ชมใบไม้เปลี่ยนสีสีทอง-แดง-ส้ม 🍂 ราบเรียบเดินง่าย 2–3 ชม.</span></li>
+      <li><span class="time">17:00</span><span class="desc">พักผ่อน อาบน้ำ เตรียมร่างกายสำหรับ hike พรุ่งนี้</span></li>
+      <li><span class="time">18:30</span><span class="desc">ดินเนอร์ที่ Fifth Season ชมพระอาทิตย์ตกสีส้มทาบ Chaukhi 🌅</span></li>
     </ul>
+    <div class="warn-box">
+      <div class="warn-head">⚠️ ต้องรู้ก่อนไป Juta</div>
+      สัญญาณมือถือน้อยมากหรือไม่มี · ดาวน์โหลดแผนที่ offline + AllTrails ก่อน · อากาศตุลาคม 3–10°C ตอนเช้า-เย็น เย็นมาก · เอาไฟฉายหรือ headlamp ไปด้วย
+    </div>
   </section>
 
   <section class="day">
@@ -280,16 +302,26 @@
       <div class="daynum"><small>DAY</small>04</div>
       <div class="day-title"><h2>Chaukhi Trail <span class="badge star">★ ไฮไลต์</span></h2><div class="date">5 ตุลาคม · จันทร์</div></div>
     </div>
-    <p class="day-note">วันไฮไลต์สูงสุด · เริ่ม trail จากหน้าที่พัก</p>
+    <p class="day-note">วัน Highlight — trail เริ่มหน้าที่พักเลย · ระยะรวม ~10 กม. · ความสูง 2,150–2,900 ม.</p>
     <ul class="tl">
-      <li><span class="time">07:00</span><span class="desc">อาหารเช้า + ขอ lunchbox จากที่พัก</span></li>
-      <li class="hi"><span class="time">08:00</span><span class="place">เริ่มเดิน Juta–Chaukhi Trail</span> 🥾</li>
-      <li class="hi"><span class="time">11:00</span><span class="place">จุดชมวิว Chaukhi Massif</span> <span class="desc">"Georgian Dolomites" พักกินข้าว ถ่ายรูป</span></li>
-      <li><span class="time">12:30</span><span class="desc">เดินลงกลับ</span></li>
-      <li><span class="time">14:30</span><span class="desc">กลับถึง Fifth Season · เช็คเอาต์</span></li>
-      <li><span class="time">15:30</span><span class="desc">ลงเขา → ต่อรถ → ขับกลับ Kazbegi</span></li>
-      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ Kazbegi</span></li>
+      <li><span class="time">07:00</span><span class="desc">อาหารเช้า + รับ lunchbox จากที่พัก (แจ้งล่วงหน้าคืนก่อน)</span></li>
+      <li class="hi"><span class="time">08:00</span><span class="place">เริ่มเดิน Juta–Chaukhi Trail</span> 🥾 <span class="desc">เส้นทางชัดเจน ใช้ AllTrails ได้เลย ไม่ต้องมีไกด์</span></li>
+      <li><span class="time">09:30</span><span class="desc">ผ่านหมู่บ้านเล็กๆ ทุ่งหญ้าสีทอง ชมวิวหุบเขาเปิดกว้าง</span></li>
+      <li class="hi"><span class="time">11:00</span><span class="place">จุดชมวิว Chaukhi Massif</span> <span class="desc">"Georgian Dolomites" ยอดหินแหลม 12 ยอดตัดฟ้า — พักกินข้าว ถ่ายรูปเต็มที่</span></li>
+      <li><span class="time">12:30</span><span class="desc">เดินลงกลับ (ง่ายและเร็วกว่าขาขึ้น)</span></li>
+      <li><span class="time">14:30</span><span class="desc">กลับถึง Fifth Season · เช็คเอาต์ อาบน้ำ</span></li>
+      <li><span class="time">15:30</span><span class="desc">นั่ง 4WD ลงเขา → ขับกลับ Kazbegi · เช็คอินที่พักเดิม</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ Kazbegi ฉลองหลัง hike 🥂</span></li>
     </ul>
+    <div class="tip-box">
+      <div class="tip-head">🥾 เตรียมตัว Chaukhi Trail</div>
+      <ul>
+        <li>ระดับ: <b>ปานกลาง</b> — ออกกำลังกายบ้างทำได้สบาย ใช้เวลา ~5–6 ชม. รวมพัก</li>
+        <li>เอาน้ำ <b>2 ลิตร</b> ขึ้นไปเลย แหล่งน้ำในเส้นทางไม่แน่นอน</li>
+        <li>ตุลาคมใบไม้เปลี่ยนสีสวยมาก background ถ่ายรูปยอดมาก</li>
+        <li>ออกแต่เช้า — ช่วงบ่ายเมฆอาจขึ้นบัง Chaukhi Massif</li>
+      </ul>
+    </div>
   </section>
 
   <section class="day">
@@ -297,15 +329,23 @@
       <div class="daynum"><small>DAY</small>05</div>
       <div class="day-title"><h2>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</h2><div class="date">6 ตุลาคม · อังคาร</div></div>
     </div>
-    <p class="day-note">วันกลับ · แวะ 2 จุดประวัติศาสตร์ทางผ่าน</p>
+    <p class="day-note">วันกลับ แวะ 2 จุดประวัติศาสตร์ · ระยะทางรวม ~250 กม.</p>
     <ul class="tl">
-      <li><span class="time">08:00</span><span class="desc">เช็คเอาต์ ออกเดินทาง</span></li>
-      <li class="hi"><span class="time">11:00</span><span class="place">Uplistsikhe Cave City</span> <span class="desc">เมืองถ้ำ 3,000 ปี (~2 ชม.) 🏛️</span></li>
-      <li><span class="time">13:30</span><span class="desc">อาหารกลางวันแถว Gori</span></li>
-      <li class="hi"><span class="time">15:30</span><span class="place">Mtskheta + Jvari Monastery</span> <span class="desc">วิวแม่น้ำสองสายบรรจบ (~1.5 ชม.)</span></li>
-      <li><span class="time">17:30</span><span class="desc">ถึง Tbilisi · เช็คอิน</span></li>
-      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ดีๆ ย่าน Fabrika ฉลองทริป</span></li>
+      <li><span class="time">08:00</span><span class="desc">เช็คเอาต์ ออกเดินทาง รถรับที่โรงแรม</span></li>
+      <li class="hi"><span class="time">11:00</span><span class="place">Uplistsikhe Cave City</span> <span class="desc">เมืองถ้ำหินอายุ 3,000 ปี — โกดังไวน์ โรงละคร ห้องโถงแกะหิน ค่าเข้า ~7 GEL 🏛️</span></li>
+      <li><span class="time">13:30</span><span class="desc">อาหารกลางวันแถว Gori · ลอง Shotis Puri (ขนมปังอบเตาดิน)</span></li>
+      <li class="hi"><span class="time">15:30</span><span class="place">Mtskheta + Jvari Monastery</span> <span class="desc">เมืองหลวงเก่า UNESCO · วิวจาก Jvari ชมแม่น้ำสองสายบรรจบ (~1.5 ชม.)</span></li>
+      <li><span class="time">17:30</span><span class="desc">ถึง Tbilisi · เช็คอินแถว Fabrika หรือ Old Town</span></li>
+      <li class="hi"><span class="time">19:30</span><span class="desc">ดินเนอร์ฉลองทริป ย่าน Fabrika 🥂</span></li>
     </ul>
+    <div class="tip-box">
+      <div class="tip-head">💡 Day 5 Tips</div>
+      <ul>
+        <li><b>Uplistsikhe:</b> มีไกด์ให้เช่า (optional) · แดดร้อนบนหิน เอาน้ำ + หมวกไปด้วย</li>
+        <li><b>Jvari Monastery:</b> แต่งกายสุภาพ มีผ้าให้ยืม · วิวจากด้านนอกโบสถ์สวยมากพอกัน</li>
+        <li>ย่าน <b>Fabrika</b> คือ hub คนรุ่นใหม่ ร้านอาหารหลากหลาย บาร์ดีๆ เหมาะฉลองวันสุดท้าย</li>
+      </ul>
+    </div>
   </section>
 
   <section class="day">
@@ -314,114 +354,206 @@
       <div class="day-title"><h2>Tbilisi → กลับบ้าน</h2><div class="date">7 ตุลาคม · พุธ</div></div>
     </div>
     <ul class="tl">
-      <li><span class="time">09:00</span><span class="place">Dry Bridge Market</span> <span class="desc">ช้อปของฝาก ของเก่า 🛍️</span></li>
-      <li><span class="time">11:00</span><span class="desc">กาแฟ อาหารเช้าสาย Old Town · เก็บกระเป๋า</span></li>
-      <li><span class="desc">บินกลับ ✈️</span></li>
+      <li><span class="time">09:00</span><span class="place">Dry Bridge Market</span> <span class="desc">ตลาดของเก่า งานศิลปะ เครื่องประดับ เปิดทุกวัน · ต่อราคาได้ 🛍️</span></li>
+      <li><span class="time">10:30</span><span class="desc">ช้อปของฝาก Old Town · ไวน์ ชา Churchkhela เครื่องปั้นดินเผา</span></li>
+      <li><span class="time">11:30</span><span class="desc">กาแฟ + อาหารเช้าสาย Old Town · เก็บกระเป๋า</span></li>
+      <li><span class="desc">เรียก <b>Bolt</b> (แท็กซี่ app ของจอร์เจีย) ไปสนามบิน</span></li>
+      <li class="hi"><span class="desc">บินกลับ ✈️ พร้อมความทรงจำและไวน์เต็มกระเป๋า</span></li>
     </ul>
+    <div class="tip-box">
+      <div class="tip-head">🛍️ ของฝากที่ดีที่สุด</div>
+      <ul>
+        <li><b>ไวน์จอร์เจีย</b> — Amber Wine, Saperavi (แดง), Rkatsiteli (ขาว) · 5–20 GEL/ขวด</li>
+        <li><b>Churchkhela</b> — ซื้อสดจาก Dry Bridge ดีกว่าแบบโรงงาน</li>
+        <li><b>Chacha</b> — เหล้าองุ่น 50°+ ราคาถูกมาก เอาขวดเล็กหลายๆ ขวด</li>
+        <li><b>ชา Georgian Tea</b> ปลูกที่ Kakheti กลิ่นหอม บรรจุกล่องสวย</li>
+      </ul>
+    </div>
   </section>
 
   <section class="next">
     <h3>เก็บไว้ทริปหน้า</h3>
     <div class="next-grid">
-      <div class="nx"><b>Svaneti</b><span>ภูเขาสุดอลังการ · หอคอยหินยุคกลาง · 3–4 วัน</span></div>
-      <div class="nx"><b>Kakheti / Sighnaghi</b><span>ไวน์เก่าแก่ที่สุดในโลก · เมืองโรแมนติก · 1–2 วัน</span></div>
-      <div class="nx"><b>Vardzia</b><span>เมืองถ้ำยักษ์ 13 ชั้น · 1–2 วัน</span></div>
-      <div class="nx"><b>Batumi</b><span>ทะเลดำ · เมืองทันสมัย · 2 วัน</span></div>
+      <div class="nx"><b>Svaneti</b><span>ภูเขาสุดอลังการ หอคอยหินยุคกลาง · 3–4 วัน (บินภายในหรือรถ 8 ชม.)</span></div>
+      <div class="nx"><b>Kakheti / Sighnaghi</b><span>แหล่งไวน์เก่าแก่ที่สุดในโลก เมืองโรแมนติกมีกำแพง · 1–2 วัน</span></div>
+      <div class="nx"><b>Vardzia</b><span>เมืองถ้ำยักษ์ 13 ชั้น ศตวรรษที่ 12 ทางใต้ · 1–2 วัน</span></div>
+      <div class="nx"><b>Batumi</b><span>ทะเลดำ เมืองทันสมัย คาสิโน · 2 วัน (บินภายในได้)</span></div>
     </div>
   </section>
 </div>
 </div>
 
-<!-- ═══════════════════════════════════ BUDGET TAB -->
+<!-- ═══ BUDGET TAB ═══ -->
 <div class="tab-panel" id="tab-budget">
 <div class="wrap">
 
   <div class="budget-hero">
-    <div class="label">ประมาณการงบรวม / คน</div>
+    <div class="blabel">ประมาณการงบรวม / คน</div>
     <div class="total">45,000–65,000<small>บาท</small></div>
-    <div class="note">ยังไม่รวมตั๋วเครื่องบิน · ขึ้นอยู่กับที่พักและการใช้จ่ายส่วนตัว</div>
+    <div class="bnote">ยังไม่รวมตั๋วเครื่องบิน · ขึ้นอยู่กับที่พักและการใช้จ่ายส่วนตัว</div>
+  </div>
+
+  <div class="bsum-row">
+    <div class="bsum-card"><div class="sc-label">ตั๋วบิน</div><div class="sc-amount">25k–45k</div><div class="sc-note">บาท / คน</div></div>
+    <div class="bsum-card"><div class="sc-label">ที่พัก 5 คืน</div><div class="sc-amount">9k–15k</div><div class="sc-note">บาท / คน (แชร์คู่)</div></div>
+    <div class="bsum-card"><div class="sc-label">รถ + อาหาร</div><div class="sc-amount">11k–20k</div><div class="sc-note">บาท / คน</div></div>
   </div>
 
   <div class="budget-section">
     <h3>✈️ ตั๋วเครื่องบิน</h3>
     <div class="budget-row">
-      <div class="item"><b>กรุงเทพฯ → Tbilisi (ไป-กลับ)</b><span>มักต่อ Dubai / Istanbul / Doha</span></div>
+      <div class="item"><b>กรุงเทพฯ → Tbilisi (ไป-กลับ)</b><span>มักต่อ Dubai (Emirates/flydubai) · Istanbul (Turkish Airlines) · Doha (Qatar Airways)</span></div>
       <div class="amount"><b>25,000–45,000</b><span>บาท</span></div>
+    </div>
+    <div class="budget-note">
+      <b>เคล็ดลับจองตั๋ว:</b>
+      <ul>
+        <li>จองล่วงหน้า 2–3 เดือน ราคาถูกกว่ามาก</li>
+        <li>ต้นตุลาคม (peak ใบไม้เปลี่ยนสี) ราคาสูงกว่าปกติ</li>
+        <li>เช็ค Google Flights ตั้ง Price Alert ไว้รอ</li>
+        <li>ต่อ Dubai มักถูกสุด ใช้เวลารวม ~11–13 ชม.</li>
+      </ul>
     </div>
   </div>
 
   <div class="budget-section">
     <h3>🏨 ที่พัก (5 คืน)</h3>
     <div class="budget-row">
-      <div class="item"><b>Tbilisi Old Town</b><span>2 คืน · บูทีคโฮเทล / เกสต์เฮ้าส์</span></div>
+      <div class="item"><b>Tbilisi Old Town · 2 คืน</b><span>บูทีคโฮเทล / เกสต์เฮ้าส์ ย่าน Old Town · แนะนำ: Fabrika Hostel ห้องส่วนตัว, Old Meidan Tiflis</span></div>
       <div class="amount"><b>2,000–4,000</b><span>บาท/คืน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Kazbegi</b><span>2 คืน · เกสต์เฮ้าส์ วิวภูเขา</span></div>
+      <div class="item"><b>Kazbegi · 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา ย่าน Stepantsminda · แนะนำ: Guesthouses รอบๆ / Rooms Hotel (หรู)</span></div>
       <div class="amount"><b>1,500–3,000</b><span>บาท/คืน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Fifth Season – Juta</b><span>1 คืน · จองล่วงหน้า! (เรตติ้ง 9.1)</span></div>
+      <div class="item"><b>Fifth Season – Juta · 1 คืน</b><span>⚠️ จองล่วงหน้า! ห้องน้อยมาก เต็มเร็วมาก Booking.com เรตติ้ง 9.1 · รวมอาหารเช้า</span></div>
       <div class="amount"><b>2,500–4,000</b><span>บาท/คืน</span></div>
+    </div>
+    <div class="budget-note">
+      <b>ประหยัดค่าที่พัก:</b> ที่พักส่วนใหญ่คิดต่อห้อง — แชร์ 2 คน ค่าที่พัก/คน ÷ 2 ทันที · Kazbegi หลายแห่ง Half Board (อาหารเช้า+เย็น) รวมอยู่แล้ว ประหยัดค่าอาหาร
     </div>
   </div>
 
   <div class="budget-section">
     <h3>🚗 การเดินทางในจอร์เจีย</h3>
     <div class="budget-row">
-      <div class="item"><b>รถ + คนขับ Military Highway</b><span>Tbilisi → Kazbegi (วันที่ 2) แวะ Ananuri, Friendship Monument</span></div>
+      <div class="item"><b>รถ + คนขับ Military Highway (Day 2)</b><span>Tbilisi → Kazbegi แวะ Ananuri, Pasanauri, Friendship Monument, Gudauri · ~7 ชม.</span></div>
       <div class="amount"><b>3,000–5,000</b><span>บาท/คัน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>รถ 4WD Kazbegi → Juta</b><span>ถนนขรุขระต้องใช้ 4WD เท่านั้น</span></div>
+      <div class="item"><b>รถ 4WD Kazbegi → Juta (ไป-กลับ) (Day 3–4)</b><span>ถนนต้องใช้ 4WD เท่านั้น · ถามที่พัก Kazbegi ช่วยจัดได้</span></div>
       <div class="amount"><b>1,500–2,500</b><span>บาท/คัน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>รถ + คนขับ Kazbegi → Tbilisi</b><span>วันที่ 5 แวะ Uplistsikhe + Mtskheta</span></div>
+      <div class="item"><b>รถ + คนขับ Kazbegi → Tbilisi (Day 5)</b><span>แวะ Uplistsikhe + Gori + Mtskheta · แวะมากกว่า ราคาสูงขึ้น · ~9 ชม.</span></div>
       <div class="amount"><b>3,500–5,500</b><span>บาท/คัน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Metro / Taxi ใน Tbilisi</b><span>วันที่ 1, 6</span></div>
+      <div class="item"><b>Bolt (แท็กซี่ app) ใน Tbilisi</b><span>Day 1 & 6 สนามบิน + เดินเที่ยวในเมือง ราคาถูกมาก</span></div>
       <div class="amount"><b>300–600</b><span>บาท</span></div>
+    </div>
+    <div class="budget-note">
+      <b>แชร์รถ:</b> ถ้าไปกลุ่ม 3–4 คน ค่ารถ/คนลดลงมาก · ถ้าไป 2 คนหาคนแชร์รถได้ที่โรงแรมหรือ Facebook Group "Georgia Travelers"
     </div>
   </div>
 
   <div class="budget-section">
     <h3>🍽️ อาหาร (6 วัน)</h3>
-    <div class="budget-row">
-      <div class="item"><b>Tbilisi</b><span>ร้านอาหารดีๆ · Khachapuri, Khinkali, ไวน์</span></div>
-      <div class="amount"><b>600–1,200</b><span>บาท/วัน</span></div>
-    </div>
-    <div class="budget-row">
-      <div class="item"><b>Kazbegi / Juta</b><span>ที่พักมักรวมอาหารเช้า · ดินเนอร์ที่โรงแรม</span></div>
-      <div class="amount"><b>400–800</b><span>บาท/วัน</span></div>
-    </div>
+    <p style="font-size:.85rem;color:var(--stone);margin-bottom:12px;">จอร์เจียถูกมากเมื่อเทียบยุโรปหรือแม้แต่ไทย ร้านอาหารดีๆ กินได้ 200–400 บาท/มื้อ</p>
+    <table class="food-table">
+      <tr><th>วัน / ที่</th><th>อาหารแนะนำ</th><th>ราคา/วัน</th></tr>
+      <tr>
+        <td><b>Tbilisi</b><br><span>Day 1 &amp; 6</span></td>
+        <td>Khachapuri Adjaruli, Khinkali, ไวน์ Rkatsiteli<br><span style="color:var(--stone);font-size:.77rem;">ร้านดีๆ ย่าน Old Town / Fabrika</span></td>
+        <td>600–1,200 บาท</td>
+      </tr>
+      <tr>
+        <td><b>Military Hwy</b><br><span>Day 2</span></td>
+        <td>Churchkhela ริมทาง, Khinkali + Mtsvadi Kazbegi<br><span style="color:var(--stone);font-size:.77rem;">ร้านเล็กๆ ตามทาง ราคาถูกมาก</span></td>
+        <td>400–700 บาท</td>
+      </tr>
+      <tr>
+        <td><b>Kazbegi</b><br><span>Day 2, 4</span></td>
+        <td>Chakapuli (สตูว์แกะ), Mtsvadi (บาร์บีคิว), Lobiani<br><span style="color:var(--stone);font-size:.77rem;">มักรวมอาหารเช้า-เย็นแล้วถ้า Half Board</span></td>
+        <td>400–800 บาท</td>
+      </tr>
+      <tr>
+        <td><b>Juta</b><br><span>Day 3</span></td>
+        <td>อาหารที่ Fifth Season (ดี! สั่งล่วงหน้า) + Lunchbox trail<br><span style="color:var(--stone);font-size:.77rem;">ตัวเลือกน้อยมาก แนะนำกินที่พักเลย</span></td>
+        <td>300–600 บาท</td>
+      </tr>
+      <tr>
+        <td><b>Gori / Mtskheta</b><br><span>Day 5</span></td>
+        <td>Shotis Puri, Pkhali (สลัดผักปั้น), Badrijani Nigvzit<br><span style="color:var(--stone);font-size:.77rem;">ร้านท้องถิ่นแถวตลาด Gori ราคาถูกสุด</span></td>
+        <td>300–500 บาท</td>
+      </tr>
+    </table>
   </div>
 
   <div class="budget-section">
     <h3>🎟️ ค่าเข้าชม</h3>
     <div class="budget-row">
       <div class="item"><b>Uplistsikhe Cave City</b><span></span></div>
-      <div class="amount"><b>~150</b><span>บาท</span></div>
+      <div class="amount"><b>~7 GEL</b><span>~100 บาท</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Ananuri Fortress</b><span>ฟรี</span></div>
+      <div class="item"><b>Botanical Garden Tbilisi</b><span>ถ้าแวะ Day 1</span></div>
+      <div class="amount"><b>~2 GEL</b><span>~28 บาท</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Cable Car Narikala (Tbilisi)</b><span>ขึ้น-ลง</span></div>
+      <div class="amount"><b>~4 GEL</b><span>~56 บาท</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Ananuri Fortress</b><span></span></div>
       <div class="amount"><b>ฟรี</b><span></span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Gergeti / Jvari / Mtskheta</b><span>โบสถ์เปิดให้เข้าฟรี</span></div>
+      <div class="item"><b>Gergeti / Jvari Monastery / Mtskheta</b><span>โบสถ์ Georgian Orthodox เปิดให้เข้าฟรี</span></div>
       <div class="amount"><b>ฟรี</b><span></span></div>
     </div>
+  </div>
+
+  <div class="budget-section">
+    <h3>🛍️ ของฝาก / Shopping (ประมาณ)</h3>
+    <div class="budget-row">
+      <div class="item"><b>ไวน์จอร์เจีย</b><span>Rkatsiteli, Saperavi, Amber Wine (ไวน์ส้มเอกลักษณ์จอร์เจีย) · 5–20 GEL/ขวด</span></div>
+      <div class="amount"><b>500–2,000</b><span>บาท</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>Churchkhela + ชาจอร์เจีย + Chacha</b><span>ของฝากยอดนิยม ราคาถูกมาก</span></div>
+      <div class="amount"><b>300–800</b><span>บาท</span></div>
+    </div>
+    <div class="budget-row">
+      <div class="item"><b>งานฝีมือ / เครื่องปั้นดินเผา</b><span>Dry Bridge Market</span></div>
+      <div class="amount"><b>500–3,000</b><span>บาท (แล้วแต่ใจ)</span></div>
+    </div>
+  </div>
+
+  <div class="currency-box">
+    <div class="cy-title">💱 อัตราแลกเปลี่ยน &amp; เคล็ดลับเงิน</div>
+    <div class="cy-row"><span>1 GEL (Georgian Lari)</span><b>≈ 13–14 บาท</b></div>
+    <div class="cy-row"><span>100 บาท</span><b>≈ 7–8 GEL</b></div>
+    <div class="cy-row"><span>แลกที่ไหนดีสุด</span><b>ร้านแลกใน Tbilisi (อัตราดีกว่าไทยมาก)</b></div>
+    <div class="cy-row"><span>ATM</span><b>มีใน Tbilisi / Kazbegi มีบ้าง · Juta ไม่มี</b></div>
+    <div class="cy-row"><span>บัตรเครดิต</span><b>รับใน Tbilisi · Juta ต้องเงินสดเท่านั้น</b></div>
   </div>
 
   <div class="budget-note">
-    <b>เคล็ดลับประหยัด:</b> แชร์รถกับนักท่องเที่ยวคนอื่น ค่ารถลดได้ครึ่งนึง · จอร์เจียถูกมากเมื่อเทียบยุโรป · ชำระด้วยเงินสด GEL (Lari) ได้ราคาดีกว่า · 1 GEL ≈ 13–14 บาท
+    <b>สรุปเคล็ดลับประหยัด:</b>
+    <ul>
+      <li>แชร์รถกับนักท่องเที่ยวคนอื่น — ค่ารถลดได้ 50% ทันที</li>
+      <li>จอร์เจียถูกมาก อาหาร-ดื่ม-ที่พักล้วนเป็นมิตร เทียบยุโรปถูกกว่า 3–5 เท่า</li>
+      <li>ชำระเงินสด GEL ที่ร้านท้องถิ่นได้ราคาดีกว่าบัตร</li>
+      <li>ที่พัก Half Board (รวมอาหารเช้า-เย็น) ที่ Kazbegi ประหยัดค่าอาหารได้มาก</li>
+    </ul>
   </div>
 
 </div>
 </div>
 
-<!-- ═══════════════════════════════════ CHECKLIST TAB -->
+<!-- ═══ CHECKLIST TAB ═══ -->
 <div class="tab-panel" id="tab-checklist">
 <div class="wrap" style="padding-top:32px;">
 
@@ -429,51 +561,71 @@
     <h3>📋 จัดการก่อนเดินทาง</h3>
     <p class="lead">ทำล่วงหน้าให้เสร็จ ทริปจะราบรื่น</p>
     <div class="cl-group">
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง Fifth Season – Juta</b><span>ต้นตุลาห้องจำกัดมาก จองด่วน! (Booking.com เรตติ้ง 9.1)</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Kazbegi 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา หรือ Rooms Hotel Kazbegi</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Tbilisi 2 คืน</b><span>ย่าน Old Town หรือ Fabrika</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับ Military Highway</b><span>Tbilisi → Kazbegi แวะทุกจุด</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ 4WD Kazbegi–Juta</b><span>ถามที่พัก Kazbegi ช่วยจัดได้</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับวันกลับ</b><span>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช็กสภาพถนน Juta กับที่พัก</b><span>โทรถามก่อนวันเดินทาง ถนนเปลี่ยนบ่อยตามสภาพอากาศ</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อประกันการเดินทาง</b><span>ครอบคลุม hiking และ outdoor activities</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ดาวน์โหลดแผนที่ offline</b><span>Maps.me หรือ Google Maps (offline) พื้นที่ Kazbegi + Juta</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อซิม / เช็ก roaming</b><span>Magti หรือ Geocell ดีในจอร์เจีย</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>แลกเงิน GEL (Lari)</b><span>แลกที่จอร์เจียได้เลย อัตราดีกว่าไทย ATM ก็ได้</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง Fifth Season – Juta</b><span>⚠️ ต้นตุลาห้องจำกัดมาก จองด่วนที่สุด! (Booking.com เรตติ้ง 9.1) มีห้องน้อย เต็มเร็วมาก</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Kazbegi 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา หรือ Rooms Hotel Kazbegi (budget สูงกว่า)</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Tbilisi 2 คืน</b><span>ย่าน Old Town สะดวกเดินเที่ยว หรือแถว Fabrika สำหรับคืนสุดท้าย</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับ Military Highway</b><span>Day 2 Tbilisi → Kazbegi แวะทุกจุด · หา Facebook Group "Georgia Travelers" หรือถามโรงแรม</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ 4WD Kazbegi–Juta (ไป-กลับ)</b><span>Day 3–4 ถนนต้องใช้ 4WD เท่านั้น · ถามที่พัก Kazbegi ช่วยจัดได้ ราคา 1,500–2,500 บาท/คัน</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองรถ + คนขับวันกลับ (Day 5)</b><span>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi แวะมากกว่า ราคาสูงขึ้น</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช็กสภาพถนน Juta กับที่พัก</b><span>โทรถามก่อน 1–2 วัน ถนนดินลูกรังอาจปิดกะทันหันหลังฝน</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อประกันการเดินทาง</b><span>ต้องครอบคลุม hiking + outdoor activities + ระดับความสูง 3,000 ม. · แนะนำ Safety Wing หรือ World Nomads</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ดาวน์โหลดแผนที่ offline</b><span>Maps.me หรือ Google Maps offline พื้นที่ Kazbegi + Juta · ดาวน์โหลด AllTrails Chaukhi Trail ด้วย · ไม่มีสัญญาณที่ Juta</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อซิม / เช็ก roaming</b><span>ซื้อซิม Magti หรือ Geocell ที่สนามบิน Tbilisi ราคา ~500 บาท มีเน็ตดีใน Tbilisi</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>แลกเงิน GEL</b><span>แลกที่จอร์เจียดีกว่าไทย · ร้านแลกใน Tbilisi อัตราดีสุด · เอาเงินสดขึ้น Juta ด้วย ไม่มี ATM</span></div></label>
     </div>
   </div>
 
   <hr class="cl-divider">
 
   <div class="cl-section">
-    <h3>🎒 เป้ใหญ่ — เสื้อผ้า</h3>
-    <p class="lead">ต้นตุลาคม อากาศ 5–18°C ที่ Kazbegi · Tbilisi อุ่นกว่า ~15–22°C</p>
+    <h3>🎒 เสื้อผ้า</h3>
+    <p class="lead">ต้นตุลาคม · Kazbegi 5–18°C · Tbilisi 15–22°C · ใส่เป็น Layer</p>
     <div class="cl-group">
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อกันหนาวหนา / fleece</b><span>สำหรับ Kazbegi และ Juta ตอนเช้า-เย็น</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อกันลม / rain jacket</b><span>กันลมและฝนระหว่าง hike</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อแขนยาว base layer 2–3 ตัว</b><span></span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>กางเกง hiking / trousers</b><span>แห้งเร็ว ขยับสะดวก</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ชุดสำหรับ Tbilisi 2–3 วัน</b><span>แต่งตัวปกติสำหรับเดินเมือง</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ผ้าพันคอ / หมวก / ถุงมือบาง</b><span>สำหรับยอดเขา</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ถุงเท้า hiking หนา 2–3 คู่</b><span></span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อกันหนาวหนา / fleece หนา</b><span>Kazbegi และ Juta ตอนเช้า-เย็น เย็นมาก ต้องใช้แน่ๆ อย่าลืม</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อกันลม / rain jacket กันน้ำ</b><span>กันลมและฝนระหว่าง hike · ฝนต้นตุลาคมมีบ้าง</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เสื้อแขนยาว base layer 2–3 ตัว</b><span>ใส่ชั้นในใต้ fleece · แห้งเร็ว ไม่เหม็น (merino wool ดีสุด)</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>กางเกง hiking / trousers</b><span>แห้งเร็ว ขยับสะดวก ไม่ยีน · 2 ตัวสลับ</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ชุดสำหรับ Tbilisi 2–3 ชุด</b><span>แต่งตัวปกติเดินเมือง ร้านอาหาร · Tbilisi ค่อนข้าง fashionable</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ผ้าพันคอ / หมวกไหมพรม / ถุงมือบาง</b><span>บนยอดเขา Gergeti และ Chaukhi ลมแรงมาก</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ถุงเท้า hiking หนา 2–3 คู่</b><span>Merino wool กันพอง ล้างง่าย แห้งเร็ว</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ผ้าคลุมศีรษะ / ผ้าคลุมไหล่</b><span>เข้าโบสถ์จอร์เจียต้องคลุม ที่ประตูมีให้ยืมแต่เอาเองดีกว่า</span></div></label>
     </div>
   </div>
 
   <hr class="cl-divider">
 
   <div class="cl-section">
-    <h3>👟 รองเท้าและอุปกรณ์ Hike</h3>
+    <h3>👟 อุปกรณ์ Hike</h3>
     <div class="pack-grid">
-      <label class="pack-item"><input type="checkbox"><span>รองเท้า hiking (กันน้ำ)</span></label>
-      <label class="pack-item"><input type="checkbox"><span>รองเท้าเดินเมือง</span></label>
+      <label class="pack-item"><input type="checkbox"><span>รองเท้า hiking กันน้ำ (ankle support)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>รองเท้าเดินเมือง / รองเท้าแตะ</span></label>
       <label class="pack-item"><input type="checkbox"><span>ไม้เท้า trekking poles</span></label>
-      <label class="pack-item"><input type="checkbox"><span>เป้เล็ก daypack</span></label>
-      <label class="pack-item"><input type="checkbox"><span>ขวดน้ำ 1 ลิตร × 2</span></label>
-      <label class="pack-item"><input type="checkbox"><span>ครีมกันแดด SPF50+</span></label>
-      <label class="pack-item"><input type="checkbox"><span>แว่นกันแดด</span></label>
-      <label class="pack-item"><input type="checkbox"><span>ยาแก้ปวดเท้า / พลาสเตอร์</span></label>
-      <label class="pack-item"><input type="checkbox"><span>ขนมระหว่าง hike</span></label>
-      <label class="pack-item"><input type="checkbox"><span>AllTrails app (offline)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>เป้เล็ก daypack 20–25L</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ขวดน้ำ 1L × 2 (เอาขึ้น trail)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ครีมกันแดด SPF50+ (UV แรงบนเขา)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>แว่นกันแดด UV400</span></label>
+      <label class="pack-item"><input type="checkbox"><span>พลาสเตอร์กันพอง Compeed</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ขนมระหว่าง hike (energy bar, ถั่ว)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>AllTrails app ดาวน์โหลด offline</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ไฟฉาย / headlamp</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ผ้าซับเหงื่อ / หมวก</span></label>
+    </div>
+  </div>
+
+  <hr class="cl-divider">
+
+  <div class="cl-section">
+    <h3>💊 ยาและสุขภาพ</h3>
+    <p class="lead">จอร์เจียมีร้านขายยา แต่ฉลากเป็นภาษาจอร์เจีย เอาไปเองดีกว่า</p>
+    <div class="pack-grid">
+      <label class="pack-item"><input type="checkbox"><span>ยาแก้ปวด / ลดไข้ (Paracetamol)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ยาท้องเสีย + Electrolyte ผง</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ยาแก้แพ้ (Antihistamine)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ยาทาแผล + antiseptic wipes</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ยา altitude sickness (ปรึกษาแพทย์)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ผ้าพันแผล elastic bandage</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ยาส่วนตัว (เพิ่มปริมาณให้พอ)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ครีมทาแมลงกัด</span></label>
     </div>
   </div>
 
@@ -482,13 +634,59 @@
   <div class="cl-section">
     <h3>📱 อุปกรณ์และเอกสาร</h3>
     <div class="pack-grid">
-      <label class="pack-item"><input type="checkbox"><span>พาสปอร์ต (หมดอายุ?)</span></label>
-      <label class="pack-item"><input type="checkbox"><span>กล้องถ่ายรูป / lens</span></label>
-      <label class="pack-item"><input type="checkbox"><span>Power bank ใหญ่</span></label>
-      <label class="pack-item"><input type="checkbox"><span>สายชาร์จ + adapter</span></label>
-      <label class="pack-item"><input type="checkbox"><span>หูฟัง</span></label>
-      <label class="pack-item"><input type="checkbox"><span>กระเป๋าซิป ใส่ของมีค่า</span></label>
+      <label class="pack-item"><input type="checkbox"><span>พาสปอร์ต (อายุเหลือ 6+ เดือน)</span></label>
+      <label class="pack-item"><input type="checkbox"><span>ถ่ายรูปพาสปอร์ตเก็บ Cloud</span></label>
+      <label class="pack-item"><input type="checkbox"><span>กล้อง + memory card สำรอง</span></label>
+      <label class="pack-item"><input type="checkbox"><span>Power bank ≥ 20,000 mAh</span></label>
+      <label class="pack-item"><input type="checkbox"><span>สายชาร์จ USB-C + adapter EU</span></label>
+      <label class="pack-item"><input type="checkbox"><span>หูฟังตัดเสียง ในเครื่องบิน</span></label>
+      <label class="pack-item"><input type="checkbox"><span>กระเป๋าซิปใส่ของมีค่า</span></label>
+      <label class="pack-item"><input type="checkbox"><span>แชร์ location กับคนที่บ้าน</span></label>
     </div>
+  </div>
+
+  <hr class="cl-divider">
+
+  <div class="cl-section">
+    <h3>🍽️ อาหารต้องลองในจอร์เจีย</h3>
+    <p class="lead">เช็คให้ครบ ทริปสมบูรณ์แบบ!</p>
+    <div class="food-cl-grid">
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Khachapuri Adjaruli</b><span>ขนมปังชีสรูปเรือ ไข่ดาวกลาง · ไม่กินคือพลาดมาก</span></div></label>
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Khinkali</b><span>เกี๊ยวน้ำซุปข้างใน · ดูดน้ำซุปออกก่อนกัด!</span></div></label>
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Amber Wine (Orange Wine)</b><span>ไวน์ขาวหมักเปลือกองุ่น สีส้มทอง เอกลักษณ์จอร์เจีย</span></div></label>
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Chacha</b><span>เหล้าองุ่น 50–60% · ดื่มแบบ Georgian เป็น Shot</span></div></label>
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Churchkhela</b><span>ลูกเกดถั่วห่อน้ำองุ่นข้น ซื้อสดริมทางดีสุด</span></div></label>
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Badrijani Nigvzit</b><span>มะเขือยาวทอดยัดไส้วอลนัทบด มังสวิรัตที่อร่อยสุด</span></div></label>
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Chakapuli</b><span>สตูว์เนื้อแกะใบทาราก็อน อาหาร Fall ของจอร์เจีย</span></div></label>
+      <label class="food-cl-item"><input type="checkbox"><div class="food-info"><b>Shotis Puri</b><span>ขนมปังอบเตาดินรูปยาว กินสดจากเตาดีที่สุด</span></div></label>
+    </div>
+  </div>
+
+  <hr class="cl-divider">
+
+  <div class="cl-section">
+    <h3>🤝 มารยาทและวัฒนธรรม</h3>
+    <p class="lead">รู้ไว้ ทริปจะดีกว่าเดิม</p>
+    <div class="etiq-grid">
+      <div class="etiq-card"><div class="etiq-icon">⛪</div><div><b>เข้าโบสถ์ต้องคลุมศีรษะ (ผู้หญิง)</b><span>ผู้ชายถอดหมวก · มีผ้าให้ยืมที่ประตู แต่เอาไปเองดีกว่า</span></div></div>
+      <div class="etiq-card"><div class="etiq-icon">🍷</div><div><b>วัฒนธรรม Supra (งานเลี้ยง Georgian)</b><span>มี Tamada (Toast Master) นำดื่มเป็นเรื่องๆ อย่าแปลกใจถ้าถูกเชิญกินข้าวแบบไม่ทันตั้งตัว</span></div></div>
+      <div class="etiq-card"><div class="etiq-icon">📸</div><div><b>ขออนุญาตก่อนถ่ายรูปคน</b><span>โดยเฉพาะผู้สูงอายุและเด็ก บางคนไม่ชอบถูกถ่าย</span></div></div>
+      <div class="etiq-card"><div class="etiq-icon">🗣️</div><div><b>ภาษา</b><span>ภาษาอังกฤษเข้าใจดีในเมือง · คนรุ่นเก่าพูดรัสเซียดีกว่า · ภาษาจอร์เจียใช้อักษรเป็นเอกลักษณ์มาก</span></div></div>
+      <div class="etiq-card"><div class="etiq-icon">💶</div><div><b>ทิปส์</b><span>ร้านอาหารทั่วไปไม่บังคับ แต่ให้ 10% ถือว่าดีมาก · คนขับรถส่วนตัวส่วนใหญ่ไม่คาดหวัง</span></div></div>
+      <div class="etiq-card"><div class="etiq-icon">🚗</div><div><b>Bolt คือ Uber ของจอร์เจีย</b><span>ดาวน์โหลดไว้ก่อนออกจากไทย ใช้ได้ใน Tbilisi สะดวกมาก ราคาถูก</span></div></div>
+    </div>
+  </div>
+
+  <hr class="cl-divider">
+
+  <div class="emergency-box">
+    <h3>🆘 เบอร์ฉุกเฉินและข้อมูลสำคัญ</h3>
+    <div class="em-row"><span class="em-label">สายด่วนฉุกเฉิน (ตำรวจ / รถพยาบาล)</span><div class="em-val">112</div></div>
+    <div class="em-row"><span class="em-label">ตำรวจจอร์เจีย</span><div class="em-val">022</div></div>
+    <div class="em-row"><span class="em-label">โรงพยาบาลดีสุดใน Tbilisi</span><div class="em-val">Mediclub Georgia / Aversi Clinic</div></div>
+    <div class="em-row"><span class="em-label">สถานทูตไทยในจอร์เจีย</span><div class="em-val">ไม่มี — ใกล้สุดคืออังการา / บากู</div></div>
+    <div class="em-row"><span class="em-label">กรมการกงสุล (กรุงเทพ)</span><div class="em-val">+66-2-575-1000</div></div>
+    <div class="em-row"><span class="em-label">โทรออกจากจอร์เจีย → ไทย</span><div class="em-val">00 + 66 + เบอร์ (ตัด 0 หน้า)</div></div>
   </div>
 
 </div>
@@ -511,10 +709,9 @@
       window.scrollTo({top: 0, behavior: 'smooth'});
     });
   });
-
-  document.querySelectorAll('.cl-item input, .pack-item input').forEach(cb => {
+  document.querySelectorAll('.cl-item input, .pack-item input, .food-cl-item input').forEach(cb => {
     cb.addEventListener('change', () => {
-      cb.closest('.cl-item, .pack-item').classList.toggle('done', cb.checked);
+      cb.closest('.cl-item, .pack-item, .food-cl-item').classList.toggle('done', cb.checked);
     });
   });
 </script>
