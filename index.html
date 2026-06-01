@@ -85,7 +85,7 @@
   .nx b{color:var(--rust);font-family:'Fraunces','IBM Plex Sans Thai',serif;}
   .nx span{display:block;font-size:.83rem;color:var(--stone);margin-top:2px;}
 
-  /* BUDGET TAB */
+  /* BUDGET */
   .budget-hero{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:28px 28px 20px;margin:32px 0 24px;text-align:center;}
   .budget-hero .blabel{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:6px;}
   .budget-hero .total{font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:2.8rem;font-weight:300;color:var(--rust);line-height:1;}
@@ -130,7 +130,7 @@
   .budget-note ul{padding-left:18px;margin-top:6px;}
   .budget-note ul li{margin-bottom:4px;}
 
-  /* CHECKLIST TAB */
+  /* CHECKLIST */
   .cl-section{margin-bottom:32px;}
   .cl-section h3{font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.15rem;color:var(--pine);margin-bottom:4px;}
   .cl-section .lead{font-size:.85rem;color:var(--stone);margin-bottom:16px;}
@@ -192,6 +192,7 @@
   <div class="meta">
     <span class="chip">2–7 ตุลาคม</span>
     <span class="chip">6 วัน 5 คืน</span>
+    <span class="chip">3 คน</span>
     <span class="chip">เน้นธรรมชาติ</span>
   </div>
   <svg class="peaks" viewBox="0 0 1200 70" preserveAspectRatio="none">
@@ -384,23 +385,23 @@
 <div class="wrap">
 
   <div class="budget-hero">
-    <div class="blabel">งบรวมทั้งหมด / คน (รวมตั๋วเครื่องบินแล้ว)</div>
-    <div class="total">40,000–75,000<small>บาท</small></div>
-    <div class="bnote2">ค่าใช้จ่ายในจอร์เจีย (ไม่รวมตั๋ว): ~15,000–30,000 บาท &nbsp;+&nbsp; ตั๋วบิน: ~25,000–45,000 บาท</div>
-    <div class="bnote">ขึ้นอยู่กับราคาตั๋ว ที่พัก และการใช้จ่ายส่วนตัว</div>
+    <div class="blabel">งบรวมทั้งหมด / คน · คำนวณสำหรับ 3 คน · รวมตั๋วแล้ว</div>
+    <div class="total">35,000–60,000<small>บาท</small></div>
+    <div class="bnote2">ตั๋วบิน ~25,000–45,000 &nbsp;+&nbsp; ค่าใช้จ่ายในจอร์เจีย ~10,000–15,000 บาท/คน</div>
+    <div class="bnote">ไปหลายคน ค่ารถและที่พักแชร์กัน ถูกกว่าไปสองคนอีก</div>
   </div>
 
   <div class="bsum-row">
-    <div class="bsum-card"><div class="sc-label">ตั๋วบิน</div><div class="sc-amount">25k–45k</div><div class="sc-note">บาท / คน</div></div>
-    <div class="bsum-card"><div class="sc-label">ที่พัก 5 คืน</div><div class="sc-amount">5k–10k</div><div class="sc-note">บาท / คน (แชร์คู่)</div></div>
-    <div class="bsum-card"><div class="sc-label">รถ+อาหาร+อื่นๆ</div><div class="sc-amount">10k–20k</div><div class="sc-note">บาท / คน</div></div>
+    <div class="bsum-card"><div class="sc-label">ตั๋วบิน</div><div class="sc-amount">25k–45k</div><div class="sc-note">บาท / คน (เท่ากัน)</div></div>
+    <div class="bsum-card"><div class="sc-label">ที่พัก 5 คืน</div><div class="sc-amount">3k–7k</div><div class="sc-note">บาท / คน (แชร์ 3 คน)</div></div>
+    <div class="bsum-card"><div class="sc-label">รถ+อาหาร+อื่นๆ</div><div class="sc-amount">7k–8k</div><div class="sc-note">บาท / คน</div></div>
   </div>
 
   <div class="budget-section">
     <h3>✈️ ตั๋วเครื่องบิน</h3>
     <div class="budget-row">
-      <div class="item"><b>กรุงเทพฯ → Tbilisi (ไป-กลับ)</b><span>มักต่อ Dubai (Emirates/flydubai) · Istanbul (Turkish Airlines) · Doha (Qatar Airways)</span></div>
-      <div class="amount"><b>25,000–45,000</b><span>บาท</span></div>
+      <div class="item"><b>กรุงเทพฯ → Tbilisi (ไป-กลับ) × 3 คน</b><span>มักต่อ Dubai (Emirates/flydubai) · Istanbul (Turkish Airlines) · Doha (Qatar Airways)</span></div>
+      <div class="amount"><b>25,000–45,000</b><span>บาท/คน</span></div>
     </div>
     <div class="budget-note">
       <b>เคล็ดลับจองตั๋ว:</b>
@@ -408,65 +409,60 @@
         <li>จองล่วงหน้า 2–3 เดือน ราคาถูกกว่ามาก</li>
         <li>ต้นตุลาคม (peak ใบไม้เปลี่ยนสี) ราคาสูงกว่าปกติ</li>
         <li>เช็ค Google Flights ตั้ง Price Alert ไว้รอ</li>
-        <li>ต่อ Dubai มักถูกสุด ใช้เวลารวม ~11–13 ชม.</li>
+        <li>จอง 3 ที่นั่งพร้อมกัน ได้ที่นั่งติดกันและบางสายการบินมีส่วนลดกลุ่ม</li>
       </ul>
     </div>
   </div>
 
   <div class="budget-section">
-    <h3>🏨 ที่พัก (5 คืน)</h3>
+    <h3>🏨 ที่พัก (5 คืน) · 3 คน</h3>
     <div class="budget-row">
-      <div class="item"><b>Tbilisi Old Town · 2 คืน</b><span>บูทีคโฮเทล / เกสต์เฮ้าส์ ย่าน Old Town · แนะนำ: Fabrika Hostel ห้องส่วนตัว, Old Meidan Tiflis</span></div>
-      <div class="amount"><b>2,000–4,000</b><span>บาท/คืน</span></div>
+      <div class="item"><b>Tbilisi Old Town · 2 คืน</b><span>จอง 1 ห้อง Triple หรือ 1 ห้อง Double + 1 ห้อง Single ย่าน Old Town</span></div>
+      <div class="amount"><b>3,000–6,000</b><span>บาท/คืน/กลุ่ม</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Kazbegi · 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา ย่าน Stepantsminda · แนะนำ: Guesthouses รอบๆ / Rooms Hotel (หรู)</span></div>
-      <div class="amount"><b>1,500–3,000</b><span>บาท/คืน</span></div>
+      <div class="item"><b>Kazbegi · 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา หลายแห่งมีห้องหลายเตียง หรือจอง 2 ห้อง</span></div>
+      <div class="amount"><b>2,500–5,000</b><span>บาท/คืน/กลุ่ม</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Fifth Season – Juta · 1 คืน</b><span>⚠️ จองล่วงหน้า! ห้องน้อยมาก เต็มเร็วมาก Booking.com เรตติ้ง 9.1 · รวมอาหารเช้า</span></div>
-      <div class="amount"><b>2,500–4,000</b><span>บาท/คืน</span></div>
+      <div class="item"><b>Fifth Season – Juta · 1 คืน</b><span>⚠️ จองล่วงหน้า! เช็กว่ามีห้องรองรับ 3 คนได้ หรือจอง 2 ห้อง เรตติ้ง 9.1</span></div>
+      <div class="amount"><b>3,500–6,000</b><span>บาท/คืน/กลุ่ม</span></div>
     </div>
     <div class="budget-note">
-      <b>ประหยัดค่าที่พัก:</b> ที่พักส่วนใหญ่คิดต่อห้อง — แชร์ 2 คน ค่าที่พัก/คน ÷ 2 ทันที · Kazbegi หลายแห่ง Half Board (อาหารเช้า+เย็น) รวมอยู่แล้ว ประหยัดค่าอาหาร
+      <b>ราคาต่อคน (3 คนแชร์):</b> ที่พัก 5 คืน รวมค่าห้อง ~15,000–25,000 บาท ÷ 3 = <b>~5,000–8,000 บาท/คน</b> — ถูกกว่าไป 2 คนมาก
     </div>
   </div>
 
   <div class="budget-section">
-    <h3>🚗 การเดินทางในจอร์เจีย</h3>
+    <h3>🚗 การเดินทางในจอร์เจีย · แชร์ 3 คน</h3>
     <div class="budget-row">
       <div class="item">
         <b>เช่ารถ 4WD / SUV ขับเอง <span class="tag-self">ขับเอง</span></b>
-        <span>Day 2, 3, 5 · เช่าจากสนามบิน Tbilisi ง่ายสุด · แนะนำ Hertz / Sixt / Europcar · 4WD ดีกว่าเพราะถนนบางช่วงขรุขระ</span>
+        <span>Day 2, 3, 5 · เช่าจากสนามบิน Tbilisi · 4 วัน × ~1,500 บาท/วัน = 6,000 บาท ÷ 3 คน</span>
       </div>
-      <div class="amount"><b>1,200–1,800</b><span>บาท/วัน (÷2 คน)</span></div>
+      <div class="amount"><b>~2,000</b><span>บาท/คน</span></div>
     </div>
     <div class="budget-row">
       <div class="item">
         <b>4WD ท้องถิ่น Kazbegi ↔ Juta <span class="tag-hire">จ้างคนขับ</span></b>
-        <span>Day 3 & 4 · ถนนดินลูกรังชันมาก รถเช่าเข้าไม่ได้ (ผิดเงื่อนไขประกัน) · ถามที่พัก Kazbegi จัดให้</span>
+        <span>Day 3 &amp; 4 · 2 เที่ยว × ~2,000 บาท = 4,000 บาท ÷ 3 คน · ถามที่พัก Kazbegi จัดให้</span>
       </div>
-      <div class="amount"><b>1,500–2,500</b><span>บาท/เที่ยว</span></div>
+      <div class="amount"><b>~1,300</b><span>บาท/คน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Bolt (แท็กซี่ app) ใน Tbilisi <span class="tag-self">ขับเอง</span></b><span>Day 1 &amp; 6 สนามบิน + เดินเที่ยวในเมือง วันที่มีรถเช่าให้ขับเองได้เลย</span></div>
-      <div class="amount"><b>200–500</b><span>บาท</span></div>
+      <div class="item"><b>Bolt ใน Tbilisi (Day 1, 6)</b><span>สนามบิน + เดินเที่ยวในเมือง</span></div>
+      <div class="amount"><b>~200</b><span>บาท/คน</span></div>
     </div>
     <div class="budget-note">
-      <b>สรุปค่ารถ (ต่อคน สำหรับ 2 คน):</b>
-      <ul>
-        <li>เช่ารถ 4WD ~4 วัน × 1,500 บาท/วัน = 6,000 บาท ÷ 2 = <b>~3,000 บาท/คน</b></li>
-        <li>4WD Juta ไป-กลับ 2 เที่ยว × 2,000 บาท = 4,000 บาท ÷ 2 = <b>~2,000 บาท/คน</b></li>
-        <li>รวมค่ารถทั้งหมด: <b>~5,000–7,000 บาท/คน</b> — ถูกกว่าจ้างคนขับทุกวัน</li>
-      </ul>
+      <b>รวมค่ารถทั้งหมด: ~3,500 บาท/คน</b> — ถูกมากเมื่อแชร์ 3 คน ถ้าไปสองคนจะเสีย ~5,000 บาท/คน
     </div>
   </div>
 
   <div class="budget-section">
     <h3>🍽️ อาหาร (6 วัน)</h3>
-    <p style="font-size:.85rem;color:var(--stone);margin-bottom:12px;">จอร์เจียถูกมากเมื่อเทียบยุโรปหรือแม้แต่ไทย ร้านอาหารดีๆ กินได้ 200–400 บาท/มื้อ</p>
+    <p style="font-size:.85rem;color:var(--stone);margin-bottom:12px;">จอร์เจียถูกมาก ราคาอาหารไม่เปลี่ยนตามจำนวนคน คิดต่อคนเท่าเดิม</p>
     <table class="food-table">
-      <tr><th>วัน / ที่</th><th>อาหารแนะนำ</th><th>ราคา/วัน</th></tr>
+      <tr><th>วัน / ที่</th><th>อาหารแนะนำ</th><th>ราคา/คน/วัน</th></tr>
       <tr>
         <td><b>Tbilisi</b><br><span>Day 1 &amp; 6</span></td>
         <td>Khachapuri Adjaruli, Khinkali, ไวน์ Rkatsiteli<br><span style="color:var(--stone);font-size:.77rem;">ร้านดีๆ ย่าน Old Town / Fabrika</span></td>
@@ -484,12 +480,12 @@
       </tr>
       <tr>
         <td><b>Juta</b><br><span>Day 3</span></td>
-        <td>อาหารที่ Fifth Season (ดี! สั่งล่วงหน้า) + Lunchbox trail<br><span style="color:var(--stone);font-size:.77rem;">ตัวเลือกน้อยมาก แนะนำกินที่พักเลย</span></td>
+        <td>อาหารที่ Fifth Season + Lunchbox trail<br><span style="color:var(--stone);font-size:.77rem;">ตัวเลือกน้อยมาก แนะนำกินที่พักเลย</span></td>
         <td>300–600 บาท</td>
       </tr>
       <tr>
         <td><b>Gori / Mtskheta</b><br><span>Day 5</span></td>
-        <td>Shotis Puri, Pkhali (สลัดผักปั้น), Badrijani Nigvzit<br><span style="color:var(--stone);font-size:.77rem;">ร้านท้องถิ่นแถวตลาด Gori ราคาถูกสุด</span></td>
+        <td>Shotis Puri, Pkhali, Badrijani Nigvzit<br><span style="color:var(--stone);font-size:.77rem;">ร้านท้องถิ่นแถวตลาด Gori ราคาถูกสุด</span></td>
         <td>300–500 บาท</td>
       </tr>
     </table>
@@ -499,39 +495,35 @@
     <h3>🎟️ ค่าเข้าชม</h3>
     <div class="budget-row">
       <div class="item"><b>Uplistsikhe Cave City</b><span></span></div>
-      <div class="amount"><b>~7 GEL</b><span>~100 บาท</span></div>
+      <div class="amount"><b>~7 GEL</b><span>~100 บาท/คน</span></div>
     </div>
     <div class="budget-row">
       <div class="item"><b>Botanical Garden Tbilisi</b><span>ถ้าแวะ Day 1</span></div>
-      <div class="amount"><b>~2 GEL</b><span>~28 บาท</span></div>
+      <div class="amount"><b>~2 GEL</b><span>~28 บาท/คน</span></div>
     </div>
     <div class="budget-row">
       <div class="item"><b>Cable Car Narikala (Tbilisi)</b><span>ขึ้น-ลง</span></div>
-      <div class="amount"><b>~4 GEL</b><span>~56 บาท</span></div>
+      <div class="amount"><b>~4 GEL</b><span>~56 บาท/คน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Ananuri Fortress</b><span></span></div>
-      <div class="amount"><b>ฟรี</b><span></span></div>
-    </div>
-    <div class="budget-row">
-      <div class="item"><b>Gergeti / Jvari Monastery / Mtskheta</b><span>โบสถ์ Georgian Orthodox เปิดให้เข้าฟรี</span></div>
+      <div class="item"><b>Ananuri / Gergeti / Jvari / Mtskheta</b><span></span></div>
       <div class="amount"><b>ฟรี</b><span></span></div>
     </div>
   </div>
 
   <div class="budget-section">
-    <h3>🛍️ ของฝาก / Shopping (ประมาณ)</h3>
+    <h3>🛍️ ของฝาก / Shopping</h3>
     <div class="budget-row">
-      <div class="item"><b>ไวน์จอร์เจีย</b><span>Rkatsiteli, Saperavi, Amber Wine (ไวน์ส้มเอกลักษณ์จอร์เจีย) · 5–20 GEL/ขวด</span></div>
-      <div class="amount"><b>500–2,000</b><span>บาท</span></div>
+      <div class="item"><b>ไวน์จอร์เจีย</b><span>Rkatsiteli, Saperavi, Amber Wine · 5–20 GEL/ขวด</span></div>
+      <div class="amount"><b>500–2,000</b><span>บาท/คน</span></div>
     </div>
     <div class="budget-row">
-      <div class="item"><b>Churchkhela + ชาจอร์เจีย + Chacha</b><span>ของฝากยอดนิยม ราคาถูกมาก</span></div>
-      <div class="amount"><b>300–800</b><span>บาท</span></div>
+      <div class="item"><b>Churchkhela + ชา + Chacha</b><span>ของฝากยอดนิยม ราคาถูกมาก</span></div>
+      <div class="amount"><b>300–800</b><span>บาท/คน</span></div>
     </div>
     <div class="budget-row">
       <div class="item"><b>งานฝีมือ / เครื่องปั้นดินเผา</b><span>Dry Bridge Market</span></div>
-      <div class="amount"><b>500–3,000</b><span>บาท (แล้วแต่ใจ)</span></div>
+      <div class="amount"><b>500–3,000</b><span>บาท/คน (แล้วแต่ใจ)</span></div>
     </div>
   </div>
 
@@ -545,12 +537,15 @@
   </div>
 
   <div class="budget-note">
-    <b>เคล็ดลับขับเองประหยัด:</b>
+    <b>สรุปงบต่อคน (3 คน) ประมาณการ:</b>
     <ul>
-      <li>เช่ารถ 4WD ที่สนามบิน Tbilisi ราคาถูกกว่าจ้างคนขับทุกวันมาก</li>
-      <li>จ้างคนขับเฉพาะ Juta เท่านั้น ที่อื่นถนนดีขับเองสบาย</li>
-      <li>จอดรถได้ทุกจุด ไม่ต้องรีบ เต็มที่กับวิวแต่ละจุด</li>
-      <li>ที่พัก Half Board (รวมอาหารเช้า-เย็น) ที่ Kazbegi ประหยัดค่าอาหารได้มาก</li>
+      <li>ตั๋วบิน: <b>25,000–45,000 บาท</b></li>
+      <li>ที่พัก 5 คืน (แชร์ 3): <b>~5,000–8,000 บาท</b></li>
+      <li>รถเช่า + 4WD Juta (แชร์ 3): <b>~3,500 บาท</b></li>
+      <li>อาหาร 6 วัน: <b>~3,000–5,000 บาท</b></li>
+      <li>ค่าเข้าชม + อื่นๆ: <b>~500–1,000 บาท</b></li>
+      <li>ของฝาก (แล้วแต่ใจ): <b>1,000–5,000 บาท</b></li>
+      <li style="border-top:1px solid var(--line);padding-top:6px;margin-top:4px;"><b>รวมทั้งหมด: ~38,000–67,000 บาท/คน</b></li>
     </ul>
   </div>
 
@@ -565,17 +560,17 @@
     <h3>📋 จัดการก่อนเดินทาง</h3>
     <p class="lead">ทำล่วงหน้าให้เสร็จ ทริปจะราบรื่น</p>
     <div class="cl-group">
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง Fifth Season – Juta</b><span>⚠️ ต้นตุลาห้องจำกัดมาก จองด่วนที่สุด! (Booking.com เรตติ้ง 9.1) มีห้องน้อย เต็มเร็วมาก</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Kazbegi 2 คืน</b><span>เกสต์เฮ้าส์วิวภูเขา หรือ Rooms Hotel Kazbegi (budget สูงกว่า)</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Tbilisi 2 คืน</b><span>ย่าน Old Town สะดวกเดินเที่ยว หรือแถว Fabrika สำหรับคืนสุดท้าย</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช่ารถ 4WD / SUV จากสนามบิน Tbilisi</b><span>Day 2–5 · จอง Hertz / Sixt / Europcar ล่วงหน้า · ขอ international driving permit จากไทยก่อน (ต้องใช้)</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ขอ International Driving Permit (IDP)</b><span>ทำที่ขนส่งทางบกในไทย ใช้เวลา 1 วัน · ค่าธรรมเนียม ~505 บาท · จำเป็นสำหรับขับรถในจอร์เจีย</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง 4WD ท้องถิ่น Kazbegi ↔ Juta (Day 3–4)</b><span>ถามที่พัก Kazbegi ช่วยจัดได้ · ราคา 1,500–2,500 บาท/เที่ยว · จองล่วงหน้า 1–2 วัน</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง Fifth Season – Juta (สำหรับ 3 คน)</b><span>⚠️ เช็กก่อนว่ารองรับ 3 คนได้ไหม อาจต้องจอง 2 ห้อง ห้องน้อยมาก เต็มเร็ว Booking.com เรตติ้ง 9.1</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Kazbegi 2 คืน</b><span>เกสต์เฮ้าส์หลายแห่งมีห้องหลายเตียง เหมาะ 3 คน หรือจอง 2 ห้อง</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จองที่พัก Tbilisi 2 คืน</b><span>หาห้อง Triple หรือ 2 ห้อง ย่าน Old Town / Fabrika</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช่ารถ 4WD / SUV จากสนามบิน Tbilisi</b><span>Day 2–5 · จอง Hertz / Sixt / Europcar ล่วงหน้า · รถ SUV 5 ที่นั่งสบายสำหรับ 3 คน + กระเป๋า</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ขอ International Driving Permit (IDP) ทั้ง 3 คน</b><span>ทำที่ขนส่งทางบก ใช้เวลา 1 วัน · ค่าธรรมเนียม ~505 บาท/คน · ควรมีทุกคน (ผลัดกันขับได้)</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>จอง 4WD ท้องถิ่น Kazbegi ↔ Juta (Day 3–4)</b><span>ถามที่พัก Kazbegi ช่วยจัดได้ · ~2,000 บาท/เที่ยว แชร์ 3 คน ถูกมาก</span></div></label>
       <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>เช็กสภาพถนน Juta กับที่พัก</b><span>โทรถามก่อน 1–2 วัน ถนนดินลูกรังอาจปิดกะทันหันหลังฝน</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อประกันการเดินทาง</b><span>ต้องครอบคลุม hiking + outdoor activities + ระดับความสูง 3,000 ม. · แนะนำ Safety Wing หรือ World Nomads</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ดาวน์โหลดแผนที่ offline</b><span>Maps.me หรือ Google Maps offline พื้นที่ Kazbegi + Juta · ดาวน์โหลด AllTrails Chaukhi Trail ด้วย · ไม่มีสัญญาณที่ Juta</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อซิม / เช็ก roaming</b><span>ซื้อซิม Magti หรือ Geocell ที่สนามบิน Tbilisi ราคา ~500 บาท มีเน็ตดีใน Tbilisi</span></div></label>
-      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>แลกเงิน GEL</b><span>แลกที่จอร์เจียดีกว่าไทย · ร้านแลกใน Tbilisi อัตราดีสุด · เอาเงินสดขึ้น Juta ด้วย ไม่มี ATM</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อประกันการเดินทาง (ทั้ง 3 คน)</b><span>ต้องครอบคลุม hiking + outdoor activities + ระดับความสูง 3,000 ม. · แนะนำ Safety Wing หรือ World Nomads</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ดาวน์โหลดแผนที่ offline (ทุกคน)</b><span>Maps.me หรือ Google Maps offline Kazbegi + Juta · AllTrails Chaukhi Trail · ไม่มีสัญญาณที่ Juta</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>ซื้อซิม / เช็ก roaming</b><span>ซิม Magti หรือ Geocell ที่สนามบิน Tbilisi ~500 บาท/คน หรือ 1 ซิมเปิด hotspot แชร์กัน</span></div></label>
+      <label class="cl-item"><input type="checkbox"><div class="cl-text"><b>แลกเงิน GEL</b><span>แลกที่ร้านใน Tbilisi อัตราดีสุด · เอาเงินสดขึ้น Juta ด้วย ไม่มี ATM</span></div></label>
     </div>
   </div>
 
