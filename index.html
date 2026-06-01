@@ -112,6 +112,14 @@
   .tag-self{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--snow);background:var(--moss);padding:2px 7px;border-radius:4px;margin-left:6px;vertical-align:middle;}
   .tag-hire{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--pine);background:var(--gold);padding:2px 7px;border-radius:4px;margin-left:6px;vertical-align:middle;}
 
+  .flight-options{display:grid;gap:8px;margin-top:12px;}
+  .flight-row{background:var(--snow);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .flight-row .fl-info b{display:block;font-size:.9rem;color:var(--pine);}
+  .flight-row .fl-info span{font-size:.78rem;color:var(--stone);}
+  .flight-row .fl-time{text-align:right;flex-shrink:0;}
+  .flight-row .fl-time b{display:block;font-family:'Fraunces','IBM Plex Sans Thai',serif;font-size:.95rem;color:var(--rust);}
+  .flight-row .fl-time span{font-size:.75rem;color:var(--stone);}
+
   .food-table{width:100%;border-collapse:collapse;font-size:.86rem;margin-top:10px;}
   .food-table th{text-align:left;font-weight:600;color:var(--stone);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line);}
   .food-table td{padding:9px 8px;border-bottom:1px dashed var(--line);vertical-align:top;color:var(--moss);}
@@ -216,7 +224,7 @@
 
   <div class="info-grid">
     <div class="info-card"><div class="icon">🌡️</div><div class="ilabel">อุณหภูมิ</div><div class="ivalue">5–22°C</div><div class="isub">Kazbegi เย็นกว่า Tbilisi มาก</div></div>
-    <div class="info-card"><div class="icon">✈️</div><div class="ilabel">เดินทาง</div><div class="ivalue">บินตรง</div><div class="isub">ไม่ต้องต่อเครื่อง ~8–10 ชม.</div></div>
+    <div class="info-card"><div class="icon">✈️</div><div class="ilabel">เดินทาง</div><div class="ivalue">ต่อ 1 จุด</div><div class="isub">Dubai · Istanbul · Doha</div></div>
     <div class="info-card"><div class="icon">💱</div><div class="ilabel">เงินตรา</div><div class="ivalue">GEL (Lari)</div><div class="isub">1 GEL ≈ 13–14 บาท</div></div>
     <div class="info-card"><div class="icon">🌍</div><div class="ilabel">วีซ่า</div><div class="ivalue">ฟรี 365 วัน</div><div class="isub">พาสปอร์ตไทย ไม่ต้องขอ</div></div>
   </div>
@@ -386,31 +394,41 @@
 
   <div class="budget-hero">
     <div class="blabel">งบรวมทั้งหมด / คน · คำนวณสำหรับ 3 คน · รวมตั๋วแล้ว</div>
-    <div class="total">40,000–70,000<small>บาท</small></div>
-    <div class="bnote2">ตั๋วบินตรง ~30,000–55,000 &nbsp;+&nbsp; ค่าใช้จ่ายในจอร์เจีย ~10,000–15,000 บาท/คน</div>
+    <div class="total">35,000–60,000<small>บาท</small></div>
+    <div class="bnote2">ตั๋วบิน ~25,000–45,000 &nbsp;+&nbsp; ค่าใช้จ่ายในจอร์เจีย ~10,000–15,000 บาท/คน</div>
     <div class="bnote">ไปหลายคน ค่ารถและที่พักแชร์กัน ถูกกว่าไปสองคนอีก</div>
   </div>
 
   <div class="bsum-row">
-    <div class="bsum-card"><div class="sc-label">ตั๋วบินตรง</div><div class="sc-amount">30k–55k</div><div class="sc-note">บาท / คน (เท่ากัน)</div></div>
+    <div class="bsum-card"><div class="sc-label">ตั๋วบิน</div><div class="sc-amount">25k–45k</div><div class="sc-note">บาท / คน (เท่ากัน)</div></div>
     <div class="bsum-card"><div class="sc-label">ที่พัก 5 คืน</div><div class="sc-amount">3k–7k</div><div class="sc-note">บาท / คน (แชร์ 3 คน)</div></div>
     <div class="bsum-card"><div class="sc-label">รถ+อาหาร+อื่นๆ</div><div class="sc-amount">7k–8k</div><div class="sc-note">บาท / คน</div></div>
   </div>
 
   <div class="budget-section">
     <h3>✈️ ตั๋วเครื่องบิน</h3>
-    <div class="budget-row">
-      <div class="item"><b>กรุงเทพฯ → Tbilisi (ไป-กลับ) บินตรง × 3 คน</b><span>ไม่ต้องต่อเครื่อง · ระยะเวลาบิน ~8–10 ชม. · นั่งสบาย ถึงที่หมายพักผ่อนได้เลย</span></div>
-      <div class="amount"><b>30,000–55,000</b><span>บาท/คน</span></div>
+    <p style="font-size:.85rem;color:var(--stone);margin-bottom:14px;">ไม่มีบินตรงจากไทยไป Tbilisi — ทุกเส้นทางต้องต่อเครื่อง 1 จุด เลือกตามราคาและเวลาที่เหมาะ</p>
+    <div class="flight-options">
+      <div class="flight-row">
+        <div class="fl-info"><b>Emirates / flydubai → ต่อ Dubai (DXB)</b><span>BKK–DXB–TBS · เวลารวม ~14–16 ชม. · รอต่อ 2–4 ชม. · มักถูกสุด</span></div>
+        <div class="fl-time"><b>~25,000–35,000</b><span>บาท/คน</span></div>
+      </div>
+      <div class="flight-row">
+        <div class="fl-info"><b>Turkish Airlines → ต่อ Istanbul (IST)</b><span>BKK–IST–TBS · เวลารวม ~16–18 ชม. · รอต่อ 2–5 ชม. · สนามบิน IST ใหม่ สะดวกมาก</span></div>
+        <div class="fl-time"><b>~28,000–42,000</b><span>บาท/คน</span></div>
+      </div>
+      <div class="flight-row">
+        <div class="fl-info"><b>Qatar Airways → ต่อ Doha (DOH)</b><span>BKK–DOH–TBS · เวลารวม ~15–17 ชม. · รอต่อ 2–4 ชม. · ที่นั่งดีมาก</span></div>
+        <div class="fl-time"><b>~30,000–45,000</b><span>บาท/คน</span></div>
+      </div>
     </div>
-    <div class="budget-note">
-      <b>เคล็ดลับจองตั๋วบินตรง:</b>
+    <div class="budget-note" style="margin-top:14px;">
+      <b>เคล็ดลับจองตั๋ว:</b>
       <ul>
-        <li>จองล่วงหน้า 2–3 เดือน ราคาถูกกว่ามาก</li>
-        <li>ต้นตุลาคม (peak ใบไม้เปลี่ยนสี) ราคาสูงกว่าปกติ</li>
-        <li>เช็ค Google Flights ตั้ง Price Alert · ค้นหา "BKK → TBS nonstop"</li>
-        <li>จอง 3 ที่นั่งพร้อมกัน ได้ที่นั่งติดกันและบางสายการบินมีส่วนลดกลุ่ม</li>
-        <li>บินตรงประหยัดเวลาและแรง ถึงสนามบินพักผ่อนได้เลยไม่ต้องรอต่อเครื่อง</li>
+        <li>จองล่วงหน้า 2–3 เดือน ราคาถูกกว่ามาก · ต้นตุลาคม peak ฤดูใบไม้เปลี่ยนสี ราคาสูง</li>
+        <li>เช็ค Google Flights ตั้ง Price Alert ไว้รอ · ค้นหา BKK → TBS</li>
+        <li>จอง 3 ที่นั่งพร้อมกัน ได้ที่นั่งติดกัน บางสายการบินมีส่วนลดกลุ่ม</li>
+        <li>ต่อ Dubai ถูกสุดแต่อาจยาวกว่า · ต่อ Istanbul สนามบินใหม่สะดวก ร้านดีเยอะ</li>
       </ul>
     </div>
   </div>
@@ -540,13 +558,13 @@
   <div class="budget-note">
     <b>สรุปงบต่อคน (3 คน) ประมาณการ:</b>
     <ul>
-      <li>ตั๋วบินตรง: <b>30,000–55,000 บาท</b></li>
+      <li>ตั๋วบิน (ต่อ 1 จุด): <b>25,000–45,000 บาท</b></li>
       <li>ที่พัก 5 คืน (แชร์ 3): <b>~5,000–8,000 บาท</b></li>
       <li>รถเช่า + 4WD Juta (แชร์ 3): <b>~3,500 บาท</b></li>
       <li>อาหาร 6 วัน: <b>~3,000–5,000 บาท</b></li>
       <li>ค่าเข้าชม + อื่นๆ: <b>~500–1,000 บาท</b></li>
       <li>ของฝาก (แล้วแต่ใจ): <b>1,000–5,000 บาท</b></li>
-      <li style="border-top:1px solid var(--line);padding-top:6px;margin-top:4px;"><b>รวมทั้งหมด: ~43,000–77,000 บาท/คน</b></li>
+      <li style="border-top:1px solid var(--line);padding-top:6px;margin-top:4px;"><b>รวมทั้งหมด: ~38,000–67,000 บาท/คน</b></li>
     </ul>
   </div>
 
