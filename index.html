@@ -1,0 +1,215 @@
+PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9InRoIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgo8dGl0bGU+R2VvcmdpYSBJdGluZXJhcnkgwrcgMuKAkzcgT2N0b2JlcjwvdGl0bGU+CjxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbSI+CjxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbSIgY3Jvc3NvcmlnaW4+CjxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9RnJhdW5jZXM6aXRhbCxvcHN6LHdnaHRAMCw5Li4xNDQsMzAwOzAsMTQuLjE0NCw0MDA7MCw5Li4xNDQsNTAwOzAsMTQuLjE0NCw2MDA7MSw5Li4xNDQsNDAwJmZhbWlseT1DaG9uYnVyaSZmYW1pbHk9SUJNK1BsZXgrU2Fucyt0aGFpOndnaHRAMzAwOzQwMDs1MDA7NjAwOzcwMCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+CjxzdHlsZT4KICA6cm9vdHsKICAgIC0taW5rOiMxYzI2MjA7CiAgICAtLXBhcGVyOiNmNGVmZTQ7CiAgICAtLXBhcGVyMjojZWNlNGQzOwogICAgLS1tb3NzOiMzYTRhM2E7CiAgICAtLXBpbmU6IzJjM2EyZTsKICAgIC0tcnVzdDojOWM1YjM0OwogICAgLS1nb2xkOiNjNzlhNDU7CiAgICAtLXN0b25lOiM3ZDdhNmU7CiAgICAtLWxpbmU6I2NkYzNhZDsKICAgIC0tc25vdzojZmJmOWYzOwogIH0KICAqe21hcmdpbjowO3BhZGRpbmc6MDtib3gtc2l6aW5nOmJvcmRlci1ib3g7fQogIGh0bWx7c2Nyb2xsLWJlaGF2aW9yOnNtb290aDt9CiAgYm9keXsKICAgIGZvbnQtZmFtaWx5OidJQk0gUGxleCBTYW5zIFRoYWknLCdGcmF1bmNlcycsc2Fucy1zZXJpZjsKICAgIGJhY2tncm91bmQ6dmFyKC0tcGFwZXIpOwogICAgY29sb3I6dmFyKC0taW5rKTsKICAgIGxpbmUtaGVpZ2h0OjEuNzsKICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6YW50aWFsaWFzZWQ7CiAgfQogIC53cmFwe21heC13aWR0aDo4ODBweDttYXJnaW46MCBhdXRvO3BhZGRpbmc6MCAyNHB4O30KCiAgLyogSEVSTyAqLwogIC5oZXJvewogICAgcG9zaXRpb246cmVsYXRpdmU7CiAgICBwYWRkaW5nOjkwcHggMjRweCA3MHB4OwogICAgdGV4dC1hbGlnbjpjZW50ZXI7CiAgICBvdmVyZmxvdzpoaWRkZW47CiAgICBiYWNrZ3JvdW5kOgogICAgICByYWRpYWwtZ3JhZGllbnQoZWxsaXBzZSAxMjAlIDgwJSBhdCA1MCUgMTIwJSwgcmdiYSg2MCw3NCw1OCwuMTgpLCB0cmFuc3BhcmVudCA2MCUpLAogICAgICBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCMyYzNhMmUgMCUsICMzYTRhM2EgNDUlLCAjNGE1MjQwIDEwMCUpOwogICAgY29sb3I6dmFyKC0tc25vdyk7CiAgfQogIC5oZXJvOjphZnRlcnsKICAgIGNvbnRlbnQ6IiI7cG9zaXRpb246YWJzb2x1dGU7aW5zZXQ6MDsKICAgIGJhY2tncm91bmQtaW1hZ2U6CiAgICAgIGxpbmVhci1ncmFkaWVudCgxMzVkZWcsIHRyYW5zcGFyZW50IDYwJSwgcmdiYSgxOTksMTU0LDY5LC4wOCkgNjAlLCByZ2JhKDE5OSwxNTQsNjksLjA4KSA2MiUsIHRyYW5zcGFyZW50IDYyJSksCiAgICAgIHJlcGVhdGluZy1saW5lYXItZ3JhZGllbnQoOTBkZWcsIHJnYmEoMjU1LDI1NSwyNTUsLjAxNSkgMCAycHgsIHRyYW5zcGFyZW50IDJweCA1cHgpOwogICAgcG9pbnRlci1ldmVudHM6bm9uZTsKICB9CiAgLnBlYWtzeyBwb3NpdGlvbjphYnNvbHV0ZTtib3R0b206LTJweDtsZWZ0OjA7d2lkdGg6MTAwJTtoZWlnaHQ6OTBweDtkaXNwbGF5OmJsb2NrO30KICAuaGVybyAua2lja2VyewogICAgZm9udC1mYW1pbHk6J0lCTSBQbGV4IFNhbnMgVGhhaScsIHNlcmlmO2ZvbnQtd2VpZ2h0OjQwMDsKICAgIGxldHRlci1zcGFjaW5nOi4wNGVtO2ZvbnQtc2l6ZToxLjA1cmVtO2NvbG9yOnZhcigtLWdvbGQpOwogICAgbWFyZ2luLWJvdHRvbToxOHB4O3Bvc2l0aW9uOnJlbGF0aXZlO3otaW5kZXg6MjsKICB9CiAgLmhlcm8gaDF7CiAgICBmb250LWZhbWlseTonRnJhdW5jZXMnLCdJQk0gUGxleCBTYW5zIFRoYWknLHNlcmlmO2ZvbnQtd2VpZ2h0OjMwMDsKICAgIGZvbnQtc2l6ZTpjbGFtcCgyLjZyZW0sOHZ3LDQuNHJlbSk7bGluZS1oZWlnaHQ6Ljk4OwogICAgbGV0dGVyLXNwYWNpbmc6LS4wMWVtO3Bvc2l0aW9uOnJlbGF0aXZlO3otaW5kZXg6MjsKICB9CiAgLmhlcm8gaDF7cGFkZGluZy1ib3R0b206MjBweDt9CiAgLmhlcm8gaDF7cGFkZGluZy10b3A6MDt9CiAgLmhlcm8gaDF7cGFkZGluZy1sZWZ0OjA7cGFkZGluZy1yaWdodDowO30KICAuaGVybyBoMSBie2ZvbnQtd2VpZ2h0OjYwMDtmb250LXN0eWxlOml0YWxpYztjb2xvcjp2YXIoLS1nb2xkKTt9CiAgLmhlcm8gLnN1YnsKICAgIG1hcmdpbi10b3A6MjJweDtmb250LXdlaWdodDozMDA7Zm9udC1zaXplOjEuMDVyZW07CiAgICBjb2xvcjpyZ2JhKDI1MSwyNDksMjQzLC44Mik7cG9zaXRpb246cmVsYXRpdmU7ei1pbmRleDoyOwogIH0KICAuaGVybyAubWV0YXsKICAgIG1hcmdpbi10b3A6MjZweDtkaXNwbGF5OmZsZXg7Z2FwOjEwcHg7anVzdGlmeS1jb250ZW50OmNlbnRlcjsKICAgIGZsZXgtd3JhcDp3cmFwO3Bvc2l0aW9uOnJlbGF0aXZlO3otaW5kZXg6MjsKICB9CiAgLmNoaXB7CiAgICBmb250LXNpemU6LjgycmVtO2xldHRlci1zcGFjaW5nOi4wMmVtOwogICAgYm9yZGVyOjFweCBzb2xpZCByZ2JhKDE5OSwxNTQsNjksLjQ1KTsKICAgIGNvbG9yOnJnYmEoMjUxLDI0OSwyNDMsLjkpOwogICAgcGFkZGluZzo2cHggMTRweDtib3JkZXItcmFkaXVzOjQwcHg7CiAgICBiYWNrZ3JvdW5kOnJnYmEoMjU1LDI1NSwyNTUsLjA0KTsKICB9CgogIC8qIElOVFJPICovCiAgLmludHJve3BhZGRpbmc6NTRweCAwIDEwcHg7dGV4dC1hbGlnbjpjZW50ZXI7fQogIC5pbnRybyBwewogICAgZm9udC1mYW1pbHk6J0lCTSBQbGV4IFNhbnMgVGhhaScsIHNlcmlmO2ZvbnQtd2VpZ2h0OjMwMDsKICAgIGZvbnQtc2l6ZToxLjJyZW07Y29sb3I6dmFyKC0tbW9zcyk7bWF4LXdpZHRoOjYyMHB4O21hcmdpbjowIGF1dG87CiAgICBsaW5lLWhlaWdodDoxLjY7CiAgfQogIC5ydWxlewogICAgd2lkdGg6NjBweDtoZWlnaHQ6MXB4O2JhY2tncm91bmQ6dmFyKC0tcnVzdCk7CiAgICBtYXJnaW46MzRweCBhdXRvO3Bvc2l0aW9uOnJlbGF0aXZlOwogIH0KICAucnVsZTo6YmVmb3JlLC5ydWxlOjphZnRlcnsKICAgIGNvbnRlbnQ6IiI7cG9zaXRpb246YWJzb2x1dGU7dG9wOjUwJTt3aWR0aDo1cHg7aGVpZ2h0OjVweDsKICAgIGJvcmRlci1yYWRpdXM6NTAlO2JhY2tncm91bmQ6dmFyKC0tcnVzdCk7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoLTUwJSk7CiAgfQogIC5ydWxlOjpiZWZvcmV7bGVmdDotMTJweDt9LnJ1bGU6OmFmdGVye3JpZ2h0Oi0xMnB4O30KCiAgLyogREFZICovCiAgLmRheXtwYWRkaW5nOjMwcHggMDtib3JkZXItYm90dG9tOjFweCBzb2xpZCB2YXIoLS1saW5lKTt9CiAgLmRheTpsYXN0LW9mLXR5cGV7Ym9yZGVyLWJvdHRvbTpub25lO30KICAuZGF5LWhlYWR7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmJhc2VsaW5lO2dhcDoxOHB4O21hcmdpbi1ib3R0b206MjBweDtmbGV4LXdyYXA6d3JhcDt9CiAgLmRheW51bXsKICAgIGZvbnQtZmFtaWx5OidGcmF1bmNlcycsJ0lCTSBQbGV4IFNhbnMgVGhhaScsIHNlcmlmO2ZvbnQtd2VpZ2h0OjMwMDsKICAgIGZvbnQtc2l6ZTozLjJyZW07bGluZS1oZWlnaHQ6Ljg7Y29sb3I6dmFyKC0tcnVzdCk7CiAgICBmbGV4LXNocmluazowOwogIH0KICAuZGF5bnVtIHNtYWxse2Rpc3BsYXk6YmxvY2s7Zm9udC1zaXplOi43cmVtO2xldHRlci1zcGFjaW5nOi4yMmVtOwogICAgY29sb3I6dmFyKC0tc3RvbmUpO2ZvbnQtZmFtaWx5OidJQk0gUGxleCBTYW5zIFRoYWknO21hcmdpbi1ib3R0b206NHB4O2ZvbnQtd2VpZ2h0OjUwMDt9CiAgLmRheS10aXRsZXtmbGV4OjE7bWluLXdpZHRoOjIwMHB4O30KICAuZGF5LXRpdGxlIGgyewogICAgZm9udC1mYW1pbHk6J0Nob25idXJpJywnSUJNIFBsZXggU2FucyBUaGFpJyxzZXJpZjtmb250LXdlaWdodDo0MDA7Zm9udC1zaXplOjEuNDVyZW07CiAgICBjb2xvcjp2YXIoLS1waW5lKTtsaW5lLWhlaWdodDoxLjE1OwogIH0KICAuZGF5LXRpdGxlIC5kYXRle2ZvbnQtc2l6ZTouODVyZW07Y29sb3I6dmFyKC0tc3RvbmUpO21hcmdpbi10b3A6MnB4O30KICAuZGF5LW5vdGV7CiAgICBmb250LWZhbWlseTonSUJNIFBsZXggU2FucyBUaGFpJyxzZXJpZjtjb2xvcjp2YXIoLS1zdG9uZSk7CiAgICBmb250LXNpemU6Ljk1cmVtO21hcmdpbi1ib3R0b206MTZweDsKICB9CiAgLmJhZGdlewogICAgZGlzcGxheTppbmxpbmUtYmxvY2s7Zm9udC1zaXplOi43MnJlbTtmb250LXdlaWdodDo2MDA7bGV0dGVyLXNwYWNpbmc6LjA1ZW07CiAgICBjb2xvcjp2YXIoLS1zbm93KTtiYWNrZ3JvdW5kOnZhcigtLXJ1c3QpO3BhZGRpbmc6M3B4IDEwcHg7Ym9yZGVyLXJhZGl1czo0cHg7CiAgICB2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7bWFyZ2luLWxlZnQ6OHB4OwogIH0KICAuYmFkZ2Uuc3Rhcntib3JkZXI6I2M3OWE0NTtjb2xvcjp2YXIoLS1waW5lKTtiYWNrZ3JvdW5kOnZhcigtLWdvbGQpO30KCiAgLyogVElNRUxJTkUgKi8KICB1bC50bHtsaXN0LXN0eWxlOm5vbmU7cG9zaXRpb246cmVsYXRpdmU7cGFkZGluZy1sZWZ0OjI2cHg7fQogIHVsLnRsOjpiZWZvcmV7CiAgICBjb250ZW50OiIiO3Bvc2l0aW9uOmFic29sdXRlO2xlZnQ6NnB4O3RvcDo4cHg7Ym90dG9tOjhweDsKICAgIHdpZHRoOjFweDtiYWNrZ3JvdW5kOnZhcigtLWxpbmUpOwogIH0KICB1bC50bCBsaXtwb3NpdGlvbjpyZWxhdGl2ZTtwYWRkaW5nOjdweCAwO30KICB1bC50bCBsaTo6YmVmb3JlewogICAgcG9zaXRpb246YWJzb2x1dGU7bGVmdDotMjNweDt0b3A6MTRweDsKICAgIHdpZHRoOjlweDtoZWlnaHQ6OXB4O2JvcmRlci1yYWRpdXM6NTAlOwogICAgYmFja2dyb3VuZDp2YXIoLS1wYXBlcik7Ym9yZGVyOjJweCBzb2xpZCB2YXIoLS1tb3NzKTsKICB9CiAgdWwudGwgbGk6OmJlZm9yZXtjb250ZW50OiIiO30KICB1bC50bCBsaS5oaTo6YmVmb3Jle2JhY2tncm91bmQ6dmFyKC0tZ29sZCk7Ym9yZGVyLWNvbG9yOnZhcigtLXJ1c3QpO30KICAudGltZXsKICAgIGZvbnQtZmFtaWx5OidGcmF1bmNlcycsJ0lCTSBQbGV4IFNhbnMgVGhhaScsIHNlcmlmO2ZvbnQtd2VpZ2h0OjYwMDtmb250LXNpemU6Ljkycm VtOwogICAgY29sb3I6dmFyKC0tcnVzdCk7bWFyZ2luLXJpZ2h0OjEwcHg7CiAgfQogIC5wbGFjZXtmb250LXdlaWdodDo2MDA7Y29sb3I6dmFyKC0tcGluZSk7fQogIC5kZXNje2NvbG9yOnZhcigtLW1vc3MpO2ZvbnQtc2l6ZTouOTVyZW07fQogIC5zbWFsbHtjb2xvcjp2YXIoLS1zdG9uZSk7Zm9udC1zaXplOi44NXJlbTt9CgogIC8qIENIRUNLTElTVCAqLwogIC5wYW5lbHsKICAgIGJhY2tncm91bmQ6dmFyKC0tcGFwZXIyKTtib3JkZXI6MXB4IHNvbGlkIHZhcigtLWxpbmUpOwogICAgYm9yZGVyLXJhZGl1czoxNHB4O3BhZGRpbmc6MzRweCAzMnB4O21hcmdpbjo1MHB4IDA7CiAgICBwb3NpdGlvbjpyZWxhdGl2ZTsKICB9CiAgLnBhbmVsIGgzewogICAgZm9udC1mYW1pbHk6J0Nob25idXJpJywnSUJNIFBsZXggU2FucyBUaGFpJyxzZXJpZjtmb250LXdlaWdodDo0MDA7Zm9udC1zaXplOjEuMzVyZW07CiAgICBjb2xvcjp2YXIoLS1waW5lKTttYXJnaW4tYm90dG9tOjZweDsKICB9CiAgLnBhbmVsIC5sZWFke2ZvbnQtc2l6ZTouOXJlbTtjb2xvcjp2YXIoLS1zdG9uZSk7bWFyZ2luLWJvdHRvbToyMnB4O30KICAuY2hlY2t7bGlzdC1zdHlsZTpub25lO2Rpc3BsYXk6Z3JpZDtnYXA6MTRweDt9CiAgLmNoZWNrIGxpe2Rpc3BsYXk6ZmxleDtnYXA6MTRweDthbGlnbi1pdGVtczpmbGV4LXN0YXJ0O30KICAuY2hlY2sgLm57CiAgICBmb250LWZhbWlseTonRnJhdW5jZXMnLCdJQk0gUGxleCBTYW5zIFRoYWknLHNlcmlmO2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjp2YXIoLS1ydXN0KTsKICAgIGZsZXgtc2hyaW5rOjA7d2lkdGg6MjRweDt0ZXh0LWFsaWduOmNlbnRlcjsKICAgIGJvcmRlci1ib3R0b206MnB4IHNvbGlkIHZhcigtLWdvbGQpO2xpbmUtaGVpZ2h0OjEuNDsKICB9CiAgLmNoZWNrIC50IGJ7Y29sb3I6dmFyKC0tcGluZSk7fQogIC5jaGVjayAudCBzcGFue2NvbG9yOnZhcigtLW1vc3MpO2ZvbnQtc2l6ZTouOTVyZW07fQoKICAucGFja3ttYXJnaW4tdG9wOjI2cHg7cGFkZGluZy10b3A6MjJweDtib3JkZXItdG9wOjFweCBkYXNoZWQgdmFyKC0tbGluZSk7fQogIC5wYWNrIGg0e2ZvbnQtc2l6ZTouNzhlbTtsZXR0ZXItc3BhY2luZzouMThlbTtjb2xvcjp2YXIoLS1zdG9uZSk7CiAgICB0ZXh0LXRyYW5zZm9ybTp1cHBlcmNhc2U7bWFyZ2luLWJvdHRvbToxMnB4O2ZvbnQtd2VpZ2h0OjYwMDt9CiAgLnBhY2stcm93e2Rpc3BsYXk6ZmxleDtmbGV4LXdyYXA6d3JhcDtnYXA6OHB4O30KICAucGFjay1yb3cgc3Bhbnshe
+    background:var(--snow);border:1px solid var(--line);
+    font-size:.85rem;padding:5px 12px;border-radius:30px;color:var(--moss);
+  }
+
+  /* NEXT TRIP */
+  .next{padding:30px 0 10px;}
+  .next h3{
+    font-family:'Chonburi','IBM Plex Sans Thai',serif;font-weight:400;font-size:1.25rem;
+    color:var(--pine);margin-bottom:18px;text-align:center;
+  }
+  .next-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .nx{
+    background:var(--snow);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;
+  }
+  .nx b{color:var(--rust);font-family:'Fraunces','IBM Plex Sans Thai',serif;}
+  .nx span{display:block;font-size:.85rem;color:var(--stone);margin-top:2px;}
+
+  /* FOOTER */
+  footer{
+    text-align:center;padding:50px 24px 60px;color:var(--stone);
+    font-family:'IBM Plex Sans Thai',serif;font-style:italic;
+  }
+  footer .big{font-size:1.4rem;color:var(--moss);margin-bottom:8px;}
+
+  @media(max-width:560px){
+    .daynum{font-size:2.6rem;}
+    .panel{padding:26px 20px;}
+    .next-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="kicker">Caucasus · ฤดูใบไม้ร่วง</div>
+  <h1>จอร์เจีย<br><b>Georgia</b></h1>
+  <p class="sub">ทริปแรก · เส้นทางทอง Tbilisi – Kazbegi – Juta</p>
+  <div class="meta">
+    <span class="chip">2–7 ตุลาคม</span>
+    <span class="chip">6 วัน 5 คืน</span>
+    <span class="chip">เน้นธรรมชาติ</span>
+  </div>
+  <svg class="peaks" viewBox="0 0 1200 90" preserveAspectRatio="none">
+    <path d="M0,90 L0,55 L120,20 L230,50 L340,8 L470,45 L600,15 L730,48 L860,22 L1000,52 L1110,28 L1200,50 L1200,90 Z" fill="#f4efe4"/>
+  </svg>
+</header>
+
+<div class="wrap">
+
+  <section class="intro">
+    <p>"ภูเขาคอเคซัส โบสถ์โบราณบนยอดเขา และหุบเขาสีทองในฤดูใบไม้ร่วง — จอร์เจียในแบบที่ดีที่สุดสำหรับครั้งแรก"</p>
+    <div class="rule"></div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>01</div>
+      <div class="day-title">
+        <h2>ถึง Tbilisi</h2>
+        <div class="date">2 ตุลาคม · ศุกร์</div>
+      </div>
+    </div>
+    <p class="day-note">วันเดินทาง เอาแบบสบายๆ ปรับตัวกับเมือง</p>
+    <ul class="tl">
+      <li><span class="place">เช็คอิน</span> <span class="desc">— ที่พักย่าน Old Town</span></li>
+      <li><span class="place">เดินเล่น Old Town + Abanotubani</span> <span class="desc">ริมแม่น้ำ Mtkvari ยามเย็น</span></li>
+      <li><span class="place">ดินเนอร์จอร์เจียแท้</span> <span class="desc">ลอง Khachapuri 🧀</span></li>
+      <li><span class="small">ถ้าถึงเช้า/บ่าย: เพิ่ม Botanical Garden of Tbilisi</span></li>
+    </ul>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>02</div>
+      <div class="day-title">
+        <h2>Tbilisi → Kazbegi</h2>
+        <div class="date">3 ตุลาคม · เสาร์</div>
+      </div>
+    </div>
+    <p class="day-note">วันขับ Military Highway — เส้นทางที่สวยที่สุดของจอร์เจีย</p>
+    <ul class="tl">
+      <li><span class="time">07:30</span><span class="desc">ออกเดินทาง</span></li>
+      <li class="hi"><span class="time">09:00</span><span class="place">Ananuri Fortress</span> <span class="desc">+ วิว Zhinvali Reservoir สีมรกต</span></li>
+      <li><span class="time">10:00</span><span class="place">Two Rivers Confluence</span> <span class="desc">แม่น้ำดำ-ขาวบรรจบ (Pasanauri)</span></li>
+      <li><span class="time">11:15</span><span class="place">Jvari Pass</span> <span class="desc">จุดสูงสุด วิวเทือกเขากว้างสุด</span></li>
+      <li class="hi"><span class="time">11:45</span><span class="place">Friendship Monument</span> <span class="desc">จุดถ่ายรูป iconic เหนือ Devil's Valley</span></li>
+      <li><span class="time">12:30</span><span class="place">Gudauri Viewpoint</span> <span class="desc">วิว Caucasus</span></li>
+      <li><span class="time">13:30</span><span class="desc">เช็คอิน Kazbegi · อาหารกลางวัน</span></li>
+      <li class="hi"><span class="time">15:30</span><span class="place">Gergeti Trinity Church</span> <span class="desc">เดินขึ้นบ่าย แสง golden hour</span> <span class="small">(ขึ้น ~1.5 ชม. ลง ~1 ชม.)</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ ลอง Khinkali 🥟</span></li>
+    </ul>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>03</div>
+      <div class="day-title">
+        <h2>Kazbegi → Juta <span class="badge">ค้างคืน</span></h2>
+        <div class="date">4 ตุลาคม · อาทิตย์</div>
+      </div>
+    </div>
+    <p class="day-note">ย้ายฐานเข้าหุบเขา · เก็บเป้เล็ก ฝากกระเป๋าใหญ่ที่ Kazbegi</p>
+    <ul class="tl">
+      <li><span class="time">09:30</span><span class="desc">ออกเดินทางไป Juta → จอดจุดถนนปิด → ต่อรถท้องถิ่น → ขึ้น Fifth Season</span></li>
+      <li class="hi"><span class="time">13:00</span><span class="place">เช็คอิน Fifth Season</span> <span class="desc">ชมวิว Chaukhi Massif ตรงหน้า 🏔️</span></li>
+      <li class="hi"><span class="time">14:30</span><span class="place">เดินเล่น Juta Valley</span> <span class="desc">เลาะชมวิวเบาๆ ใบไม้เปลี่ยนสี 🍂 (ไม่หนัก เก็บแรงพรุ่งนี้)</span></li>
+      <li><span class="time">18:00</span><span class="desc">ดินเนอร์ที่ Fifth Season ชมพระอาทิตย์ตก 🌅</span></li>
+    </ul>
+  </section>
+
+  <!-- DAY 4 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>04</div>
+      <div class="day-title">
+        <h2>Juta — Chaukhi Trail → Kazbegi <span class="badge star">★ ไฮไลต์</span></h2>
+        <div class="date">5 ตุลาคม · จันทร์</div>
+      </div>
+    </div>
+    <p class="day-note">วันไฮไลต์สูงสุด · เริ่ม trail จากหน้าที่พัก</p>
+    <ul class="tl">
+      <li><span class="time">07:00</span><span class="desc">อาหารเช้า + ขอ lunchbox จากที่พัก</span></li>
+      <li class="hi"><span class="time">08:00</span><span class="place">เริ่มเดิน Juta–Chaukhi Trail</span> 🥾</li>
+      <li class="hi"><span class="time">11:00</span><span class="place">จุดชมวิว Chaukhi Massif</span> <span class="desc">หน้าผาหินแหลม "Georgian Dolomites" พักกินข้าว ถ่ายรูป</span></li>
+      <li><span class="time">12:30</span><span class="desc">เดินลงกลับ</span></li>
+      <li><span class="time">14:30</span><span class="desc">กลับถึง Fifth Season · เช็คเอาต์</span></li>
+      <li><span class="time">15:30</span><span class="desc">ลงเขา → ต่อรถ → ขับกลับ Kazbegi</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ Kazbegi</span></li>
+    </ul>
+  </section>
+
+  <!-- DAY 5 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>05</div>
+      <div class="day-title">
+        <h2>Kazbegi → Uplistsikhe → Mtskheta → Tbilisi</h2>
+        <div class="date">6 ตุลาคม · อังคาร</div>
+      </div>
+    </div>
+    <p class="day-note">วันกลับ · แวะ 2 จุดประวัติศาสตร์ทางผ่าน</p>
+    <ul class="tl">
+      <li><span class="time">08:00</span><span class="desc">เช็คเอาต์ ออกเดินทาง</span></li>
+      <li class="hi"><span class="time">11:00</span><span class="place">Uplistsikhe Cave City</span> <span class="desc">เมืองถ้ำ 3,000 ปี (~2 ชม.) 🏛️</span></li>
+      <li><span class="time">13:30</span><span class="desc">อาหารกลางวันแถว Gori</span></li>
+      <li class="hi"><span class="time">15:30</span><span class="place">Mtskheta + Jvari Monastery</span> <span class="desc">วิวแม่น้ำสองสายบรรจบ (~1.5 ชม.)</span></li>
+      <li><span class="time">17:30</span><span class="desc">ถึง Tbilisi · เช็คอิน</span></li>
+      <li><span class="time">19:30</span><span class="desc">ดินเนอร์ดีๆ ย่าน Fabrika ฉลองทริป</span></li>
+    </ul>
+  </section>
+
+  <!-- DAY 6 -->
+  <section class="day">
+    <div class="day-head">
+      <div class="daynum"><small>DAY</small>06</div>
+      <div class="day-title">
+        <h2>Tbilisi → กลับบ้าน</h2>
+        <div class="date">7 ตุลาคม · พุธ</div>
+      </div>
+    </div>
+    <ul class="tl">
+      <li><span class="time">09:00</span><span class="place">Dry Bridge Market</span> <span class="desc">ช้อปของฝาก ของเก่า 🛍️</span></li>
+      <li><span class="time">11:00</span><span class="desc">กาแฟ อาหารเช้าสาย Old Town · เก็บกระเป๋า</span></li>
+      <li><span class="desc">บินกลับ ✈️</span></li>
+    </ul>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="panel">
+    <h3>เช็กลิสต์ก่อนไป</h3>
+    <p class="lead">จัดการล่วงหน้าให้เรียบร้อย ทริปจะราบรื่น</p>
+    <ul class="check">
+      <li><span class="n">1</span><span class="t"><b>จอง Fifth Season ล่วงหน้า</b> <span>— ต้นตุลาห้องจำกัด (เรตติ้ง 9.1 บน Booking)</span></span></li>
+      <li><span class="n">2</span><span class="t"><b>โทรถามที่พักเรื่องสภาพถนน Juta</b> <span>— ถนนเปลี่ยนบ่อย ต้องเช็กก่อนวันเดินทาง</span></span></li>
+      <li><span class="n">3</span><span class="t"><b>จองรถ 4WD + คนขับ</b> <span>— สำหรับเส้น Kazbegi–Juta</span></span></li>
+      <li><span class="n">4</span><span class="t"><b>แพ็คเป้เล็ก</b> <span>— สำหรับค้าง Juta 1 คืน</span></span></li>
+    </ul>
+    <div class="pack">
+      <h4>เตรียมตัว Chaukhi Trail</h4>
+      <div class="pack-row">
+        <span>รองเท้า hiking</span>
+        <span>น้ำ 2 ลิตร</span>
+        <span>เสื้อกันหนาว</span>
+        <span>ครีมกันแดด</span>
+        <span>แผนที่ offline (AllTrails)</span>
+        <span>lunchbox จากที่พัก</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT TRIP -->
+  <section class="next">
+    <h3>เก็บไว้ทริปหน้า</h3>
+    <div class="next-grid">
+      <div class="nx"><b>Svaneti</b><span>ภูเขาสุดอลังการ · หอคอยหินยุคกลาง · 3–4 วัน</span></div>
+      <div class="nx"><b>Kakheti / Sighnaghi</b><span>ไวน์เก่าแก่ที่สุดในโลก · เมืองโรแมนติก · 1–2 วัน</span></div>
+      <div class="nx"><b>Vardzia</b><span>เมืองถ้ำยักษ์ 13 ชั้น · 1–2 วัน</span></div>
+      <div class="nx"><b>Batumi</b><span>ทะเลดำ · เมืองทันสมัย · 2 วัน</span></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="big">გაუმარჯოს!</div>
+  ดื่มฉลองทริปจอร์เจีย · ขอให้เดินทางสนุก
+</footer>
+
+</body>
+</html>
